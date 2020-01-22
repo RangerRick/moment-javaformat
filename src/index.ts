@@ -6,7 +6,7 @@ import 'core-js';
 import 'regenerator-runtime/runtime';
 
 import SimpleDateFormat from './formats/SimpleDateFormat';
-//import DateTimeFormatter from './formats/DateTimeFormatter';
+import DateTimeFormatter from './formats/DateTimeFormatter';
 
 declare const define: any;
 declare const exports: any;
@@ -40,7 +40,7 @@ declare const require: any;
     root.momentJDateFormatParserSetup = root.moment ? factory(root.moment) : factory;
   }
 })(this, function loadPlugin (moment) {
-  moment.fn.formatJSDF = new SimpleDateFormat();
-//  moment.fn.formatJDFT = new DateTimeFormatter();
+  moment.fn.formatJavaSDF = new SimpleDateFormat();
+  moment.fn.formatJavaDFT = new DateTimeFormatter();
 });
 
