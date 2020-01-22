@@ -1,0 +1,50 @@
+{
+  "name": "@rangerrick/moment-javaformat",
+  "version": "1.0.0",
+  "description": "Format Moment.js using Java format strings",
+  "main": "index.js",
+  "author": "Benjamin Reed <ranger@opennms.org>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-proposal-async-generator-functions": "^7.8.3",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
+    "@babel/plugin-transform-destructuring": "^7.8.3",
+    "@babel/plugin-transform-for-of": "^7.8.3",
+    "@babel/plugin-transform-modules-commonjs": "^7.8.3",
+    "@babel/plugin-transform-regenerator": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-typescript": "^7.8.3",
+    "@types/jest": "^24.9.0",
+    "@types/node": "^13.1.8",
+    "@typescript-eslint/eslint-plugin": "^2.16.0",
+    "@typescript-eslint/parser": "^2.16.0",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
+    "eslint": "^6.8.0",
+    "jest": "^24.9.0",
+    "moment": "^2.24.0",
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "core-js": "^3.6.4",
+    "regenerator-runtime": "^0.13.3",
+    "runtypes": "^4.0.3"
+  },
+  "browserslist": [
+    "defaults",
+    "last 2 versions, not dead",
+    "> 5%, not dead",
+    "maintained node versions"
+  ],
+  "scripts": {
+    "build": "tsc -p . --outFile dist/moment-javaformat.js",
+    "lint": "eslint src/**/*.ts test/**/*.ts",
+    "test": "npm run lint && jest",
+    "watch": "babel --extensions .ts --watch src -d dist"
+  }
+}
