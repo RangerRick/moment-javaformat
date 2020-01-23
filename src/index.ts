@@ -5,6 +5,7 @@
 import 'core-js';
 import 'regenerator-runtime/runtime';
 
+import abbrs from './abbreviations';
 import SimpleDateFormat from './formats/SimpleDateFormat';
 import DateTimeFormatter from './formats/DateTimeFormatter';
 

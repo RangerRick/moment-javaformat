@@ -1,7 +1,58 @@
 /* eslint-disable @typescript-eslint/ban-types */
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-type Moment = any;
+declare const moment: any;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+declare type Moment = any;
+//import { Moment } from 'moment-timezone';
+
+import { abbreviations, offsets } from './abbreviations';
+
+const offsetMappings = {
+};
+
+export const findAbbreviationForOffset = (offset: number): string | null => {
+  const tz = moment.tz.guess();
+  const short = tz ? moment.tz(tz).format('z') : null;
+//  console.log('guessed=', short);
+
+  const matches = offsets[String(offset)];
+
+  if (matches) {
+    // check if the current browser zone matches our offset mapping
+    // and if so, shortcut to that abbreviation
+    if (matches.indexOf(short) >= 0) {
+      return short;
+    } else {
+      // otherwise, return the first/primary abbreviation in the offset mapping
+      return matches[0];
+    }
+  }
+
+  return null;
+};
+
+export const getDescriptionForAbbreviation = (abbr: string): string | null => {
+  if (abbreviations[abbr]) {
+    return abbreviations[abbr];
+  }
+
+  return null;
+};
+
+export const getZoneForDateTime = (dateTime: string | Moment): string | null => {
+  const dt = moment(dateTime);
+  const offset = dt.utcOffset();
+  if (!offsetMappings[offset]) {
+    const shortcut = findAbbreviationForOffset(offset);
+    if (shortcut) {
+      offsetMappings[offset] = shortcut;
+    } else {
+      console.warn('- unhandled offset: ' + offset);
+    }
+  }
+  return offsetMappings[offset] || null;
+};
 
 export const toAbsString = (value: string | number): string => {
   if (Number.isInteger(value as number)) {
@@ -111,5 +162,5 @@ export abstract class Formatter {
    * @param {Moment} moment - the moment to convert
    * @param {string} formatString - the format string
    */
-  abstract format(moment: Moment, formatString: string, strict?: boolean): string;
+  abstract format(moment: Moment, formatString: string): string;
 }

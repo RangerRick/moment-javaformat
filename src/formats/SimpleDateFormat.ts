@@ -1,13 +1,23 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 
-import { Moment } from 'moment';
-import { Formatter, Token, toAbsString, zeroPad } from '../Formatter';
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+declare const moment: any;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+declare type Moment = any;
+//import { Moment } from 'moment-timezone';
+
+import { Formatter, Token, getDescriptionForAbbreviation, getZoneForDateTime, toAbsString, zeroPad } from '../Formatter';
+
+const eraFormatter = (moment: Moment) => {
+  return moment.year() > 0 ? 'AD' : 'BC';
+};
 
 const javaToMoment = {
   // Era designator
-  G: (moment: Moment) => {
-    return moment.year() > 0 ? 'AD' : 'BC';
-  }, // (era - AD or BC)
+  G: eraFormatter,
+  GG: eraFormatter,
+  GGG: eraFormatter,
+  GGGG: eraFormatter,
 
   // Year
   y: (moment: Moment) => {
@@ -38,13 +48,17 @@ const javaToMoment = {
   MMMM: 'MMMM',
 
   // Week in year
-  w: 'w',
-  ww: 'ww',
+  w: (moment: Moment) => {
+    return zeroPad(moment.format('w'), 1);
+  },
+  ww: (moment: Moment) => {
+    return zeroPad(moment.format('w'), 2);
+  },
   www: (moment: Moment) => {
-    return zeroPad(moment.format('ww'), 3);
+    return zeroPad(moment.format('w'), 3);
   },
   wwww: (moment: Moment) => {
-    return zeroPad(moment.format('ww'), 3);
+    return zeroPad(moment.format('w'), 4);
   },
 
   // Week in month (W) not supported
@@ -52,7 +66,7 @@ const javaToMoment = {
   // Day in year
   D: 'DDD',
   DD: (moment: Moment) => {
-    return zeroPad(moment.format('DD'), 2);
+    return zeroPad(moment.format('DDD'), 2);
   },
   DDD: (moment: Moment) => {
     return zeroPad(moment.format('DDD'), 3);
@@ -62,15 +76,13 @@ const javaToMoment = {
   },
 
   // Day in month
-  d: 'DD',
-  dd: (moment: Moment) => {
-    return zeroPad(moment.format('DDD'), 2);
-  },
+  d: 'D',
+  dd: 'DD',
   ddd: (moment: Moment) => {
-    return zeroPad(moment.format('DDD'), 3);
+    return zeroPad(moment.format('D'), 3);
   },
   dddd: (moment: Moment) => {
-    return zeroPad(moment.format('DDDD'), 4);
+    return zeroPad(moment.format('D'), 4);
   },
 
   // Day of week in month (F) not supported
@@ -96,34 +108,77 @@ const javaToMoment = {
   // Am/pm marker 
   a: 'A',
   aa: 'A',
+  aaa: 'A',
+  aaaa: 'A',
 
   // Hour in day (0-23) 
   H: 'H',
   HH: 'HH',
+  HHH: (moment: Moment) => {
+    return zeroPad(moment.format('H'), 3);
+  },
+  HHHH: (moment: Moment) => {
+    return zeroPad(moment.format('H'), 4);
+  },
 
   // Hour in day (1-24)
   k: 'k',
   kk: 'kk',
+  kkk: (moment: Moment) => {
+    return zeroPad(moment.format('k'), 3);
+  },
+  kkkk: (moment: Moment) => {
+    return zeroPad(moment.format('k'), 4);
+  },
 
   // Hour in am/pm (0-11) 
+  // except java doesn't actually do this, it outputs the same as 'h'!  (sigh)
   K: (moment: Moment) => {
-    return parseInt(moment.format('h'), 10) - 1;
+    const asNumber = parseInt(moment.format('h'), 10);
+    return toAbsString(asNumber % 12);
   },
   KK: (moment: Moment) => {
-    return zeroPad(parseInt(moment.format('h'), 10) - 1, 2);
+    const asNumber = parseInt(moment.format('h'), 10);
+    return zeroPad(toAbsString(asNumber % 12), 2);
+  },
+  KKK: (moment: Moment) => {
+    const asNumber = parseInt(moment.format('h'), 10);
+    return zeroPad(toAbsString(asNumber % 12), 3);
+  },
+  KKKK: (moment: Moment) => {
+    const asNumber = parseInt(moment.format('h'), 10);
+    return zeroPad(toAbsString(asNumber % 12), 4);
   },
 
   // Hour in am/pm (1-12) 
   h: 'h',
   hh: 'hh',
+  hhh: (moment: Moment) => {
+    return zeroPad(moment.format('h'), 3);
+  },
+  hhhh: (moment: Moment) => {
+    return zeroPad(moment.format('h'), 4);
+  },
 
   // Minute in hour 
   m: 'm',
   mm: 'mm',
+  mmm: (moment: Moment) => {
+    return zeroPad(moment.format('m'), 3);
+  },
+  mmmm: (moment: Moment) => {
+    return zeroPad(moment.format('m'), 4);
+  },
 
   // Second in minute 
   s: 's',
   ss: 'ss',
+  sss: (moment: Moment) => {
+    return zeroPad(moment.format('s'), 3);
+  },
+  ssss: (moment: Moment) => {
+    return zeroPad(moment.format('s'), 4);
+  },
 
   // Millisecond
   S: 'S',
@@ -132,26 +187,54 @@ const javaToMoment = {
   SSSS: 'SSSS',
 
   // Time zone (Pacific Standard Time; PST)
-  z: 'z',
-  zz: 'z',
-  zzz: 'z',
-  zzzz: 'zz',
+  z: (moment: Moment) => {
+    const zone = getZoneForDateTime(moment);
+    if (zone) {
+      return zone;
+    }
+    return moment.zoneAbbr();
+  },
+  zz: (moment: Moment) => {
+    const zone = getZoneForDateTime(moment);
+    if (zone) {
+      return zone;
+    }
+    return moment.zoneAbbr();
+  },
+  zzz: (moment: Moment) => {
+    const zone = getZoneForDateTime(moment);
+    if (zone) {
+      return zone;
+    }
+    return moment.zoneAbbr();
+  },
+  zzzz: (moment: Moment) => {
+    const zone = getZoneForDateTime(moment);
+    if (zone) {
+      const match = getDescriptionForAbbreviation(zone);
+      if (match) {
+        return match;
+      }
+      const ret = moment.clone().tz(zone).zoneName();
+      if (ret && ret.length > 0) {
+        return ret;
+      }
+    }
+    return moment.zoneName();
+  },
 
   // Time zone (-0800)
-  Z: 'Z',
-  ZZ: 'Z',
-  ZZZ: 'Z',
-  ZZZZ: 'Z',
+  Z: 'ZZ',
+  ZZ: 'ZZ',
+  ZZZ: 'ZZ',
+  ZZZZ: 'ZZ',
 
   // Time zone (-08; -0800; -08:00)
   X: (moment: Moment) => {
     return moment.format('Z').substr(0, 3);
   },
-  XX: 'Z',
-  XXX: (moment: Moment) => {
-    const formatted = moment.format('Z');
-    return formatted.substr(0, 3) + ':' + formatted.substr(3);
-  }
+  XX: 'ZZ',
+  XXX: 'Z'
 };
 
 export default class SimpleDateFormat extends Formatter {
@@ -160,9 +243,8 @@ export default class SimpleDateFormat extends Formatter {
    *
    * @param {Moment} moment - the moment to convert
    * @param {string} formatString - the format string
-   * @param {boolean} strict - if true, fail on unhandled format tokens, otherwise silently drop them
    */
-  format(moment: Moment, formatString: string, strict?: boolean): string {
+  format(moment: Moment, formatString: string): string {
     const parts = Formatter.tokenize(formatString, "'");
     const ret = [];
     for (const part of parts) {
@@ -170,12 +252,9 @@ export default class SimpleDateFormat extends Formatter {
         const partString = part.toString();
         const translation = javaToMoment[partString];
         if (translation === undefined) {
-          if (strict) {
-            const err = new Error(`'${partString}' cannot be converted to a moment format token; bailing`);
-            console.error(err.message);
-            throw err;
-          }
-          console.warn(`SimpleDateFormat: '${partString}' cannot be converted to a moment format token; ignoring`);
+          const err = new Error(`'${partString}' cannot be converted to a moment format token; bailing`);
+//          console.error(err.message);
+          throw err;
         } else {
           if (typeof translation === 'function') {
             ret.push(translation(moment, partString));
