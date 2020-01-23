@@ -2,10 +2,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 
+/*
 import 'core-js';
 import 'regenerator-runtime/runtime';
+*/
 
-import abbrs from './abbreviations';
 import SimpleDateFormat from './formats/SimpleDateFormat';
 import DateTimeFormatter from './formats/DateTimeFormatter';
 
@@ -13,7 +14,17 @@ declare const define: any;
 declare const exports: any;
 declare const module: any;
 declare const require: any;
+declare const moment: any;
 
+if (moment && moment.tz) {
+  console.log('Moment.js with timezone support detected; loading.');
+  moment.fn.formatJavaSDF = new SimpleDateFormat();
+  moment.fn.formatJavaDFT = new DateTimeFormatter();
+} else {
+  console.warn('Moment.js with timezone support missing; skipping moment-javaformat loading.');
+}
+
+/*
 // this loading routine is shamelessly copied from the "moment-duration-format" plugin
 // @see https://github.com/jsmreese/moment-duration-format
 (function loadMomentJS (root, factory) {
@@ -44,4 +55,5 @@ declare const require: any;
   moment.fn.formatJavaSDF = new SimpleDateFormat();
   moment.fn.formatJavaDFT = new DateTimeFormatter();
 });
+*/
 

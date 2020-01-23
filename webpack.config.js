@@ -3,6 +3,8 @@
 const path = require('path');
 const process = require('process');
 
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
 const isProduction = (process.argv.filter((arg) => arg.match(/production/)).length > 0);
 
 module.exports = {
@@ -33,5 +35,11 @@ module.exports = {
         use: 'babel-loader',
       }
     ]
-  }
+  },
+  plugins: [
+  ]
 };
+
+if (!isProduction) {
+  // module.exports.plugins.push(new BundleAnalyzerPlugin());
+}
