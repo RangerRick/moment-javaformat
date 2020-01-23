@@ -1,6 +1,11 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 
-import { Moment } from 'moment';
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+declare const moment: any;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+declare type Moment = any;
+//import { Moment } from 'moment-timezone';
+
 import { Formatter, Token, toAbsString, zeroPad } from '../Formatter';
 
 const adConverter = (moment: Moment) => {
@@ -25,7 +30,7 @@ const javaToMoment = {
     return zeroPad(moment.format('YYYY'), 1);
   },
   uu: (moment: Moment) => {
-    return zeroPad(toAbsString(moment.format('YYYY')), 2);
+    return zeroPad(toAbsString(moment.format('YY')), 2);
   },
   uuu: (moment: Moment) => {
     return zeroPad(moment.format('YYYY'), 3);
@@ -88,7 +93,9 @@ const javaToMoment = {
 
   // quarter-of-year
   q: 'Q',
-  qq: 'QQ',
+  qq: (moment: Moment) => {
+    return zeroPad(moment.format('Q'), 2);
+  },
   qqq: 'Q',
   qqqq: 'Q',
 
@@ -115,15 +122,15 @@ const javaToMoment = {
   EEEE: 'dddd',
 
   // localized day-of-week (e)
-  e: 'e',
+  e: 'd',
   ee: (moment: Moment) => {
-    return zeroPad(moment.format('e'), 2);
+    return zeroPad(moment.format('d'), 2);
   },
   eee: 'ddd',
   eeee: 'dddd',
 
   // localized day-of-week (c)
-  c: 'e',
+  c: 'd',
   ccc: 'ddd',
   cccc: 'dddd',
 
@@ -138,10 +145,10 @@ const javaToMoment = {
 
   // hour-of-am-pm
   K: (moment: Moment) => {
-    return (moment.hour() % 12) - 1;
+    return toAbsString(moment.hour() % 12);
   },
   KK: (moment: Moment) => {
-    const hour = (moment.hour() % 12) - 1;
+    const hour = toAbsString(moment.hour() % 12);
     return zeroPad(hour, 2);
   },
 
@@ -169,8 +176,26 @@ const javaToMoment = {
 
   // milli-of-day
   A: (moment: Moment) => {
-    const dayStart = moment.clone().hour(0).minute(0).second(0).milliseconds(0);
-    return zeroPad(moment.valueOf() - dayStart.valueOf(), 1);
+    return zeroPad(moment.valueOf() - moment.clone().startOf('day').valueOf(), 1);
+  },
+  AA: (moment: Moment) => {
+    if (moment.isSame(moment.clone().startOf('day'))) {
+      console.log(moment.format() + ' is the same as ' + moment.clone().startOf('day').format());
+      return '00';
+    }
+    return null;
+  },
+  AAA: (moment: Moment) => {
+    if (moment.isSame(moment.clone().startOf('day'))) {
+      return '000';
+    }
+    return null;
+  },
+  AAAA: (moment: Moment) => {
+    if (moment.isSame(moment.clone().startOf('day'))) {
+      return '0000';
+    }
+    return null;
   },
 
   // nano-of-second not supported
@@ -199,6 +224,9 @@ const javaToMoment = {
   O: (moment: Moment) => {
     const offset = moment.utcOffset() / 60.0;
     const pre = Math.floor(offset);
+
+//    console.log('offset=', offset);
+//    console.log('pre=', pre);
 
     if (Number.isInteger(offset)) {
       if (offset < 0) {
@@ -264,9 +292,8 @@ export default class DateTimeFormatter extends Formatter {
    *
    * @param {Moment} moment - the moment to convert
    * @param {string} formatString - the format string
-   * @param {boolean} strict - if true, fail on unhandled format tokens, otherwise silently drop them
    */
-  format(moment: Moment, formatString: string, strict?: boolean): string {
+  format(moment: Moment, formatString: string): string {
     const parts = Formatter.tokenize(formatString, "'");
     const ret = [];
     for (const part of parts) {
@@ -274,15 +301,18 @@ export default class DateTimeFormatter extends Formatter {
         const partString = part.toString();
         const translation = javaToMoment[partString];
         if (translation === undefined) {
-          if (strict) {
-            const err = new Error(`'${partString}' cannot be converted to a moment format token; bailing`);
-            console.error(err.message);
-            throw err;
-          }
-          console.warn(`SimpleDateFormat: '${partString}' cannot be converted to a moment format token; ignoring`);
+          const err = new Error(`'${partString}' cannot be converted to a moment format token; bailing`);
+//          console.error(err.message);
+          throw err;
         } else {
           if (typeof translation === 'function') {
-            ret.push(translation(moment, partString, strict));
+            const result = translation(moment, partString);
+            if (result === null) {
+              const err = new Error(`'${partString}' cannot be converted to a moment format token; bailing`);
+              //          console.error(err.message);
+              throw err;
+            }
+            ret.push(result);
           } else {
             ret.push(moment.format(translation));
           }

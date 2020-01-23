@@ -19,21 +19,27 @@
     "@babel/preset-env": "^7.8.3",
     "@babel/preset-typescript": "^7.8.3",
     "@types/jest": "^24.9.0",
-    "@types/node": "^13.1.8",
+    "@types/moment-timezone": "^0.5.12",
+    "@types/node": "^13.5.0",
+    "@types/webpack": "^4.41.3",
     "@typescript-eslint/eslint-plugin": "^2.16.0",
     "@typescript-eslint/parser": "^2.16.0",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
     "eslint": "^6.8.0",
     "jest": "^24.9.0",
-    "moment": "^2.24.0",
-    "parcel-bundler": "^1.12.4",
-    "typescript": "^3.7.5"
+    "moment-timezone": "^0.5.27",
+    "typescript": "^3.7.5",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
   },
   "dependencies": {
     "core-js": "^3.6.4",
-    "regenerator-runtime": "^0.13.3",
-    "runtypes": "^4.0.3"
+    "regenerator-runtime": "^0.13.3"
+  },
+  "peerDependencies": {
+    "moment-timezone": "^0.x"
   },
   "browserslist": [
     "defaults",
@@ -42,9 +48,10 @@
     "maintained node versions"
   ],
   "scripts": {
-    "build": "tsc -p . --outFile dist/moment-javaformat.js",
+    "build": "webpack --mode=development",
+    "release": "npm run test && webpack --mode=production",
     "lint": "eslint src/**/*.ts test/**/*.ts",
     "test": "npm run lint && jest",
-    "watch": "babel --extensions .ts --watch src -d dist"
+    "watch": "webpack --mode=development --watch --debug"
   }
 }
