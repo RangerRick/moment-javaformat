@@ -14,6 +14,8 @@ commands:
             name: git fetch origin
             command: |
               git fetch origin
+              git config user.name 'CircleCI Automated Commit'
+              git config user.email 'github@raccoonfink.com'
         - save_cache:
             key: git-{{ .Branch }}-{{ .Revision }}
             paths:
@@ -62,7 +64,7 @@ jobs:
             command: |
               git checkout master
               git pull
-              git merge -m 'automated merge from develop -> master' --log --author='Automated Merge <github@raccoonfink.com>'
+              git merge -m 'automated merge from develop -> master' --log
         - run:
             name: Build Artifacts
             command: npm --prefer-offline --no-progress run release
@@ -70,7 +72,7 @@ jobs:
             name: Commit and Push Updated Artifacts
             command: |
               git add -A
-              git commit -m 'automated generation of dist/' --log --author='Automated Merge <github@raccoonfink.com>'
+              git commit -m 'automated generation of dist/' --log
               git push
 
 workflows:
