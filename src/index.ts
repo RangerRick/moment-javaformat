@@ -31,3 +31,5 @@ if (window.moment) {
 export default {
   register: register,
 };
+
+export { SimpleDateFormat, DateTimeFormatter };
