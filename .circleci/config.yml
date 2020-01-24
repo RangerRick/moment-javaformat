@@ -82,6 +82,8 @@ workflows:
               ignore:
                 - master
       - merge-master:
+          requires:
+            - run-tests
           filters:
             branches:
               only:
