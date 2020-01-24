@@ -41,6 +41,8 @@ jobs:
   run-tests:
       docker:
         - image: circleci/node:10
+          environment:
+            TZ: "America/New_York"
       steps:
         - cached-checkout
         - cached-npm-install
@@ -50,6 +52,8 @@ jobs:
   merge-master:
       docker:
         - image: circleci/node:10
+          environment:
+            TZ: "America/New_York"
       steps:
         - cached-checkout
         - cached-npm-install
