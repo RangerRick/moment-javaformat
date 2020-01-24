@@ -1,6 +1,7 @@
 declare type Moment = any;
-import { Formatter } from '../Formatter';
+import { Formatter, Token } from '../Formatter';
 export default class SimpleDateFormat extends Formatter {
+    tokenize(pattern: string): Array<Token | string>;
     /**
      * Convert a moment into a formatted date string, using the format tokens defined at: https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html
      *

@@ -14,12 +14,11 @@ export declare class Token {
 }
 export declare abstract class Formatter {
     /**
-     * Tokenize a format string, given a character or tuple to represent literal values.
+     * Tokenize a format string.
      *
      * @param {string} formatString the string to format
-     * @param {string[] | string} literalBoundary the boundary values for string literals
      */
-    static tokenize(formatString: string, literalBoundary: string[] | string): Array<Token | string>;
+    abstract tokenize(formatString: string): Array<Token | string>;
     /**
      * Convert a moment into a formatted date string.
      *
