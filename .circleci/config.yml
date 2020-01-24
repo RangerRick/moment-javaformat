@@ -73,12 +73,10 @@ jobs:
             command: |
               git add -A
               if [ `git diff HEAD | wc -l` -gt 0 ]; then
-                echo "changes detected; committing and pushing to master"
+                echo "code detected; committing updated dist/"
                 git commit -m 'automated generation of dist/'
-                git push
-              else
-                echo "no changes detected; skipping push to master"
               fi
+              git push
 
 workflows:
   test-and-deploy:
