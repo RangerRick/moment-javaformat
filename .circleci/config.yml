@@ -62,7 +62,7 @@ jobs:
             command: |
               git checkout master
               git pull
-              git merge -m 'automated merge from develop -> master' --log develop
+              git merge -m 'automated merge from develop -> master' --log --author='Automated Merge <github@raccoonfink.com>'
         - run:
             name: Build Artifacts
             command: npm --prefer-offline --no-progress run release
@@ -70,7 +70,7 @@ jobs:
             name: Commit and Push Updated Artifacts
             command: |
               git add -A
-              git commit -m 'automated generation of dist/' --log
+              git commit -m 'automated generation of dist/' --log --author='Automated Merge <github@raccoonfink.com>'
               git push
 
 workflows:
