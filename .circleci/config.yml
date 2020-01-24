@@ -72,8 +72,13 @@ jobs:
             name: Commit and Push Updated Artifacts
             command: |
               git add -A
-              git commit -m 'automated generation of dist/'
-              git push
+              if [ `git diff HEAD | wc -l` -gt 0 ]; then
+                echo "changes detected; committing and pushing to master"
+                git commit -m 'automated generation of dist/'
+                git push
+              else
+                echo "no changes detected; skipping push to master"
+              fi
 
 workflows:
   test-and-deploy:
