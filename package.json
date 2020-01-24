@@ -50,7 +50,8 @@
   ],
   "scripts": {
     "build": "webpack --mode=development",
-    "release": "npm run test && webpack --mode=development && webpack --mode=production",
+    "build-release": "webpack --mode=development && webpack --mode=production",
+    "release": "npm run test && npm run build-release",
     "lint": "eslint src/**/*.ts test/**/*.ts",
     "test": "npm run lint && jest",
     "watch": "webpack --mode=development --watch --debug"

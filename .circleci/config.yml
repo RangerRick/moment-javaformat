@@ -67,7 +67,7 @@ jobs:
               git merge -m 'automated merge from develop -> master' --log
         - run:
             name: Build Artifacts
-            command: npm --prefer-offline --no-progress run release
+            command: npm --prefer-offline --no-progress run build-release
         - run:
             name: Commit and Push Updated Artifacts
             command: |
