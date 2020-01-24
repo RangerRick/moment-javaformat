@@ -28,7 +28,7 @@
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
     "eslint": "^6.8.0",
-    "jest": "^24.9.0",
+    "jest": "^25.1.0",
     "moment-timezone": "^0.5.27",
     "typescript": "^3.7.5",
     "webpack": "^4.41.5",
