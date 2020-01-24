@@ -1,67 +1,18 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 
 import moment from 'moment-timezone';
+// @ts-ignore
 window.moment = moment;
 
-import { Formatter, Token, getZoneForDateTime } from '../src/Formatter';
+moment.tz.setDefault('America/New_York');
+
+import { Formatter, getZoneForDateTime } from '../src/Formatter';
 import testData from './test-data';
 import SimpleDateFormat from '../src/formats/SimpleDateFormat';
 import DateTimeFormatter from '../src/formats/DateTimeFormatter';
 
-/* raw tests for the tokenize() method */
-const singleLiteralFormatStrings = {
-  'g': [new Token('g')],
-  'gg': [new Token('g', 2)],
-  "'blah'gg": ['blah', new Token('g', 2)],
-  'ggff': [new Token('g', 2), new Token('f', 2)],
-  "'\\'blah'gg": ["'blah", new Token('g', 2)],
-};
-
-const doubleLiteralFormatStrings = {
-  "[blah]gg": ['blah', new Token('g', 2)],
-  "[\\]blah]gg": ["]blah", new Token('g', 2)],
-};
-
 describe('Formatter.getZoneForDateTime', () => {
   getZoneForDateTime("2020-01-01T18:00-05:00");
-});
-
-
-describe('Formatter.tokenize', () => {
-  for (const [key, value] of Object.entries(singleLiteralFormatStrings)) {
-    //console.log(`key=${key}, value=${value}`);
-    test(key, () => {
-      const tokenized = Formatter.tokenize(key, "'");
-      expect(tokenized).toBeDefined();
-      expect(value.length).toEqual(tokenized.length);
-      for (let i=0; i < value.length; i++) {
-        expect(value[i]).toEqual(tokenized[i]);
-      }
-    });
-  }
-  
-  for (const [key, value] of Object.entries(doubleLiteralFormatStrings)) {
-    //console.log(`key=${key}, value=${value}`);
-    test(key, () => {
-      const tokenized = Formatter.tokenize(key, ['[', ']']);
-      expect(tokenized).toBeDefined();
-      expect(value.length).toEqual(tokenized.length);
-      for (let i=0; i < value.length; i++) {
-        expect(value[i]).toEqual(tokenized[i]);
-      }
-    });
-  }
-  
-  test('token type', () => {
-    const tokenized = Formatter.tokenize('gggg', "'");
-    expect(tokenized[0]).toBeInstanceOf(Token);
-  });
-  
-  test('literal type', () => {
-    const tokenized = Formatter.tokenize("'blah'", "'");
-    expect(tokenized[0]).not.toBeInstanceOf(Token);
-    expect(tokenized[0]).toBe('blah');
-  });
 });
 
 /* test using auto-generated test data */
@@ -91,7 +42,7 @@ const testClass = (className: string, impl: Formatter): void => {
             if (unimplemented[className] && unimplemented[className].indexOf(token) >= 0) {
               expect(() => {
                 impl.format(date, token);
-              }).toThrowError('cannot be converted to a moment format token; bailing');
+              }).toThrowError('cannot be converted to a moment format token');
               return;
             }
   
@@ -131,7 +82,7 @@ const dtf = new DateTimeFormatter();
 
 describe('formatters', () => {
   testClass('SimpleDateFormat', sdf);
-//  testClass('DateTimeFormatter', dtf);
+  // testClass('DateTimeFormatter', dtf);
 });
 
 //const o = dtf.format(moment.tz('2020-01-01T00:00Z', 'UTC'), 'O');
