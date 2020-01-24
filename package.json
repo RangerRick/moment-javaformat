@@ -50,7 +50,7 @@
   ],
   "scripts": {
     "build": "webpack --mode=development",
-    "build-release": "webpack --mode=development && webpack --mode=production",
+    "build-release": "webpack --mode=development && webpack --mode=production && tsc -d --declarationMap --emitDeclarationOnly --declarationDir dist/lib",
     "release": "npm run test && npm run build-release",
     "lint": "eslint src/**/*.ts test/**/*.ts",
     "test": "npm run lint && jest",
