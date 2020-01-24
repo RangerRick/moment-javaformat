@@ -1,15 +1,12 @@
 /* eslint-disable @typescript-eslint/ban-types */
-
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare const moment: any;
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare type Moment = any;
 //import { Moment } from 'moment-timezone';
-
 import { abbreviations, offsets } from './abbreviations';
 
-const offsetMappings = {
-};
+const offsetMappings = {};
 
 export const findAbbreviationForOffset = (offset: number): string | null => {
   const tz = moment.tz.guess();
@@ -98,63 +95,11 @@ export class Token {
 
 export abstract class Formatter {
   /**
-   * Tokenize a format string, given a character or tuple to represent literal values.
+   * Tokenize a format string.
    *
    * @param {string} formatString the string to format
-   * @param {string[] | string} literalBoundary the boundary values for string literals
    */
-  static tokenize(formatString: string, literalBoundary: string[] | string): Array<Token|string> {
-    const ret = [];
-    const len = formatString.length;
-
-    let literals = [] as string[];
-    if (literalBoundary) {
-      literals = Array.isArray(literalBoundary)? literalBoundary : literalBoundary.split('');
-    }
-
-    let i = 0,
-      current = '',
-      lastChar = null,
-      inEscape = false,
-      inLiteral = false;
-
-    for (i=0; i < len; i++) {
-      current = formatString.charAt(i);
-      if (inLiteral) {
-        // we're in the middle of a literal/quoted section
-        if (inEscape) {
-          // and the current character should be escaped
-          ret[ret.length - 1] += current;
-          inEscape = false;
-        } else {
-          if (current === '\\') {
-            // the next character should be escaped
-            inEscape = true;
-          } else if (current === literals[literals.length - 1]) {
-            // we are at the end of a literal boundary
-            inLiteral = false;
-          } else {
-            // we're still in the literal, append to the last entry
-            ret[ret.length - 1] += current;
-          }
-        }
-      } else {
-        if (current === literals[0]) {
-          inLiteral = true;
-          ret.push('');
-        } else if (current === lastChar) {
-          // we're in the same sequence, append
-          ret[ret.length - 1].increment();
-        } else {
-          // new token
-          ret.push(new Token(current));
-        }
-      }
-      lastChar = current;
-    }
-
-    return ret;
-  }
+  abstract tokenize(formatString: string): Array<Token|string>;
 
   /**
    * Convert a moment into a formatted date string.

@@ -2,11 +2,14 @@
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare const moment: any;
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare type Moment = any;
 //import { Moment } from 'moment-timezone';
 
 import { Formatter, Token, toAbsString, zeroPad } from '../Formatter';
+
+const matchReserved = /[A-Za-z]/;
 
 const adConverter = (moment: Moment) => {
   return moment.year() > 0 ? 'AD' : 'BC';
@@ -225,9 +228,6 @@ const javaToMoment = {
     const offset = moment.utcOffset() / 60.0;
     const pre = Math.floor(offset);
 
-//    console.log('offset=', offset);
-//    console.log('pre=', pre);
-
     if (Number.isInteger(offset)) {
       if (offset < 0) {
         return 'UTC-' + toAbsString(pre);
@@ -286,7 +286,115 @@ const javaToMoment = {
   }
 };
 
+export class PaddedToken extends Token {
+  public padding: number;
+  public padChar: string;
+
+  constructor(padding: number, padChar: string, value: string, count?: number) {
+    super(value, count);
+    this.padding = padding;
+    this.padChar = padChar;
+  }
+
+  public format(input: string) {
+    if (input.length > this.padding) {
+      throw new Error(`Cannot format padding as formatted string "${input}" exceeds pad width of ${this.padding}.`);
+    }
+
+    const padded = this.padChar.repeat(this.padding) + input;
+    return padded.substr(0 - this.padding);
+  }
+}
+
 export default class DateTimeFormatter extends Formatter {
+  tokenize(formatString: string): Array<Token|string> {
+    let padNextWidth = 0;
+    let padNextChar = ' ';
+
+    const ret = [];
+
+    for (let pos = 0; pos < formatString.length; pos++) {
+      let cur = formatString.charAt(pos);
+      if (cur.match(matchReserved)) {
+        let start = pos++;
+
+        for (; pos < formatString.length && formatString.charAt(pos) === cur; pos++);
+
+        let count = pos - start;
+
+        // padding parsed
+        if (cur === 'p') {
+          let pad = 0;
+          if (pos < formatString.length) {
+            cur = formatString.charAt(pos);
+            if (cur.match(matchReserved)) {
+              pad = count;
+              start = pos++;
+              for ( ; pos < formatString.length && formatString.charAt(pos) === cur; pos++); // short loop
+              count = pos - start;
+            }
+          }
+          if (pad === 0) {
+            throw new Error("Pad letter 'p' must be followed by valid pad pattern: " + formatString);
+          }
+          // pad and continue parsing
+          padNextWidth = pad;
+          padNextChar = ' ';
+        }
+
+        // main rules
+        if (javaToMoment[cur.repeat(count)]) {
+          if (padNextWidth> 0) {
+            ret.push(new PaddedToken(padNextWidth, padNextChar, cur, count));
+            padNextWidth = 0;
+            padNextChar = ' ';
+          } else {
+            ret.push(new Token(cur, count));
+          }
+        } else {
+          throw new Error(`Unknown pattern letter: ${cur}`);
+        }
+        pos--;
+      } else if (cur === '\'') {
+        // parse literals
+        const start = pos++;
+        for ( ; pos < formatString.length; pos++) {
+          if (formatString.charAt(pos) === '\'') {
+            if (pos + 1 < formatString.length && formatString.charAt(pos + 1) === '\'') {
+              pos++;
+            } else {
+              break;  // end of literal
+            }
+          }
+        }
+
+        if (pos >= formatString.length) {
+          throw new Error(`Pattern ends with an incomplete string literal: ${formatString}`);
+        }
+
+        const str = formatString.substring(start + 1, pos);
+        if (str.length == 0) {
+          ret.push('\'');
+        } else {
+          ret.push(str.replace("''", "'"));
+        }
+      } else if (cur === '[') {
+        throw new Error(`Optional patterns are not supported: ${cur}`);
+      } else if (cur === ']') {
+        throw new Error(`Optional patterns are not supported: ${cur}`);
+      } else if (cur === '{' || cur === '}' || cur === '#') {
+        throw new Error(`Pattern includes reserved character: '${cur}'`);
+      } else {
+        if (ret[ret.length - 1] instanceof Token) {
+          ret.push(cur);
+        } else {
+          ret[ret.length - 1] += cur;
+        }
+      }
+    }
+    return ret;
+  }
+
   /**
    * Convert a moment into a formatted date string, using the format tokens defined at: https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html
    *
@@ -294,12 +402,14 @@ export default class DateTimeFormatter extends Formatter {
    * @param {string} formatString - the format string
    */
   format(moment: Moment, formatString: string): string {
-    const parts = Formatter.tokenize(formatString, "'");
+    const parts = this.tokenize(formatString);
     const ret = [];
+
     for (const part of parts) {
       if (part instanceof Token) {
         const partString = part.toString();
         const translation = javaToMoment[partString];
+
         if (translation === undefined) {
           const err = new Error(`'${partString}' cannot be converted to a moment format token; bailing`);
 //          console.error(err.message);
