@@ -72,7 +72,7 @@ jobs:
             name: Commit and Push Updated Artifacts
             command: |
               git add -A
-              git commit -m 'automated generation of dist/' --log
+              git commit -m 'automated generation of dist/'
               git push
 
 workflows:
