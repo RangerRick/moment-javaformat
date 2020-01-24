@@ -4,6 +4,7 @@
     "module": "amd",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
+    "declaration": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "sourceMap": true,
