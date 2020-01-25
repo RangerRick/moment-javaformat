@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("moment"));
+		module.exports = factory(require("moment-timezone"));
 	else if(typeof define === 'function' && define.amd)
-		define(["moment"], factory);
+		define(["moment-timezone"], factory);
 	else {
-		var a = typeof exports === 'object' ? factory(require("moment")) : factory(root["moment"]);
+		var a = typeof exports === 'object' ? factory(require("moment-timezone")) : factory(root["moment-timezone"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(window, function(__WEBPACK_EXTERNAL_MODULE_moment__) {
+})(window, function(__WEBPACK_EXTERNAL_MODULE_moment_timezone__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -152,18 +152,18 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nObject.defineProperty(exports, \"SimpleDateFormat\", {\n  enumerable: true,\n  get: function get() {\n    return _SimpleDateFormat.default;\n  }\n});\nObject.defineProperty(exports, \"DateTimeFormatter\", {\n  enumerable: true,\n  get: function get() {\n    return _DateTimeFormatter.default;\n  }\n});\nexports.default = void 0;\n\nvar _SimpleDateFormat = _interopRequireDefault(__webpack_require__(/*! ./formats/SimpleDateFormat */ \"./src/formats/SimpleDateFormat.ts\"));\n\nvar _DateTimeFormatter = _interopRequireDefault(__webpack_require__(/*! ./formats/DateTimeFormatter */ \"./src/formats/DateTimeFormatter.ts\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\n//declare const moment: any;\nvar register = function register(moment) {\n  var fatal = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;\n\n  if (moment.tz) {\n    console.log('Moment.js with timezone support detected; attaching Java format methods.');\n    moment.fn.formatJavaSDF = new _SimpleDateFormat.default();\n    moment.fn.formatJavaDFT = new _DateTimeFormatter.default();\n  } else {\n    console.error('Unable to attach Java format methods.  Moment.js object was invalid or missing timezone support.');\n\n    if (fatal) {\n      throw new Error('Moment.js object was invalid or missing timezone support.');\n    }\n  }\n};\n/* Attempt to register with global Moment.js object if it's found. */\n// eslint-disable-next-line @typescript-eslint/explicit-function-return-type\n\n\n(function (root, factory) {\n  if (true) {\n    // AMD. Register as an anonymous module.\n    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(/*! moment */ \"moment\")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),\n\t\t\t\t__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?\n\t\t\t\t(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),\n\t\t\t\t__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));\n  } else {}\n\n  if (root) {\n    // Globals\n    root.registerJavaFormats = root.moment ? factory(root.moment) : factory;\n  }\n})(void 0, function (_moment) {\n  register(_moment, false);\n  return register;\n});\n\nvar _default = {\n  register: register\n};\nexports.default = _default;\n\n//# sourceURL=webpack:///./src/index.ts?");
+eval("var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nObject.defineProperty(exports, \"SimpleDateFormat\", {\n  enumerable: true,\n  get: function get() {\n    return _SimpleDateFormat.default;\n  }\n});\nObject.defineProperty(exports, \"DateTimeFormatter\", {\n  enumerable: true,\n  get: function get() {\n    return _DateTimeFormatter.default;\n  }\n});\nexports.default = void 0;\n\nvar _SimpleDateFormat = _interopRequireDefault(__webpack_require__(/*! ./formats/SimpleDateFormat */ \"./src/formats/SimpleDateFormat.ts\"));\n\nvar _DateTimeFormatter = _interopRequireDefault(__webpack_require__(/*! ./formats/DateTimeFormatter */ \"./src/formats/DateTimeFormatter.ts\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\n//declare const moment: any;\nvar register = function register(moment) {\n  var fatal = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;\n\n  if (moment.tz) {\n    console.log('Moment.js with timezone support detected; attaching Java format methods.');\n    var sdf = new _SimpleDateFormat.default();\n    var dtf = new _DateTimeFormatter.default();\n\n    moment.fn.formatJavaSDF = function (formatString) {\n      return sdf.format(this, formatString);\n    };\n\n    moment.fn.formatJavaDTF = function (formatString) {\n      return dtf.format(this, formatString);\n    };\n\n    return true;\n  } else {\n    console.error('Unable to attach Java format methods.  Moment.js object was invalid or missing timezone support.');\n\n    if (fatal) {\n      throw new Error('Moment.js object was invalid or missing timezone support.');\n    }\n  }\n\n  return false;\n};\n/* Attempt to register with global Moment.js object if it's found. */\n// eslint-disable-next-line @typescript-eslint/explicit-function-return-type\n\n\n(function (root, factory) {\n  if (true) {\n    // AMD. Register as an anonymous module.\n    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(/*! moment-timezone */ \"moment-timezone\")], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),\n\t\t\t\t__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?\n\t\t\t\t(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),\n\t\t\t\t__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));\n  } else {}\n\n  if (root) {\n    // Globals\n    root.registerJavaFormats = root.moment ? factory(root.moment) : factory;\n  }\n})(void 0, function (_moment) {\n  register(_moment, false);\n\n  if (register) {\n    return _moment;\n  }\n\n  return register;\n});\n\nvar _default = {\n  register: register\n};\nexports.default = _default;\n\n//# sourceURL=webpack:///./src/index.ts?");
 
 /***/ }),
 
-/***/ "moment":
-/*!*************************!*\
-  !*** external "moment" ***!
-  \*************************/
+/***/ "moment-timezone":
+/*!**********************************!*\
+  !*** external "moment-timezone" ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = __WEBPACK_EXTERNAL_MODULE_moment__;\n\n//# sourceURL=webpack:///external_%22moment%22?");
+eval("module.exports = __WEBPACK_EXTERNAL_MODULE_moment_timezone__;\n\n//# sourceURL=webpack:///external_%22moment-timezone%22?");
 
 /***/ })
 
