@@ -3,6 +3,7 @@
 const path = require('path');
 const process = require('process');
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const isProduction = (process.argv.filter((arg) => arg.match(/production/)).length > 0);
@@ -18,6 +19,7 @@ module.exports = {
     umdNamedDefine: true
   },
   externals: [
+    'moment',
     'moment-timezone',
   ],
   resolve: {
