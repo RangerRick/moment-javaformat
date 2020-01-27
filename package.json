@@ -33,6 +33,7 @@
     "babel-loader": "^8.0.6",
     "eslint": "^6.8.0",
     "jest": "^25.1.0",
+    "mkdirp": "^1.0.3",
     "moment-timezone": "^0.5.27",
     "typescript": "^3.7.5",
     "webpack": "^4.41.5",
@@ -58,6 +59,7 @@
     "build-release": "webpack --mode=development && webpack --mode=production && tsc -d --declarationMap --emitDeclarationOnly --declarationDir dist/lib",
     "release": "npm run test && npm run build-release",
     "lint": "eslint src/**/*.ts test/**/*.ts",
+    "generate-testdata": "mkdirp node_modules/.cache/java-test-data && javac -source 1.8 -target 1.8 -d node_modules/.cache/java-test-data src/date.java && java -classpath node_modules/.cache/java-test-data date > test/test-data.js",
     "test": "npm run lint && jest",
     "watch": "webpack --mode=development --watch --debug"
   }
