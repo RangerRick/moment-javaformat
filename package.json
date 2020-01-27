@@ -54,7 +54,7 @@
     "maintained node versions"
   ],
   "scripts": {
-    "prepublish": "npm run test",
+    "prepublishOnly": "npm run test",
     "build": "webpack --mode=development",
     "build-release": "webpack --mode=development && webpack --mode=production && tsc -d --declarationMap --emitDeclarationOnly --declarationDir dist/lib",
     "release": "npm run test && npm run build-release",
