@@ -81,11 +81,7 @@ jobs:
 workflows:
   test-and-deploy:
     jobs:
-      - run-tests:
-          filters:
-            branches:
-              ignore:
-                - master
+      - run-tests
       - merge-master:
           requires:
             - run-tests
