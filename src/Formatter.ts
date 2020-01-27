@@ -9,6 +9,10 @@ import { abbreviations, offsets } from './abbreviations';
 const offsetMappings = {};
 
 export const findAbbreviationForOffset = (offset: number): string | null => {
+  if (!moment.tz) {
+    return null;
+  }
+
   const tz = moment.tz.guess();
   const short = tz ? moment.tz(tz).format('z') : null;
 //  console.log('guessed=', short);
