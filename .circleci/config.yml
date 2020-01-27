@@ -23,7 +23,6 @@ commands:
   cached-npm-install:
       description: run "npm install", updating cache
       steps:
-        - cached-checkout
         - restore_cache:
             name: Restore Package Cache
             keys:
