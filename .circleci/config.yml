@@ -78,9 +78,20 @@ jobs:
               git push
 
 workflows:
-  test-and-deploy:
+  run-tests:
     jobs:
-      - run-tests
+      - run-tests:
+          filters:
+            branches:
+              ignore:
+                - develop
+  run-tests-and-deploy:
+    jobs:
+      - run-tests:
+          filters:
+            branches:
+              only:
+                - develop
       - merge-master:
           requires:
             - run-tests
