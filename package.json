@@ -5,6 +5,10 @@
   "main": "dist/moment-javaformat.min.js",
   "author": "Benjamin Reed <ranger@opennms.org>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RangerRick/moment-javaformat.git"
+  },
   "devDependencies": {
     "@babel/cli": "^7.8.3",
     "@babel/core": "^7.8.3",
@@ -39,6 +43,9 @@
   "peerDependencies": {
     "moment-timezone": "^0.x"
   },
+  "files": [
+    "dist"
+  ],
   "browserslist": [
     "defaults",
     "last 2 versions, not dead",
@@ -46,6 +53,7 @@
     "maintained node versions"
   ],
   "scripts": {
+    "prepublish": "npm run test",
     "build": "webpack --mode=development",
     "build-release": "webpack --mode=development && webpack --mode=production && tsc -d --declarationMap --emitDeclarationOnly --declarationDir dist/lib",
     "release": "npm run test && npm run build-release",
