@@ -4,13 +4,14 @@
 import SimpleDateFormat from './formats/SimpleDateFormat';
 import DateTimeFormatter from './formats/DateTimeFormatter';
 
-declare const define: any;
-declare const require: any;
-//declare const moment: any;
-
 const register = (moment: any, fatal = true): boolean => {
-  if (moment.tz) {
-    console.log('Moment.js with timezone support detected; attaching Java format methods.');
+  if (moment && moment.fn.format) {
+    if (moment.tz) {
+      console.log('Moment.js with timezone support detected; attaching Java format methods.');
+    } else {
+      console.warn('Moment.js detected, but timezone support is missing.  Some features may not work as expected.');
+    }
+
     const sdf = new SimpleDateFormat();
     const dtf = new DateTimeFormatter();
 
@@ -30,39 +31,30 @@ const register = (moment: any, fatal = true): boolean => {
   return false;
 };
 
-/* Attempt to register with global Moment.js object if it's found. */
+/*
+  Attempt to register with global Moment.js object if it's found,
+  preferring `moment-timezone` over `moment`.
+*/
 
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-(function (root: any, factory: any) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['moment-timezone'], factory);
-  } else if (typeof exports === 'object') {
-    // Node. Does not work with strict CommonJS, but only CommonJS-like
-    // enviroments that support module.exports, like Node.
+// @ts-ignore
+if (window.moment) {
+  // @ts-ignore
+  register(window.moment, false);
+} else {
+  try {
+    const moment = require('moment-timezone');
+    register(moment, false);
+  } catch (err) {
+    console.warn('Failed to load moment-timezone. Attempting fallback to moment.');
     try {
-      module.exports = factory(require('moment-timezone'));
-    } catch (e) {
-      // If moment is not available, leave the setup up to the user.
-      // Like when using moment-timezone or similar moment-based package.
-      module.exports = factory;
+      const moment = require('moment');
+      register(moment, false);
+    } catch (subErr) {
+      console.warn('Failed to load moment.  User will have to manually register.');
     }
   }
+}
 
-  if (root) {
-    // Globals
-    root.registerJavaFormats = root.moment ? factory(root.moment) : factory;
-  }
-})(this, function (_moment: any) {
-  register(_moment, false);
-  if (register) {
-    return _moment;
-  }
-  return register;
-});
-
-export default {
-  register: register,
-};
+export default register;
 
 export { SimpleDateFormat, DateTimeFormatter };

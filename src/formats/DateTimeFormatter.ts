@@ -207,6 +207,11 @@ const javaToMoment = {
 
   // time-zone ID
   VV: (moment: Moment) => {
+    if (!moment.tz) {
+      // moment doesn't have timezone support, try 'Z' as a last resolt
+      return moment.format('Z');
+    }
+
     // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
     // @ts-ignore
     const ret = moment.tz();

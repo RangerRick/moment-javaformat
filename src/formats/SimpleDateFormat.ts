@@ -226,11 +226,22 @@ const javaToMoment = {
       if (match) {
         return match;
       }
-      const ret = moment.clone().tz(zone).zoneName();
-      if (ret && ret.length > 0) {
-        return ret;
+
+      if (moment.tz) {
+        const ret = moment.clone().tz(zone).zoneName();
+        if (ret && ret.length > 0) {
+          return ret;
+        }
+      } else {
+        const ret = moment.clone().zoneName();
+        if (ret && ret.length > 0) {
+          return ret;
+        } else {
+          throw new Error('Moment.js is missing time zone support.  Non-UTC dates cannot be formatted.');
+        }
       }
     }
+
     return moment.zoneName();
   },
 
