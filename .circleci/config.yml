@@ -20,6 +20,11 @@ commands:
             key: git-{{ .Branch }}-{{ .Revision }}
             paths:
               - ".git"
+  generate-changelog:
+      steps:
+        - run:
+            name: generate changelog
+            command: npm run changelog
   cached-npm-install:
       description: run "npm install", updating cache
       steps:
@@ -57,16 +62,17 @@ jobs:
             TZ: "America/New_York"
       steps:
         - cached-checkout
-        - cached-npm-install
         - run:
             name: Merge Develop to Master
             command: |
               git checkout master
               git pull
               git merge -m 'automated merge from develop -> master' --log develop
+        - cached-npm-install
         - run:
             name: Build Artifacts
             command: npm --prefer-offline --no-progress run build-release
+        - generate-changelog
         - run:
             name: Commit and Push Updated Artifacts
             command: |
