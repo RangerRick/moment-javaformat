@@ -4,9 +4,9 @@
 
 This plugin for [Moment.js](https://momentjs.com/) adds support for formatting using the Java [SimpleDateFormat](https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html) and [DateTimeFormatter](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) format options.
 
-It differs from [moment-jdateformatparser](https://raw.githubusercontent.com/MadMG/moment-jdateformatparser) in that it doesn't just try to translate Java format strings to Moment, but instead implement a new set of format methods that can handle a wider range of Java format strings, at the expense of speed.
+It differs from [moment-jdateformatparser](https://github.com/MadMG/moment-jdateformatparser) in that it doesn't just try to translate Java format strings to Moment, but instead implement a new set of format methods that can handle a wider range of Java format strings, at the expense of speed.
 
-Thanks to [moment-jdateformatparser](https://raw.githubusercontent.com/MadMG/moment-jdateformatparser) for the basic idea, I ran with it in my own way because we needed some formats that just plain aren't possible in a simple format string translation.  :)
+Thanks to [moment-jdateformatparser](https://github.com/MadMG/moment-jdateformatparser) for the basic idea, I ran with it in my own way because we needed some formats that just plain aren't possible in a simple format string translation.  :)
 
 ## Version History
 
