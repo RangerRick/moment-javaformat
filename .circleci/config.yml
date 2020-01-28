@@ -24,7 +24,7 @@ commands:
       steps:
         - run:
             name: generate changelog
-            command: conventional-changelog -p angular -i CHANGELOG.md -s
+            command: npm run changelog
   cached-npm-install:
       description: run "npm install", updating cache
       steps:
