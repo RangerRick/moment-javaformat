@@ -62,13 +62,13 @@ jobs:
             TZ: "America/New_York"
       steps:
         - cached-checkout
-        - cached-npm-install
         - run:
             name: Merge Develop to Master
             command: |
               git checkout master
               git pull
               git merge -m 'automated merge from develop -> master' --log develop
+        - cached-npm-install
         - run:
             name: Build Artifacts
             command: npm --prefer-offline --no-progress run build-release
