@@ -15,6 +15,42 @@ const eraFormatter = (moment: Moment) => {
   return moment.year() > 0 ? 'AD' : 'BC';
 };
 
+const guessZoneInfo = (moment: Moment) => {
+  let abbr = moment.zoneAbbr();
+  const name = moment.zoneName();
+  if (moment.tz) {
+    if (!name || name === '') {
+      // missing the zone name, probably can't find things right
+      return null;
+    }
+    if (abbr === 'UTC' && moment.utcOffset() !== 0) {
+      // we only know the offset
+      return null;
+    }
+
+    // return name;
+    return {
+      abbr: abbr,
+      name: name,
+      description: getDescriptionForAbbreviation(abbr),
+    };
+  }
+
+  abbr = getZoneForDateTime(moment);
+  if (abbr) {
+    const match = getDescriptionForAbbreviation(abbr);
+    if (match) {
+      return {
+        abbr: abbr,
+        name: name,
+        description: match,
+      }
+    }
+  }
+
+  return null;
+};
+
 const javaToMoment = {
   // Era designator
   G: eraFormatter,
@@ -199,50 +235,36 @@ const javaToMoment = {
 
   // Time zone (Pacific Standard Time; PST)
   z: (moment: Moment) => {
-    const zone = getZoneForDateTime(moment);
-    if (zone) {
-      return zone;
+    const info = guessZoneInfo(moment);
+
+    if (info) {
+      return info.abbr;
     }
-    return moment.zoneAbbr();
+    return 'GMT' + moment.format('Z');
   },
   zz: (moment: Moment) => {
-    const zone = getZoneForDateTime(moment);
-    if (zone) {
-      return zone;
+    const info = guessZoneInfo(moment);
+
+    if (info) {
+      return info.abbr;
     }
-    return moment.zoneAbbr();
+    return 'GMT' + moment.format('Z');
   },
   zzz: (moment: Moment) => {
-    const zone = getZoneForDateTime(moment);
-    if (zone) {
-      return zone;
+    const info = guessZoneInfo(moment);
+
+    if (info) {
+      return info.abbr;
     }
-    return moment.zoneAbbr();
+    return 'GMT' + moment.format('Z');
   },
   zzzz: (moment: Moment) => {
-    const zone = getZoneForDateTime(moment);
-    if (zone) {
-      const match = getDescriptionForAbbreviation(zone);
-      if (match) {
-        return match;
-      }
+    const info = guessZoneInfo(moment);
 
-      if (moment.tz) {
-        const ret = moment.clone().tz(zone).zoneName();
-        if (ret && ret.length > 0) {
-          return ret;
-        }
-      } else {
-        const ret = moment.clone().zoneName();
-        if (ret && ret.length > 0) {
-          return ret;
-        } else {
-          throw new Error('Moment.js is missing time zone support.  Non-UTC dates cannot be formatted.');
-        }
-      }
+    if (info) {
+      return info.description;
     }
-
-    return moment.zoneName();
+    return 'GMT' + moment.format('Z');
   },
 
   // Time zone (-0800)
@@ -253,10 +275,23 @@ const javaToMoment = {
 
   // Time zone (-08; -0800; -08:00)
   X: (moment: Moment) => {
+    if (moment.utcOffset() === 0) {
+      return 'Z';
+    }
     return moment.format('Z').substr(0, 3);
   },
-  XX: 'ZZ',
-  XXX: 'Z'
+  XX: (moment: Moment) => {
+    if (moment.utcOffset() === 0) {
+      return 'Z';
+    }
+    return moment.format('ZZ');
+  },
+  XXX: (moment: Moment) => {
+    if (moment.utcOffset() === 0) {
+      return 'Z';
+    }
+    return moment.format('Z');
+  }
 };
 
 export default class SimpleDateFormat extends Formatter {

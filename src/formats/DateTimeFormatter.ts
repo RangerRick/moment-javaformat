@@ -7,16 +7,21 @@ declare const moment: any;
 declare type Moment = any;
 //import { Moment } from 'moment-timezone';
 
-import { Formatter, Token, toAbsString, zeroPad } from '../Formatter';
+import { Formatter, Token, toAbsString, zeroPad, getDescriptionForAbbreviation } from '../Formatter';
 
+const endZeroes = /:?00$/;
 const matchReserved = /[A-Za-z]/;
 
 const adConverter = (moment: Moment) => {
   return moment.year() > 0 ? 'AD' : 'BC';
 };
 
-const zoneWithZConverter = (moment: Moment) => {
-  return moment.utcOffset() === 0? 'Z' : moment.format('ZZ');
+const findAbbreviation = (moment: Moment) => {
+  const defaultAbbr = moment.zoneAbbr();
+  if (defaultAbbr === 'UTC' && moment.utcOffset() != 0) {
+    return null;
+  }
+  return defaultAbbr;
 };
 
 const javaToMoment = {
@@ -117,6 +122,10 @@ const javaToMoment = {
   ww: 'ww',
 
   // week-of-month (W) not supported
+  W: null,
+  WW: null,
+  WWW: null,
+  WWWW: null,
 
   // day-of-week
   E: 'ddd',
@@ -183,7 +192,7 @@ const javaToMoment = {
   },
   AA: (moment: Moment) => {
     if (moment.isSame(moment.clone().startOf('day'))) {
-      console.log(moment.format() + ' is the same as ' + moment.clone().startOf('day').format());
+      // console.warn(moment.format() + ' is the same as ' + moment.clone().startOf('day').format());
       return '00';
     }
     return null;
@@ -207,87 +216,137 @@ const javaToMoment = {
 
   // time-zone ID
   VV: (moment: Moment) => {
-    if (!moment.tz) {
-      // moment doesn't have timezone support, try 'Z' as a last resolt
-      return moment.format('Z');
+    if (moment.utcOffset() === 0) {
+      return 'Z';
     }
-
-    // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
-    // @ts-ignore
-    const ret = moment.tz();
-    if (!ret) {
-      // if we don't have a "zone" then just return the offset format
-      return moment.format('Z');
+    const tz = moment.tz();
+    if (tz && tz.length > 0) {
+      return tz;
     }
-    return ret;
+    return moment.format('Z');
   },
 
   // time-zone name
-  z: 'z',
-  zz: 'z',
-  zzz: 'z',
-  zzzz: 'zz',
+  z: (moment: Moment) => {
+    if (moment.utcOffset() === 0) {
+      return 'Z';
+    }
+    const abbr = findAbbreviation(moment);
+    if (abbr) {
+      return abbr;
+    }
+    return moment.format('Z');
+  },
+  zz: (moment: Moment) => {
+    if (moment.utcOffset() === 0) {
+      return 'Z';
+    }
+    const abbr = findAbbreviation(moment);
+    if (abbr) {
+      return abbr;
+    }
+    return moment.format('Z');
+  },
+  zzz: (moment: Moment) => {
+    if (moment.utcOffset() === 0) {
+      return 'Z';
+    }
+    const abbr = findAbbreviation(moment);
+    if (abbr) {
+      return abbr;
+    }
+    return moment.format('Z');
+  },
+  zzzz: (moment: Moment) => {
+    if (moment.utcOffset() === 0) {
+      return 'Z';
+    }
+    const abbr = findAbbreviation(moment);
+    if (abbr) {
+      return getDescriptionForAbbreviation(abbr);
+    }
+
+    return moment.format('Z');
+  },
 
   // localized zone-offset
   O: (moment: Moment) => {
     const offset = moment.utcOffset() / 60.0;
-    const pre = Math.floor(offset);
-
-    if (Number.isInteger(offset)) {
-      if (offset < 0) {
-        return 'UTC-' + toAbsString(pre);
-      } else {
-        return 'UTC+' + pre;
-      }
-    } else {
-      const partial = toAbsString(moment.utcOffset() % 60);
-      if (offset < 0) {
-        return 'UTC-' + toAbsString(pre) + ':' + zeroPad(partial, 2);
-      } else {
-        return 'UTC-' + toAbsString(pre) + ':' + zeroPad(partial, 2);
-      }
+    if (offset === 0) {
+      return 'GMT';
     }
+
+    const ret = moment.format('Z').replace(endZeroes, '').replace(/^([+-])0/, '$1');
+    return 'GMT' + ret;
   },
   OOOO: (moment: Moment) => {
     const offset = moment.utcOffset() / 60.0;
-    const pre = Math.floor(offset);
-
-    if (Number.isInteger(offset)) {
-      if (offset < 0) {
-        return 'UTC-' + zeroPad(toAbsString(pre), 2) + ':00';
-      } else {
-        return 'UTC+' + zeroPad(pre, 2) + ':00';
-      }
-    } else {
-      const partial = toAbsString(moment.utcOffset() % 60);
-      if (offset < 0) {
-        return 'UTC-' + zeroPad(toAbsString(pre), 2) + ':' + zeroPad(partial, 2);
-      } else {
-        return 'UTC-' + zeroPad(toAbsString(pre), 2) + ':' + zeroPad(partial, 2);
-      }
+    if (offset === 0) {
+      return 'GMT';
     }
+
+    const ret = moment.format('Z');
+    return 'GMT' + ret;
   },
 
   // zone-offset 'Z' for zero
-  X: zoneWithZConverter,
-  XX: zoneWithZConverter,
-  XXX: zoneWithZConverter,
-  XXXX: zoneWithZConverter,
+  X: (moment: Moment) => {
+    if (moment.utcOffset() === 0) { return 'Z'; }
+    const ret = moment.format('ZZ')
+    if (ret.match(endZeroes)) {
+      return ret.substr(0, 3);
+    }
+    return ret;
+  },
+  XX: (moment: Moment) => {
+    if (moment.utcOffset() === 0) { return 'Z'; }
+    return moment.format('ZZ');
+  },
+  XXX: (moment: Moment) => {
+    if (moment.utcOffset() === 0) { return 'Z'; }
+    return moment.format('Z');
+  },
+  XXXX: (moment: Moment) => {
+    if (moment.utcOffset() === 0) { return 'Z'; }
+    return moment.format('ZZ');
+  },
 
   // zone-offset
   x: (moment: Moment) => {
-    return moment.format('Z').substr(0, 3);
+    const ret = moment.format('ZZ');
+    if (ret.match(endZeroes)) {
+      return ret.substr(0, 3);
+    }
+    return ret;
   },
   xx: 'ZZ',
   xxx: 'Z',
   xxxx: 'ZZ',
 
   // zone-offset
-  Z: 'ZZ',
-  ZZ: 'ZZ',
-  ZZZ: 'ZZ',
+  Z: (moment: Moment) => {
+    if (moment.utcOffset() === 0) {
+      return '+0000';
+    }
+    return moment.format('ZZ');
+  },
+  ZZ: (moment: Moment) => {
+    if (moment.utcOffset() === 0) {
+      return '+0000';
+    }
+    return moment.format('ZZ');
+  },
+  ZZZ: (moment: Moment) => {
+    if (moment.utcOffset() === 0) {
+      return '+0000';
+    }
+    return moment.format('ZZ');
+  },
   ZZZZ: (moment: Moment) => {
-    return 'UTC' + moment.format('Z');
+    if (moment.utcOffset() === 0) {
+      return 'GMT';
+    }
+    return 'GMT' + moment.format('Z');
   }
 };
 
@@ -348,7 +407,12 @@ export default class DateTimeFormatter extends Formatter {
         }
 
         // main rules
-        if (javaToMoment[cur.repeat(count)]) {
+        const translate = javaToMoment[cur.repeat(count)];
+        if (translate === null) {
+          throw new Error(`'${cur.repeat(count)}' cannot be converted to a moment format token; token is not implemented`);
+        } else if (translate === undefined) {
+          throw new Error(`'${cur.repeat(count)}' cannot be converted to a moment format token; unknown token`);
+        } else {
           if (padNextWidth> 0) {
             ret.push(new PaddedToken(padNextWidth, padNextChar, cur, count));
             padNextWidth = 0;
@@ -356,8 +420,6 @@ export default class DateTimeFormatter extends Formatter {
           } else {
             ret.push(new Token(cur, count));
           }
-        } else {
-          throw new Error(`Unknown pattern letter: ${cur}`);
         }
         pos--;
       } else if (cur === '\'') {

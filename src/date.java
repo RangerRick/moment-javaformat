@@ -16,7 +16,7 @@ public class date {
 
 		final StringBuilder sb = new StringBuilder("export default {\n");
 
-		List<ZoneId> zones = Arrays.asList(ZoneOffset.UTC, ZoneId.of("EST", ZoneId.SHORT_IDS), ZoneId.of("NST", ZoneId.SHORT_IDS), ZoneId.of("JST", ZoneId.SHORT_IDS), ZoneOffset.ofHoursMinutes(-3, -30));
+		List<ZoneId> zones = Arrays.asList(ZoneOffset.UTC, ZoneId.of("America/New_York"), ZoneId.of("America/St_Johns"), ZoneId.of("Asia/Tokyo"), ZoneOffset.ofHoursMinutes(-3, -30));
 		List<String> sdfComponents = Arrays.asList("G", "y", "Y", "M", "w", "W", "D", "d", "F", "E", "u", "a", "H", "k", "K", "h", "m", "s", "S", "z", "Z", "X");
 		List<String> dtfComponents = Arrays.asList("G", "u", "y", "D", "M", "L", "d", "Q", "q", "Y", "w", "W", "E", "e", "c", "F", "a", "h", "K", "k", "H", "m", "s", "S", "A", "n", "N", "V", "z", "O", "X", "x", "Z");
 
@@ -26,15 +26,18 @@ public class date {
 //					Date d = Date.from(ldt.atZone(zone).toInstant());
 
 			sb.append("    \"").append(component).append("\": {\n");
-			for (int z=0; z<zones.size(); z++) {
+
+			for (int d=0; d<dateparts.size(); d++) {
+				final List<Integer> datepart = dateparts.get(d);
+				final OffsetDateTime odt = OffsetDateTime.of(datepart.get(0), datepart.get(1), datepart.get(2), datepart.get(3), datepart.get(4), datepart.get(5), datepart.get(6), ZoneOffset.UTC);
+
+				sb.append("      \"").append(odt.toString()).append("\": {\n");
+
+				for (int z=0; z<zones.size(); z++) {
 				final ZoneId zone = zones.get(z);
+					final ZonedDateTime zdt = odt.atZoneSameInstant(zone);
 
-				for (int d=0; d<dateparts.size(); d++) {
-					final List<Integer> datepart = dateparts.get(d);
-					final OffsetDateTime odt = OffsetDateTime.of(datepart.get(0), datepart.get(1), datepart.get(2), datepart.get(3), datepart.get(4), datepart.get(5), datepart.get(6), ZoneOffset.UTC);
-					final ZonedDateTime zdt = odt.atZoneSameInstant(zone).withZoneSameInstant(zone.getRules().getOffset(odt.toInstant()));
-
-					sb.append("      \"").append(zdt.toString()).append("\": [ ");
+					sb.append("        \"").append(zone.getId()).append("\": [ ");
 
 					for (Integer count : Arrays.asList(1, 2, 3, 4)) {
 						try {
@@ -54,6 +57,7 @@ public class date {
 
 					sb.append(",\n");
 				}
+				sb.append("      },\n");
 			}
 			sb.append("    },\n");
 		}
@@ -64,21 +68,24 @@ public class date {
 			final String component = sdfComponents.get(c);
 			sb.append("    \"").append(component).append("\": {\n");
 
-			for (int z=0; z<zones.size(); z++) {
-				final ZoneId zone = zones.get(z);
+			for (int d=0; d<dateparts.size(); d++) {
+				final List<Integer> datepart = dateparts.get(d);
+				final OffsetDateTime odt = OffsetDateTime.of(datepart.get(0), datepart.get(1), datepart.get(2), datepart.get(3), datepart.get(4), datepart.get(5), datepart.get(6), ZoneOffset.UTC);
 
-				for (int d=0; d<dateparts.size(); d++) {
-					final List<Integer> datepart = dateparts.get(d);
-					final OffsetDateTime odt = OffsetDateTime.of(datepart.get(0), datepart.get(1), datepart.get(2), datepart.get(3), datepart.get(4), datepart.get(5), datepart.get(6), ZoneOffset.UTC);
+				sb.append("      \"").append(odt.toString()).append("\": {\n");
+
+				for (int z=0; z<zones.size(); z++) {
+					final ZoneId zone = zones.get(z);
 					final ZonedDateTime zdt = odt.atZoneSameInstant(zone);
 					final Date date = Date.from(zdt.toInstant());
 
-					sb.append("      \"").append(zdt.toOffsetDateTime().toString()).append("\": [ ");
+					sb.append("        \"").append(zone.getId()).append("\": [ ");
 
 					for (Integer count : Arrays.asList(1, 2, 3, 4)) {
 						try {
 							final String formatString = new String(new char[count]).replace("\0", component);
 							final SimpleDateFormat formatter = new SimpleDateFormat(formatString);
+							formatter.setTimeZone(TimeZone.getTimeZone(zone));
 							final String formatted = formatter.format(date);
 							sb.append("\"").append(formatted).append("\"");
 						} catch (final Exception e) {
@@ -92,6 +99,7 @@ public class date {
 					}
 					sb.append(",\n");
 				}
+				sb.append("      },\n");
 			}
 			sb.append("    },\n");
 		}

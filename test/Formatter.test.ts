@@ -4,8 +4,6 @@ import moment from 'moment-timezone';
 // @ts-ignore
 window.moment = moment;
 
-moment.tz.setDefault('America/New_York');
-
 import { Formatter, getZoneForDateTime } from '../src/Formatter';
 import testData from './test-data';
 import SimpleDateFormat from '../src/formats/SimpleDateFormat';
@@ -36,39 +34,52 @@ const testClass = (className: string, impl: Formatter): void => {
       describe(`'${token}'`, () => {
         const dates = Object.keys(data[token]);
         for (const dateString of dates) {
-          const date = moment(dateString);
-  
           describe(dateString, () => {
-            if (unimplemented[className] && unimplemented[className].indexOf(token) >= 0) {
-              expect(() => {
-                impl.format(date, token);
-              }).toThrowError('cannot be converted to a moment format token');
-              return;
-            }
-  
-            for (const count of [1, 2, 3, 4]) {
-              const formatString = token.repeat(count);
-  
-              if (knownBroken[className] && knownBroken[className].indexOf(token) >= 0) {
-                // skip for now, these are failing for various reasons
-                test.skip(formatString, () => {
-                  const formatted = impl.format(date, formatString);
-                  expect(formatted).toBeDefined();
-                  expect(formatted.length).toBeGreaterThan(0);
-                });
+            const zones = Object.keys(data[token][dateString]);
+
+            for (const zone of zones) {
+              let date = moment(dateString);
+              if (zone.indexOf('/') > 0) {
+                date = date.tz(zone);
+              } else if (zone === 'Z') {
+                date = date.tz('UTC');
               } else {
-                test(formatString, () => {
-                  const expected = data[token][dateString][count-1];
-                  if (expected === null) {
-                    expect(() => {
-                      impl.format(date, formatString);
-                    }).toThrowError();
-                  } else {
-                    const formatted = impl.format(date, formatString);
-                    expect(formatted).toBe(expected);
-                  }
-                });
+                date = date.utcOffset(zone);
               }
+  
+              describe(zone, () => {
+                if (unimplemented[className] && unimplemented[className].indexOf(token) >= 0) {
+                  expect(() => {
+                    impl.format(date, token);
+                  }).toThrowError('cannot be converted to a moment format token');
+                  return;
+                }
+      
+                for (const count of [1, 2, 3, 4]) {
+                  const formatString = token.repeat(count);
+      
+                  if (knownBroken[className] && knownBroken[className].indexOf(token) >= 0) {
+                    // skip for now, these are failing for various reasons
+                    test.skip(formatString, () => {
+                      const formatted = impl.format(date, formatString);
+                      expect(formatted).toBeDefined();
+                      expect(formatted.length).toBeGreaterThan(0);
+                    });
+                  } else {
+                    test(formatString, () => {
+                      const expected = data[token][dateString][zone][count-1];
+                      if (expected === null) {
+                        expect(() => {
+                          impl.format(date, formatString);
+                        }).toThrowError();
+                      } else {
+                        const formatted = impl.format(date, formatString);
+                        expect(formatted).toBe(expected);
+                      }
+                    });
+                  }
+                }
+              });
             }
           });
         }
@@ -82,7 +93,7 @@ const dtf = new DateTimeFormatter();
 
 describe('formatters', () => {
   testClass('SimpleDateFormat', sdf);
-  // testClass('DateTimeFormatter', dtf);
+  testClass('DateTimeFormatter', dtf);
 });
 
 //const o = dtf.format(moment.tz('2020-01-01T00:00Z', 'UTC'), 'O');

@@ -73,14 +73,25 @@ jobs:
               git add -A
               if [ `git diff HEAD | wc -l` -gt 0 ]; then
                 echo "code detected; committing updated dist/"
-                git commit -m 'automated generation of dist/'
+                git commit -m 'build: automated generation of dist/'
               fi
               git push
 
 workflows:
-  test-and-deploy:
+  run-tests:
     jobs:
-      - run-tests
+      - run-tests:
+          filters:
+            branches:
+              ignore:
+                - develop
+  run-tests-and-deploy:
+    jobs:
+      - run-tests:
+          filters:
+            branches:
+              only:
+                - develop
       - merge-master:
           requires:
             - run-tests
