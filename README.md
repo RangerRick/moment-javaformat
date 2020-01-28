@@ -8,6 +8,11 @@ It differs from [moment-jdateformatparser](https://raw.githubusercontent.com/Mad
 
 Thanks to [moment-jdateformatparser](https://raw.githubusercontent.com/MadMG/moment-jdateformatparser) for the basic idea, I ran with it in my own way because we needed some formats that just plain aren't possible in a simple format string translation.  :)
 
+## Version History
+
+Changes made in the `develop` branch are checked against unit tests upon commit.
+The latest [CHANGELOG.md](https://github.com/RangerRick/moment-javaformat/blob/master/CHANGELOG.md) is then auto-generated from the commit history and merged to `master`.
+
 ## Requirements
 
 This plugin requires loading either `moment` or `moment-timezone`, but some functionality will be undefined or fail if you are using Moment.js without timezone support.

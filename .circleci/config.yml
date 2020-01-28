@@ -20,6 +20,11 @@ commands:
             key: git-{{ .Branch }}-{{ .Revision }}
             paths:
               - ".git"
+  generate-changelog:
+      steps:
+        - run:
+            name: generate changelog
+            command: conventional-changelog -p angular -i CHANGELOG.md -s
   cached-npm-install:
       description: run "npm install", updating cache
       steps:
@@ -67,6 +72,7 @@ jobs:
         - run:
             name: Build Artifacts
             command: npm --prefer-offline --no-progress run build-release
+        - generate-changelog
         - run:
             name: Commit and Push Updated Artifacts
             command: |
