@@ -5,7 +5,13 @@
   "main": "dist/moment-javaformat.min.js",
   "author": "Benjamin Reed <ranger@opennms.org>",
   "license": "MIT",
-  "keywords": [ "moment", "date", "time", "format", "java" ],
+  "keywords": [
+    "moment",
+    "date",
+    "time",
+    "format",
+    "java"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/RangerRick/moment-javaformat.git"
