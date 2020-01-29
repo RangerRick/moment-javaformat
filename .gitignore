@@ -10,5 +10,7 @@ node_modules
 .idea/
 *.iml
 
+/coverage/
+
 # Not yet
 /dist/

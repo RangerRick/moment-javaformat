@@ -63,6 +63,13 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{js,ts}"
+    ],
+    "errorOnDeprecated": true
+  },
   "scripts": {
     "prepublishOnly": "npm run test",
     "build": "webpack --mode=development",
