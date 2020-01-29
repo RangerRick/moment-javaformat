@@ -1,6 +1,7 @@
-import SimpleDateFormat from './formats/SimpleDateFormat';
-import DateTimeFormatter from './formats/DateTimeFormatter';
-declare const register: (moment: any, fatal?: boolean) => boolean;
-export default register;
+declare var _default: any;
+export default _default;
+export function register(moment: any, fatal?: boolean): any;
+import SimpleDateFormat from "./formats/SimpleDateFormat";
+import DateTimeFormatter from "./formats/DateTimeFormatter";
 export { SimpleDateFormat, DateTimeFormatter };
 //# sourceMappingURL=index.d.ts.map
