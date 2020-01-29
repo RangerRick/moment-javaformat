@@ -152,13 +152,13 @@ const javaToMoment = {
     return zeroPad(moment.format('E'), 4);
   },
 
-  // Am/pm marker 
+  // Am/pm marker
   a: 'A',
   aa: 'A',
   aaa: 'A',
   aaaa: 'A',
 
-  // Hour in day (0-23) 
+  // Hour in day (0-23)
   H: 'H',
   HH: 'HH',
   HHH: (moment: Moment) => {
@@ -178,7 +178,7 @@ const javaToMoment = {
     return zeroPad(moment.format('k'), 4);
   },
 
-  // Hour in am/pm (0-11) 
+  // Hour in am/pm (0-11)
   // except java doesn't actually do this, it outputs the same as 'h'!  (sigh)
   K: (moment: Moment) => {
     const asNumber = parseInt(moment.format('h'), 10);
@@ -197,7 +197,7 @@ const javaToMoment = {
     return zeroPad(toAbsString(asNumber % 12), 4);
   },
 
-  // Hour in am/pm (1-12) 
+  // Hour in am/pm (1-12)
   h: 'h',
   hh: 'hh',
   hhh: (moment: Moment) => {
@@ -207,7 +207,7 @@ const javaToMoment = {
     return zeroPad(moment.format('h'), 4);
   },
 
-  // Minute in hour 
+  // Minute in hour
   m: 'm',
   mm: 'mm',
   mmm: (moment: Moment) => {
@@ -217,7 +217,7 @@ const javaToMoment = {
     return zeroPad(moment.format('m'), 4);
   },
 
-  // Second in minute 
+  // Second in minute
   s: 's',
   ss: 'ss',
   sss: (moment: Moment) => {
