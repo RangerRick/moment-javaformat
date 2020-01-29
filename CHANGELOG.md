@@ -3,7 +3,7 @@
 
 ### Bug Fixes
 
-* fix initialization, convert to pure-js ([385d3a8](https://github.com/RangerRick/moment-javaformat/commit/385d3a8d1af9a1cb821805d7d38dc52977dac9db))
+* fix initialization, convert initialization code to pure-js ([385d3a8](https://github.com/RangerRick/moment-javaformat/commit/385d3a8d1af9a1cb821805d7d38dc52977dac9db))
 
 
 
