@@ -46,7 +46,7 @@ const testClass = (className: string, impl: Formatter): void => {
               } else {
                 date = date.utcOffset(zone);
               }
-  
+
               describe(zone, () => {
                 if (unimplemented[className] && unimplemented[className].indexOf(token) >= 0) {
                   expect(() => {
@@ -54,10 +54,10 @@ const testClass = (className: string, impl: Formatter): void => {
                   }).toThrowError('cannot be converted to a moment format token');
                   return;
                 }
-      
+
                 for (const count of [1, 2, 3, 4]) {
                   const formatString = token.repeat(count);
-      
+
                   if (knownBroken[className] && knownBroken[className].indexOf(token) >= 0) {
                     // skip for now, these are failing for various reasons
                     test.skip(formatString, () => {

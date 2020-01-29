@@ -107,7 +107,7 @@ export abstract class Formatter {
 
   /**
    * Convert a moment into a formatted date string.
-   * 
+   *
    * @param {Moment} moment - the moment to convert
    * @param {string} formatString - the format string
    */
