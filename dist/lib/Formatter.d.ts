@@ -1,7 +1,7 @@
 declare type Moment = any;
-export declare const findAbbreviationForOffset: (offset: number) => string;
-export declare const getDescriptionForAbbreviation: (abbr: string) => string;
-export declare const getZoneForDateTime: (dateTime: any) => string;
+export declare const findAbbreviationForOffset: (offset: number) => string | null;
+export declare const getDescriptionForAbbreviation: (abbr: string) => string | null;
+export declare const getZoneForDateTime: (dateTime: string | Moment) => string | null;
 export declare const toAbsString: (value: string | number) => string;
 export declare const zeroPad: (input: string | number, length: number) => string;
 export declare class Token {
