@@ -45,6 +45,15 @@ npm install --save @rangerrick/moment-javaformat
 yarn add @rangerrick/moment-javaformat
 ```
 
+## Caveats
+
+A few format strings are difficult to implement without going deeper down the rabbit hole than I was willing to go.  ;)
+
+* SimpleDateFormat: `W` (week-of-month), `F` (day-of-week-in-month)
+* DateTimeFormatter: `W` (week-of-month), `F` (day-of-week-in-month), `n` (nano-of-second), `N` (nano-of-day)
+
+I might implement the nano ones if I get around to doing the math (and probing `window.performance.now()`) but Date objects don't have that level of accuracy anyway.
+
 ## License
 
 `moment-javaformat` is freely distributable under the terms of the MIT license.
