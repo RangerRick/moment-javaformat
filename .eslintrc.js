@@ -1,6 +1,11 @@
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
+  env: {
+    browser: true,
+    jest: true,
+    node: true,
+  },
   plugins: [
     '@typescript-eslint',
   ],
@@ -11,5 +16,6 @@ module.exports = {
   ],
   rules: {
     '@typescript-eslint/ban-ts-ignore': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
   },
 };
