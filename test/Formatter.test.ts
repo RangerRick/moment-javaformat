@@ -55,7 +55,7 @@ const testClass = (className: string, impl: Formatter): void => {
                   return;
                 }
 
-                for (const count of [1, 2, 3, 4]) {
+                for (const count of [1, 2, 3, 4, 5, 6]) {
                   const formatString = token.repeat(count);
 
                   if (knownBroken[className] && knownBroken[className].indexOf(token) >= 0) {

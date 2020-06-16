@@ -32,6 +32,9 @@ const javaToMoment = {
   GGGG: (moment: Moment) => {
     return moment.year() > 0 ? 'Anno Domini' : 'Before Christ';
   },
+  GGGGG: (moment: Moment) => {
+    return adConverter(moment).substring(0, 1);
+  },
 
   // year
   u: (moment: Moment) => {
@@ -44,6 +47,12 @@ const javaToMoment = {
     return zeroPad(moment.format('YYYY'), 3);
   },
   uuuu: 'YYYY',
+  uuuuu: (moment: Moment) => {
+    return zeroPad(moment.format('YYYY'), 5);
+  },
+  uuuuuu: (moment: Moment) => {
+    return zeroPad(moment.format('YYYY'), 6);
+  },
 
   // year-of-era
   y: (moment: Moment) => {
@@ -57,6 +66,12 @@ const javaToMoment = {
   },
   yyyy: (moment: Moment) => {
     return toAbsString(moment.format('YYYY'));
+  },
+  yyyyy: (moment: Moment) => {
+    return zeroPad(toAbsString(moment.format('YYYY')), 5);
+  },
+  yyyyyy: (moment: Moment) => {
+    return zeroPad(toAbsString(moment.format('YYYY')), 6);
   },
 
   // day-of-year
@@ -76,12 +91,16 @@ const javaToMoment = {
   MM: 'MM',
   MMM: 'MMM',
   MMMM: 'MMMM',
+  MMMMM: (moment: Moment) => {
+    return moment.format('MMMM').substring(0, 1);
+  },
 
   // month-of-year (numeric)
   L: 'M',
   LL: 'MM',
   LLL: 'M',
   LLLL: 'M',
+  LLLLL: 'M',
 
   // day-of-month
   d: 'D',
@@ -98,6 +117,7 @@ const javaToMoment = {
   QQQQ: (moment: Moment) => {
     return moment.format('Qo') + ' quarter';
   },
+  QQQQQ: 'Q',
 
   // quarter-of-year
   q: 'Q',
@@ -106,6 +126,7 @@ const javaToMoment = {
   },
   qqq: 'Q',
   qqqq: 'Q',
+  qqqqq: 'Q',
 
   // week-based-year
   Y: (moment: Moment) => {
@@ -116,6 +137,12 @@ const javaToMoment = {
     return zeroPad(moment.format('gggg'), 3);
   },
   YYYY: 'gggg',
+  YYYYY: (moment: Moment) => {
+    return zeroPad(moment.format('gggg'), 5);
+  },
+  YYYYYY: (moment: Moment) => {
+    return zeroPad(moment.format('gggg'), 6);
+  },
 
   // week-of-week-based-year
   w: 'w',
@@ -132,6 +159,9 @@ const javaToMoment = {
   EE: 'ddd',
   EEE: 'ddd',
   EEEE: 'dddd',
+  EEEEE: (moment: Moment) => {
+    return moment.format('dddd').substring(0, 1);
+  },
 
   // localized day-of-week (e)
   e: 'd',
@@ -140,11 +170,18 @@ const javaToMoment = {
   },
   eee: 'ddd',
   eeee: 'dddd',
+  eeeee: (moment: Moment) => {
+    return moment.format('dddd').substring(0, 1);
+  },
 
   // localized day-of-week (c)
   c: 'd',
   ccc: 'ddd',
   cccc: 'dddd',
+  ccccc: (moment: Moment) => {
+    // 5 c's = 0-indexed I guess?!?
+    return String(parseInt(moment.format('d'), 10) - 1);
+  },
 
   // week of month (F) not supported
 
@@ -185,6 +222,12 @@ const javaToMoment = {
   SS: 'SS',
   SSS: 'SSS',
   SSSS: 'SSSS',
+  SSSSS: (moment: Moment) => {
+    return zeroPad(moment.format('SSSS'), 5);
+  },
+  SSSSSS: (moment: Moment) => {
+    return zeroPad(moment.format('SSSS'), 6);
+  },
 
   // milli-of-day
   A: (moment: Moment) => {
@@ -209,10 +252,22 @@ const javaToMoment = {
     }
     return null;
   },
+  AAAAA: (moment: Moment) => {
+    if (moment.isSame(moment.clone().startOf('day'))) {
+      return '00000';
+    }
+    return null;
+  },
+  AAAAAA: (moment: Moment) => {
+    if (moment.isSame(moment.clone().startOf('day'))) {
+      return '000000';
+    }
+    return null;
+  },
 
-  // nano-of-second not supported
+  // nano-of-second (n) not supported
 
-  // nano-of-day not supported
+  // nano-of-day (N) not supported
 
   // time-zone ID
   VV: (moment: Moment) => {
@@ -310,6 +365,10 @@ const javaToMoment = {
     if (moment.utcOffset() === 0) { return 'Z'; }
     return moment.format('ZZ');
   },
+  XXXXX: (moment: Moment) => {
+    if (moment.utcOffset() === 0) { return 'Z'; }
+    return moment.format('Z');
+  },
 
   // zone-offset
   x: (moment: Moment) => {
@@ -322,6 +381,7 @@ const javaToMoment = {
   xx: 'ZZ',
   xxx: 'Z',
   xxxx: 'ZZ',
+  xxxxx: 'Z',
 
   // zone-offset
   Z: (moment: Moment) => {
@@ -347,6 +407,12 @@ const javaToMoment = {
       return 'GMT';
     }
     return 'GMT' + moment.format('Z');
+  },
+  ZZZZZ: (moment: Moment) => {
+    if (moment.utcOffset() === 0) {
+      return 'Z';
+    }
+    return moment.format('Z');
   }
 };
 

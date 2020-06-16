@@ -57,6 +57,8 @@ const javaToMoment = {
   GG: eraFormatter,
   GGG: eraFormatter,
   GGGG: eraFormatter,
+  GGGGG: eraFormatter,
+  GGGGGG: eraFormatter,
 
   // Year
   y: (moment: Moment) => {
@@ -71,6 +73,12 @@ const javaToMoment = {
   yyyy: (moment: Moment) => {
     return toAbsString(moment.format('YYYY'));
   },
+  yyyyy: (moment: Moment) => {
+    return zeroPad(toAbsString(moment.format('YYYY')), 5);
+  },
+  yyyyyy: (moment: Moment) => {
+    return zeroPad(toAbsString(moment.format('YYYY')), 6);
+  },
 
   // Week year
   Y: 'gggg',
@@ -79,12 +87,20 @@ const javaToMoment = {
     return zeroPad(moment.format('gggg'), 3);
   },
   YYYY: 'gggg',
+  YYYYY: (moment: Moment) => {
+    return zeroPad(moment.format('gggg'), 5);
+  },
+  YYYYYY: (moment: Moment) => {
+    return zeroPad(moment.format('gggg'), 6);
+  },
 
   // Month in year
   M: 'M',
   MM: 'MM',
   MMM: 'MMM',
   MMMM: 'MMMM',
+  MMMMM: 'MMMM',
+  MMMMMM: 'MMMM',
 
   // Week in year
   w: (moment: Moment) => {
@@ -98,6 +114,12 @@ const javaToMoment = {
   },
   wwww: (moment: Moment) => {
     return zeroPad(moment.format('w'), 4);
+  },
+  wwwww: (moment: Moment) => {
+    return zeroPad(moment.format('w'), 5);
+  },
+  wwwwww: (moment: Moment) => {
+    return zeroPad(moment.format('w'), 6);
   },
 
   // Week in month (W) not supported
@@ -117,6 +139,12 @@ const javaToMoment = {
   DDDD: (moment: Moment) => {
     return zeroPad(moment.format('DDD'), 4);
   },
+  DDDDD: (moment: Moment) => {
+    return zeroPad(moment.format('DDD'), 5);
+  },
+  DDDDDD: (moment: Moment) => {
+    return zeroPad(moment.format('DDD'), 6);
+  },
 
   // Day in month
   d: 'D',
@@ -126,6 +154,12 @@ const javaToMoment = {
   },
   dddd: (moment: Moment) => {
     return zeroPad(moment.format('D'), 4);
+  },
+  ddddd: (moment: Moment) => {
+    return zeroPad(moment.format('D'), 5);
+  },
+  dddddd: (moment: Moment) => {
+    return zeroPad(moment.format('D'), 6);
   },
 
   // Day of week in month (F) not supported
@@ -139,6 +173,8 @@ const javaToMoment = {
   EE: 'ddd',
   EEE: 'ddd',
   EEEE: 'dddd',
+  EEEEE: 'dddd',
+  EEEEEE: 'dddd',
 
   // Day number of week
   u: 'E',
@@ -151,12 +187,20 @@ const javaToMoment = {
   uuuu: (moment: Moment) => {
     return zeroPad(moment.format('E'), 4);
   },
+  uuuuu: (moment: Moment) => {
+    return zeroPad(moment.format('E'), 5);
+  },
+  uuuuuu: (moment: Moment) => {
+    return zeroPad(moment.format('E'), 6);
+  },
 
   // Am/pm marker
   a: 'A',
   aa: 'A',
   aaa: 'A',
   aaaa: 'A',
+  aaaaa: 'A',
+  aaaaaa: 'A',
 
   // Hour in day (0-23)
   H: 'H',
@@ -167,6 +211,12 @@ const javaToMoment = {
   HHHH: (moment: Moment) => {
     return zeroPad(moment.format('H'), 4);
   },
+  HHHHH: (moment: Moment) => {
+    return zeroPad(moment.format('H'), 5);
+  },
+  HHHHHH: (moment: Moment) => {
+    return zeroPad(moment.format('H'), 6);
+  },
 
   // Hour in day (1-24)
   k: 'k',
@@ -176,6 +226,12 @@ const javaToMoment = {
   },
   kkkk: (moment: Moment) => {
     return zeroPad(moment.format('k'), 4);
+  },
+  kkkkk: (moment: Moment) => {
+    return zeroPad(moment.format('k'), 5);
+  },
+  kkkkkk: (moment: Moment) => {
+    return zeroPad(moment.format('k'), 6);
   },
 
   // Hour in am/pm (0-11)
@@ -196,6 +252,14 @@ const javaToMoment = {
     const asNumber = parseInt(moment.format('h'), 10);
     return zeroPad(toAbsString(asNumber % 12), 4);
   },
+  KKKKK: (moment: Moment) => {
+    const asNumber = parseInt(moment.format('h'), 10);
+    return zeroPad(toAbsString(asNumber % 12), 5);
+  },
+  KKKKKK: (moment: Moment) => {
+    const asNumber = parseInt(moment.format('h'), 10);
+    return zeroPad(toAbsString(asNumber % 12), 6);
+  },
 
   // Hour in am/pm (1-12)
   h: 'h',
@@ -205,6 +269,12 @@ const javaToMoment = {
   },
   hhhh: (moment: Moment) => {
     return zeroPad(moment.format('h'), 4);
+  },
+  hhhhh: (moment: Moment) => {
+    return zeroPad(moment.format('h'), 5);
+  },
+  hhhhhh: (moment: Moment) => {
+    return zeroPad(moment.format('h'), 6);
   },
 
   // Minute in hour
@@ -216,6 +286,12 @@ const javaToMoment = {
   mmmm: (moment: Moment) => {
     return zeroPad(moment.format('m'), 4);
   },
+  mmmmm: (moment: Moment) => {
+    return zeroPad(moment.format('m'), 5);
+  },
+  mmmmmm: (moment: Moment) => {
+    return zeroPad(moment.format('m'), 6);
+  },
 
   // Second in minute
   s: 's',
@@ -226,12 +302,24 @@ const javaToMoment = {
   ssss: (moment: Moment) => {
     return zeroPad(moment.format('s'), 4);
   },
+  sssss: (moment: Moment) => {
+    return zeroPad(moment.format('s'), 5);
+  },
+  ssssss: (moment: Moment) => {
+    return zeroPad(moment.format('s'), 6);
+  },
 
   // Millisecond
   S: 'S',
   SS: 'SS',
   SSS: 'SSS',
   SSSS: 'SSSS',
+  SSSSS: (moment: Moment) => {
+    return zeroPad(moment.format('SSSS'), 5);
+  },
+  SSSSSS: (moment: Moment) => {
+    return zeroPad(moment.format('SSSS'), 6);
+  },
 
   // Time zone (Pacific Standard Time; PST)
   z: (moment: Moment) => {
@@ -266,12 +354,30 @@ const javaToMoment = {
     }
     return 'GMT' + moment.format('Z');
   },
+  zzzzz: (moment: Moment) => {
+    const info = guessZoneInfo(moment);
+
+    if (info) {
+      return info.description;
+    }
+    return 'GMT' + moment.format('Z');
+  },
+  zzzzzz: (moment: Moment) => {
+    const info = guessZoneInfo(moment);
+
+    if (info) {
+      return info.description;
+    }
+    return 'GMT' + moment.format('Z');
+  },
 
   // Time zone (-0800)
   Z: 'ZZ',
   ZZ: 'ZZ',
   ZZZ: 'ZZ',
   ZZZZ: 'ZZ',
+  ZZZZZ: 'ZZ',
+  ZZZZZZ: 'ZZ',
 
   // Time zone (-08; -0800; -08:00)
   X: (moment: Moment) => {

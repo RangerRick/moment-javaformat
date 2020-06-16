@@ -39,7 +39,7 @@ public class date {
 
 					sb.append("        \"").append(zone.getId()).append("\": [ ");
 
-					for (Integer count : Arrays.asList(1, 2, 3, 4)) {
+					for (Integer count : Arrays.asList(1, 2, 3, 4, 5, 6)) {
 						try {
 							final String formatString = new String(new char[count]).replace("\0", component);
 							DateTimeFormatter formatter = DateTimeFormatter.ofPattern(formatString);
@@ -48,7 +48,7 @@ public class date {
 						} catch (final Exception e) {
 							sb.append("null");
 						}
-						if (count == 4) {
+						if (count == 6) {
 							sb.append(" ]");
 						} else {
 							sb.append(", ");
@@ -81,7 +81,7 @@ public class date {
 
 					sb.append("        \"").append(zone.getId()).append("\": [ ");
 
-					for (Integer count : Arrays.asList(1, 2, 3, 4)) {
+					for (Integer count : Arrays.asList(1, 2, 3, 4, 5, 6)) {
 						try {
 							final String formatString = new String(new char[count]).replace("\0", component);
 							final SimpleDateFormat formatter = new SimpleDateFormat(formatString);
@@ -91,7 +91,7 @@ public class date {
 						} catch (final Exception e) {
 							sb.append("null");
 						}
-						if (count == 4) {
+						if (count == 6) {
 							sb.append(" ]");
 						} else {
 							sb.append(",");
