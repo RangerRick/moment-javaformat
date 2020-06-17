@@ -1,6 +1,6 @@
 # moment-javaformat
 
-[![CircleCI](https://circleci.com/gh/RangerRick/moment-javaformat/tree/master.svg?style=svg)](https://circleci.com/gh/RangerRick/moment-javaformat/tree/master)
+[![CircleCI](https://circleci.com/gh/RangerRick/moment-javaformat/tree/main.svg?style=svg)](https://circleci.com/gh/RangerRick/moment-javaformat/tree/main)
 
 This plugin for [Moment.js](https://momentjs.com/) adds support for formatting using the Java [SimpleDateFormat](https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html) and [DateTimeFormatter](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html) format options.
 
@@ -11,7 +11,7 @@ Thanks to [moment-jdateformatparser](https://github.com/MadMG/moment-jdateformat
 ## Version History
 
 Changes made in the `develop` branch are checked against unit tests upon commit.
-The latest [CHANGELOG.md](https://github.com/RangerRick/moment-javaformat/blob/master/CHANGELOG.md) is then auto-generated from the commit history and merged to `master`.
+The latest [CHANGELOG.md](https://github.com/RangerRick/moment-javaformat/blob/main/CHANGELOG.md) is then auto-generated from the commit history and merged to `main`.
 
 ## Requirements
 

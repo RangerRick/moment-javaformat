@@ -58,7 +58,7 @@ jobs:
         - run:
             name: Run Tests
             command: npm --prefer-offline --no-progress run test
-  merge-master:
+  merge-main:
       docker:
         - image: circleci/node:10
           environment:
@@ -66,11 +66,11 @@ jobs:
       steps:
         - cached-checkout
         - run:
-            name: Merge Develop to Master
+            name: Merge Develop to Main
             command: |
-              git checkout master
+              git checkout main
               git pull
-              git merge -m 'automated merge from develop -> master' --log develop
+              git merge -m 'automated merge from develop -> main' --log develop
         - cached-npm-install
         - run:
             name: Build Artifacts
@@ -101,7 +101,7 @@ workflows:
             branches:
               only:
                 - develop
-      - merge-master:
+      - merge-main:
           requires:
             - run-tests
           filters:
