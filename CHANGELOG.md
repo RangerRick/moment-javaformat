@@ -1,4 +1,4 @@
-## [1.0.4](https://github.com/RangerRick/moment-javaformat/compare/v1.0.3...v1.0.4) (2020-06-22)
+## [1.0.4](https://github.com/RangerRick/moment-javaformat/compare/v1.0.3...v1.0.4) (2020-07-06)
 
 
 ### Bug Fixes
