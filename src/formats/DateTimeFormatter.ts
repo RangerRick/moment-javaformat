@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
+// eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars
 declare const moment: any;
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -426,7 +426,7 @@ export class PaddedToken extends Token {
     this.padChar = padChar;
   }
 
-  public format(input: string) {
+  public format(input: string): string {
     if (input.length > this.padding) {
       throw new Error(`Cannot format padding as formatted string "${input}" exceeds pad width of ${this.padding}.`);
     }
