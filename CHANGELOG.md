@@ -1,4 +1,4 @@
-## [1.0.4](https://github.com/RangerRick/moment-javaformat/compare/v1.0.3...v1.0.4) (2020-10-19)
+## [1.0.4](https://github.com/RangerRick/moment-javaformat/compare/v1.0.3...v1.0.4) (2020-10-20)
 
 
 ### Bug Fixes
@@ -10,6 +10,11 @@
 ### Features
 
 * rename master -> main ([24bd501](https://github.com/RangerRick/moment-javaformat/commit/24bd5011e0a74723a8f5b0d17abc24e6af5cc413))
+
+
+### Reverts
+
+* Revert "build(deps-dev): bump webpack from 4.44.2 to 5.1.3" ([114a748](https://github.com/RangerRick/moment-javaformat/commit/114a7481de6433a7e2ea152a56c47acd770120b2))
 
 
 
