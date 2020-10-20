@@ -29,7 +29,7 @@ commands:
             name: Generate Change Log
             command: npm run changelog
   cached-npm-install:
-      description: run "npm install", updating cache
+      description: run "npm ci", updating cache
       steps:
         - restore_cache:
             name: Restore Package Cache
@@ -39,7 +39,7 @@ commands:
               - npm-packages-
         - run:
             name: Install Node Dependencies
-            command: npm --prefer-offline --no-progress install
+            command: npm ci
         - save_cache:
             name: Save Package Cache
             key: npm-packages-{{ .Branch }}-{{ checksum "package-lock.json" }}
@@ -57,7 +57,7 @@ jobs:
         - cached-npm-install
         - run:
             name: Run Tests
-            command: npm --prefer-offline --no-progress run test
+            command: npm run build-release && npm run test
   merge-main:
       docker:
         - image: circleci/node:10
