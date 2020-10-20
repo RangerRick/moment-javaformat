@@ -57,7 +57,7 @@ jobs:
         - cached-npm-install
         - run:
             name: Run Tests
-            command: npm --prefer-offline --no-progress run test
+            command: npm run build-release && npm run test
   merge-main:
       docker:
         - image: circleci/node:10
