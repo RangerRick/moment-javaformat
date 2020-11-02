@@ -16,7 +16,9 @@ module.exports = {
     path: path.resolve('./dist'),
     filename: '[name]' + (isProduction? '.min' : '') + '.js',
     libraryTarget: 'umd',
-    umdNamedDefine: true
+    umdNamedDefine: true,
+    chunkLoading: false,
+    wasmLoading: false
   },
   externals: [
     'moment',
