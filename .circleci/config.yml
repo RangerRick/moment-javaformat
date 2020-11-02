@@ -29,7 +29,7 @@ commands:
             name: Generate Change Log
             command: npm run changelog
   cached-npm-install:
-      description: run "npm ci", updating cache
+      description: run "npm i", updating cache
       steps:
         - restore_cache:
             name: Restore Package Cache
@@ -39,7 +39,7 @@ commands:
               - npm-packages-
         - run:
             name: Install Node Dependencies
-            command: npm ci
+            command: npm --prefer-offline install
         - save_cache:
             name: Save Package Cache
             key: npm-packages-{{ .Branch }}-{{ checksum "package-lock.json" }}
