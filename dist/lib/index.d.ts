@@ -1,4 +1,4 @@
-declare var _default: any;
+declare var _default: typeof import("moment");
 export default _default;
 export function register(moment: any, fatal?: boolean): any;
 import SimpleDateFormat from "./formats/SimpleDateFormat";
