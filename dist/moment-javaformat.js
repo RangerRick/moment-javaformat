@@ -21,7 +21,7 @@ return /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/Formatter.ts":
-/*!**************************!*
+/*!**************************!*\
   !*** ./src/Formatter.ts ***!
   \**************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
@@ -31,7 +31,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));
 /***/ }),
 
 /***/ "./src/abbreviations.ts":
-/*!******************************!*
+/*!******************************!*\
   !*** ./src/abbreviations.ts ***!
   \******************************/
 /***/ (function(__unused_webpack_module, exports) {
@@ -41,7 +41,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));
 /***/ }),
 
 /***/ "./src/formats/DateTimeFormatter.ts":
-/*!******************************************!*
+/*!******************************************!*\
   !*** ./src/formats/DateTimeFormatter.ts ***!
   \******************************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
@@ -51,7 +51,7 @@ eval("\n\nfunction _typeof(obj) { \"@babel/helpers - typeof\"; if (typeof Symbol
 /***/ }),
 
 /***/ "./src/formats/SimpleDateFormat.ts":
-/*!*****************************************!*
+/*!*****************************************!*\
   !*** ./src/formats/SimpleDateFormat.ts ***!
   \*****************************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
@@ -61,7 +61,7 @@ eval("\n\nfunction _typeof(obj) { \"@babel/helpers - typeof\"; if (typeof Symbol
 /***/ }),
 
 /***/ "./src/index.js":
-/*!**********************!*
+/*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
@@ -71,7 +71,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));
 /***/ }),
 
 /***/ "moment":
-/*!*************************!*
+/*!*************************!*\
   !*** external "moment" ***!
   \*************************/
 /***/ (function(module) {
@@ -81,7 +81,7 @@ eval("if(typeof __WEBPACK_EXTERNAL_MODULE_moment__ === 'undefined') { var e = ne
 /***/ }),
 
 /***/ "moment-timezone":
-/*!**********************************!*
+/*!**********************************!*\
   !*** external "moment-timezone" ***!
   \**********************************/
 /***/ (function(module) {
