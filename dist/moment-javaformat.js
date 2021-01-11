@@ -1,6 +1,6 @@
 /*
  * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
- * This devtool is not neither made for production nor for readable output files.
+ * This devtool is neither made for production nor for readable output files.
  * It uses "eval()" calls to create a separate source file in the browser devtools.
  * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
  * or disable the default devtool with "devtool: false".
@@ -76,7 +76,9 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));
   \*************************/
 /***/ (function(module) {
 
-eval("if(typeof __WEBPACK_EXTERNAL_MODULE_moment__ === 'undefined') { var e = new Error(\"Cannot find module 'moment'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }\n\nmodule.exports = __WEBPACK_EXTERNAL_MODULE_moment__;\n\n//# sourceURL=webpack://@rangerrick/moment-javaformat/external_%22moment%22?");
+if(typeof __WEBPACK_EXTERNAL_MODULE_moment__ === 'undefined') { var e = new Error("Cannot find module 'moment'"); e.code = 'MODULE_NOT_FOUND'; throw e; }
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_moment__;
 
 /***/ }),
 
@@ -86,7 +88,9 @@ eval("if(typeof __WEBPACK_EXTERNAL_MODULE_moment__ === 'undefined') { var e = ne
   \**********************************/
 /***/ (function(module) {
 
-eval("if(typeof __WEBPACK_EXTERNAL_MODULE_moment_timezone__ === 'undefined') { var e = new Error(\"Cannot find module 'moment-timezone'\"); e.code = 'MODULE_NOT_FOUND'; throw e; }\n\nmodule.exports = __WEBPACK_EXTERNAL_MODULE_moment_timezone__;\n\n//# sourceURL=webpack://@rangerrick/moment-javaformat/external_%22moment-timezone%22?");
+if(typeof __WEBPACK_EXTERNAL_MODULE_moment_timezone__ === 'undefined') { var e = new Error("Cannot find module 'moment-timezone'"); e.code = 'MODULE_NOT_FOUND'; throw e; }
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_moment_timezone__;
 
 /***/ })
 
