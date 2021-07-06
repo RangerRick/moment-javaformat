@@ -33,7 +33,7 @@
     "@commitlint/config-conventional": "^12.0.1",
     "@types/jest": "^26.0.15",
     "@types/moment-timezone": "^0.5.12",
-    "@types/node": "^15.0.1",
+    "@types/node": "^16.0.0",
     "@types/webpack": "^5.0.0",
     "@typescript-eslint/eslint-plugin": "^4.4.1",
     "@typescript-eslint/parser": "^4.4.1",
