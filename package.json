@@ -1,6 +1,6 @@
 {
   "name": "@rangerrick/moment-javaformat",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Format Moment.js using Java format strings",
   "main": "dist/moment-javaformat.min.js",
   "author": "Benjamin Reed <ranger@opennms.org>",
