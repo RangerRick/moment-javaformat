@@ -31,7 +31,7 @@
     "@babel/preset-typescript": "^7.8.3",
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
-    "@types/jest": "^26.0.15",
+    "@types/jest": "^27.0.1",
     "@types/moment-timezone": "^0.5.12",
     "@types/node": "^16.0.0",
     "@types/webpack": "^5.0.0",
