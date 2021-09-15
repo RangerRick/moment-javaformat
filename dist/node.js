@@ -8,14 +8,14 @@
  */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory((function webpackLoadOptionalExternalModule() { try { return require("moment"); } catch(e) {} }()), (function webpackLoadOptionalExternalModule() { try { return require("moment-timezone"); } catch(e) {} }()));
+		module.exports = factory();
 	else if(typeof define === 'function' && define.amd)
-		define(["moment", "moment-timezone"], factory);
+		define([], factory);
 	else {
-		var a = typeof exports === 'object' ? factory((function webpackLoadOptionalExternalModule() { try { return require("moment"); } catch(e) {} }()), (function webpackLoadOptionalExternalModule() { try { return require("moment-timezone"); } catch(e) {} }())) : factory(root["moment"], root["moment-timezone"]);
+		var a = factory();
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function(__WEBPACK_EXTERNAL_MODULE_moment__, __WEBPACK_EXTERNAL_MODULE_moment_timezone__) {
+})(global, function() {
 return /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
@@ -76,9 +76,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));
   \*************************/
 /***/ ((module) => {
 
-if(typeof __WEBPACK_EXTERNAL_MODULE_moment__ === 'undefined') { var e = new Error("Cannot find module 'moment'"); e.code = 'MODULE_NOT_FOUND'; throw e; }
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_moment__;
+module.exports = require("moment");
 
 /***/ }),
 
@@ -88,9 +86,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_moment__;
   \**********************************/
 /***/ ((module) => {
 
-if(typeof __WEBPACK_EXTERNAL_MODULE_moment_timezone__ === 'undefined') { var e = new Error("Cannot find module 'moment-timezone'"); e.code = 'MODULE_NOT_FOUND'; throw e; }
-
-module.exports = __WEBPACK_EXTERNAL_MODULE_moment_timezone__;
+module.exports = require("moment-timezone");
 
 /***/ })
 
