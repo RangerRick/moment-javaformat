@@ -1,7 +1,7 @@
 module.exports = {
   "presets": [
     ["@babel/preset-env", {
-      "modules": "umd",
+      "modules": "auto",
       /*
       "useBuiltIns": "usage",
       "corejs": 3,
