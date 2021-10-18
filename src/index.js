@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 
 import SimpleDateFormat from './formats/SimpleDateFormat';
 import DateTimeFormatter from './formats/DateTimeFormatter';
@@ -37,9 +38,11 @@ const register = (moment, fatal = true) => {
   preferring `moment-timezone` over `moment`.
 */
 
-if (window.moment) {
+if (typeof window !== 'undefined' && window?.moment) {
   register(window.moment, false);
-} else {
+} else if (typeof global !== 'undefined' && global?.moment) {
+  register(global.moment, false);
+} else if (typeof window !== 'undefined' && window) {
   try {
     const moment = require('moment-timezone');
     window.moment = register(moment, false);
@@ -54,6 +57,13 @@ if (window.moment) {
   }
 }
 
-export default window.moment ? window.moment : undefined;
+let m = undefined;
+if (typeof window !== 'undefined') {
+  m = window?.moment;
+}
+if (typeof m === 'undefined' && typeof global !== 'undefined') {
+  m = global?.moment;
+}
+export default m;
 
 export { register, SimpleDateFormat, DateTimeFormatter };
