@@ -1,4 +1,4 @@
-# [2.0.0](https://github.com/RangerRick/moment-javaformat/compare/v1.0.4...v2.0.0) (2021-11-29)
+# [2.0.0](https://github.com/RangerRick/moment-javaformat/compare/v1.0.4...v2.0.0) (2021-11-30)
 
 
 ### Bug Fixes
@@ -6,6 +6,7 @@
 * fix initialization, convert to pure-js ([385d3a8](https://github.com/RangerRick/moment-javaformat/commit/385d3a8d1af9a1cb821805d7d38dc52977dac9db))
 * handle 5- and 6-length formatters (eg, YYYYY) ([727855b](https://github.com/RangerRick/moment-javaformat/commit/727855b328cd73eef564594a8ddf15fe821edcc4)), closes [#150](https://github.com/RangerRick/moment-javaformat/issues/150)
 * rework how assets are generated for node vs. browser ([d4794de](https://github.com/RangerRick/moment-javaformat/commit/d4794dea7d5eea511076107eddc279e8217f6305))
+* use `global` rather than `window` on node ([8c931ec](https://github.com/RangerRick/moment-javaformat/commit/8c931ec35023b0ff58d7bf23a5df6b7901e6f467)), closes [#638](https://github.com/RangerRick/moment-javaformat/issues/638)
 
 
 ### Features
