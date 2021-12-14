@@ -81,7 +81,7 @@
     "testEnvironment": "jsdom"
   },
   "scripts": {
-    "postinstall": "husky install",
+    "prepare": "husky install",
     "prepublishOnly": "pinst --disable && npm run test",
     "postpublish": "pinst --enable",
     "build": "webpack --mode=development",
