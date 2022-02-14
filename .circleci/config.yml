@@ -75,8 +75,9 @@ jobs:
             name: Merge Develop to Main
             command: |
               git checkout main
-              git pull
-              git merge -m 'automated merge from develop -> main' --log develop
+              git fetch --all
+              git reset --hard origin/main
+              git merge -m 'automated merge from develop -> main' --log origin/develop
         - cached-npm-install
         - run:
             name: Build Artifacts
@@ -90,7 +91,7 @@ jobs:
                 echo "code detected; committing updated dist/"
                 git commit -m 'build: automated generation of dist/'
               fi
-              git push
+              git push origin main:main
 
 workflows:
   run-tests:
