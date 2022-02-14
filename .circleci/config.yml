@@ -91,7 +91,7 @@ jobs:
                 echo "code detected; committing updated dist/"
                 git commit -m 'build: automated generation of dist/'
               fi
-              git push
+              git push origin main:main
 
 workflows:
   run-tests:
