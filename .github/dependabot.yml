@@ -23,6 +23,7 @@ updates:
   - dependency-name: husky
     versions:
     - 5.0.9
+  - dependency-name: "@types/node"
   commit-message:
     prefix: build
     include: scope
