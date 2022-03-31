@@ -29,7 +29,7 @@ commands:
             name: Generate Change Log
             command: npm run changelog
   cached-npm-install:
-      description: run "npm i", updating cache
+      description: run "npm ci", updating cache
       steps:
         - restore_cache:
             name: Restore Package Cache
@@ -77,7 +77,7 @@ jobs:
               git checkout main
               git fetch --all
               git reset --hard origin/main
-              git merge -m 'automated merge from develop -> main' --log origin/develop
+              git merge -m 'automated merge from develop -> main' "<< pipeline.git.revision >>"
         - cached-npm-install
         - run:
             name: Build Artifacts
