@@ -15,7 +15,7 @@
 		var a = typeof exports === 'object' ? factory((function webpackLoadOptionalExternalModule() { try { return require("moment-timezone"); } catch(e) {} }()), (function webpackLoadOptionalExternalModule() { try { return require("moment"); } catch(e) {} }())) : factory(root["moment-timezone"], root["moment"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function(__WEBPACK_EXTERNAL_MODULE_moment_timezone__, __WEBPACK_EXTERNAL_MODULE_moment__) {
+})(this, (__WEBPACK_EXTERNAL_MODULE_moment_timezone__, __WEBPACK_EXTERNAL_MODULE_moment__) => {
 return /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
