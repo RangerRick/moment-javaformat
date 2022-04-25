@@ -1,10 +1,10 @@
-import moment from 'moment-timezone';
+import moment from "moment-timezone";
 window.moment = moment;
 
-import '../src/index';
+import "../src/index";
 
-describe('index (moment-timezone)', () => {
-  test('auto-import', () => {
+describe("index (moment-timezone)", () => {
+  test("auto-import", () => {
     const now = moment();
     expect(now.formatJavaSDF).toBeDefined();
     expect(now.formatJavaDTF).toBeDefined();
