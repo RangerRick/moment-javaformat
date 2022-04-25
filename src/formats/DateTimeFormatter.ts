@@ -7,18 +7,24 @@ declare const moment: any;
 declare type Moment = any;
 //import { Moment } from 'moment-timezone';
 
-import { Formatter, Token, toAbsString, zeroPad, getDescriptionForAbbreviation } from '../Formatter';
+import {
+  Formatter,
+  Token,
+  toAbsString,
+  zeroPad,
+  getDescriptionForAbbreviation,
+} from "../Formatter";
 
 const endZeroes = /:?00$/;
 const matchReserved = /[A-Za-z]/;
 
 const adConverter = (moment: Moment) => {
-  return moment.year() > 0 ? 'AD' : 'BC';
+  return moment.year() > 0 ? "AD" : "BC";
 };
 
 const findAbbreviation = (moment: Moment) => {
   const defaultAbbr = moment.zoneAbbr();
-  if (defaultAbbr === 'UTC' && moment.utcOffset() != 0) {
+  if (defaultAbbr === "UTC" && moment.utcOffset() != 0) {
     return null;
   }
   return defaultAbbr;
@@ -30,7 +36,7 @@ const javaToMoment = {
   GG: adConverter,
   GGG: adConverter,
   GGGG: (moment: Moment) => {
-    return moment.year() > 0 ? 'Anno Domini' : 'Before Christ';
+    return moment.year() > 0 ? "Anno Domini" : "Before Christ";
   },
   GGGGG: (moment: Moment) => {
     return adConverter(moment).substring(0, 1);
@@ -38,115 +44,119 @@ const javaToMoment = {
 
   // year
   u: (moment: Moment) => {
-    return zeroPad(moment.format('YYYY'), 1);
+    return zeroPad(moment.format("YYYY"), 1);
   },
   uu: (moment: Moment) => {
-    return zeroPad(toAbsString(moment.format('YY')), 2);
+    return zeroPad(toAbsString(moment.format("YY")), 2);
   },
   uuu: (moment: Moment) => {
-    return zeroPad(moment.format('YYYY'), 3);
+    return zeroPad(moment.format("YYYY"), 3);
   },
-  uuuu: 'YYYY',
+  uuuu: "YYYY",
   uuuuu: (moment: Moment) => {
-    return zeroPad(moment.format('YYYY'), 5);
+    return zeroPad(moment.format("YYYY"), 5);
   },
   uuuuuu: (moment: Moment) => {
-    return zeroPad(moment.format('YYYY'), 6);
+    return zeroPad(moment.format("YYYY"), 6);
   },
 
   // year-of-era
   y: (moment: Moment) => {
-    return toAbsString(moment.format('Y'));
+    return toAbsString(moment.format("Y"));
   },
   yy: (moment: Moment) => {
-    return toAbsString(moment.format('YY'));
+    return toAbsString(moment.format("YY"));
   },
   yyy: (moment: Moment) => {
-    return zeroPad(toAbsString(moment.format('YYYY')), 3);
+    return zeroPad(toAbsString(moment.format("YYYY")), 3);
   },
   yyyy: (moment: Moment) => {
-    return toAbsString(moment.format('YYYY'));
+    return toAbsString(moment.format("YYYY"));
   },
   yyyyy: (moment: Moment) => {
-    return zeroPad(toAbsString(moment.format('YYYY')), 5);
+    return zeroPad(toAbsString(moment.format("YYYY")), 5);
   },
   yyyyyy: (moment: Moment) => {
-    return zeroPad(toAbsString(moment.format('YYYY')), 6);
+    return zeroPad(toAbsString(moment.format("YYYY")), 6);
   },
 
   // day-of-year
-  D: 'DDD',
+  D: "DDD",
   DD: (moment: Moment) => {
-    const ret = moment.format('DDD');
+    const ret = moment.format("DDD");
     if (ret.length > 2) {
-      throw new Error('Field DayOfYear cannot be printed as the value ' + ret + ' exceeds the maximum print width of 2');
+      throw new Error(
+        "Field DayOfYear cannot be printed as the value " +
+          ret +
+          " exceeds the maximum print width of 2"
+      );
     }
     return zeroPad(ret, 2);
   },
-  DDD: 'DDDD',
+  DDD: "DDDD",
   // DDDD throws an error in Java DateTimeFormatter
 
   // month-of-year
-  M: 'M',
-  MM: 'MM',
-  MMM: 'MMM',
-  MMMM: 'MMMM',
+  M: "M",
+  MM: "MM",
+  MMM: "MMM",
+  MMMM: "MMMM",
   MMMMM: (moment: Moment) => {
-    return moment.format('MMMM').substring(0, 1);
+    return moment.format("MMMM").substring(0, 1);
   },
 
   // month-of-year (numeric)
-  L: 'M',
-  LL: 'MM',
-  LLL: 'M',
-  LLLL: 'M',
-  LLLLL: 'M',
+  L: "M",
+  LL: "MM",
+  LLL: "M",
+  LLLL: "M",
+  LLLLL: "M",
 
   // day-of-month
-  d: 'D',
-  dd: 'DD',
+  d: "D",
+  dd: "DD",
 
   // quarter-of-year
-  Q: 'Q',
+  Q: "Q",
   QQ: (moment: Moment) => {
-    return zeroPad(moment.format('Q'), 2);
+    return zeroPad(moment.format("Q"), 2);
   },
   QQQ: (moment: Moment) => {
-    return 'Q' + moment.format('Q');
+    return "Q" + moment.format("Q");
   },
   QQQQ: (moment: Moment) => {
-    return moment.format('Qo') + ' quarter';
+    return moment.format("Qo") + " quarter";
   },
-  QQQQQ: 'Q',
+  QQQQQ: "Q",
 
   // quarter-of-year
-  q: 'Q',
+  q: "Q",
   qq: (moment: Moment) => {
-    return zeroPad(moment.format('Q'), 2);
+    return zeroPad(moment.format("Q"), 2);
   },
-  qqq: 'Q',
-  qqqq: 'Q',
-  qqqqq: 'Q',
+  qqq: "Q",
+  qqqq: "Q",
+  qqqqq: "Q",
 
   // week-based-year
   Y: (moment: Moment) => {
-    return zeroPad(moment.format('gggg'), 1);
+    return zeroPad(moment.format("gggg"), 1);
   },
-  YY: 'gg',
+  YY: "gg",
   YYY: (moment: Moment) => {
-    return zeroPad(moment.format('gggg'), 3);
+    return zeroPad(moment.format("gggg"), 3);
   },
-  YYYY: 'gggg',
+  YYYY: "gggg",
   YYYYY: (moment: Moment) => {
-    return zeroPad(moment.format('gggg'), 5);
+    return zeroPad(moment.format("gggg"), 5);
   },
   YYYYYY: (moment: Moment) => {
-    return zeroPad(moment.format('gggg'), 6);
+    return zeroPad(moment.format("gggg"), 6);
   },
 
   // week-of-week-based-year
-  w: 'w',
-  ww: 'ww',
+  w: "w",
+  ww: "ww",
 
   // week-of-month (W) not supported
   W: null,
@@ -155,42 +165,42 @@ const javaToMoment = {
   WWWW: null,
 
   // day-of-week
-  E: 'ddd',
-  EE: 'ddd',
-  EEE: 'ddd',
-  EEEE: 'dddd',
+  E: "ddd",
+  EE: "ddd",
+  EEE: "ddd",
+  EEEE: "dddd",
   EEEEE: (moment: Moment) => {
-    return moment.format('dddd').substring(0, 1);
+    return moment.format("dddd").substring(0, 1);
   },
 
   // localized day-of-week (e)
-  e: 'd',
+  e: "d",
   ee: (moment: Moment) => {
-    return zeroPad(moment.format('d'), 2);
+    return zeroPad(moment.format("d"), 2);
   },
-  eee: 'ddd',
-  eeee: 'dddd',
+  eee: "ddd",
+  eeee: "dddd",
   eeeee: (moment: Moment) => {
-    return moment.format('dddd').substring(0, 1);
+    return moment.format("dddd").substring(0, 1);
   },
 
   // localized day-of-week (c)
-  c: 'd',
-  ccc: 'ddd',
-  cccc: 'dddd',
+  c: "d",
+  ccc: "ddd",
+  cccc: "dddd",
   ccccc: (moment: Moment) => {
     // 5 c's = 0-indexed I guess?!?
-    return String(parseInt(moment.format('d'), 10) - 1);
+    return String(parseInt(moment.format("d"), 10) - 1);
   },
 
   // week of month (F) not supported
 
   // am-pm-of-day
-  a: 'A',
+  a: "A",
 
   // clock-hour-of-am-pm
-  h: 'h',
-  hh: 'hh',
+  h: "h",
+  hh: "hh",
 
   // hour-of-am-pm
   K: (moment: Moment) => {
@@ -202,65 +212,68 @@ const javaToMoment = {
   },
 
   // clock-hour-of-am-pm
-  k: 'k',
-  kk: 'kk',
+  k: "k",
+  kk: "kk",
 
   // hour-of-day
-  H: 'H',
-  HH: 'HH',
+  H: "H",
+  HH: "HH",
 
   // minute-of-hour
-  m: 'm',
-  mm: 'mm',
+  m: "m",
+  mm: "mm",
 
   // second-of-minute
-  s: 's',
-  ss: 'ss',
+  s: "s",
+  ss: "ss",
 
   // fraction-of-second
-  S: 'S',
-  SS: 'SS',
-  SSS: 'SSS',
-  SSSS: 'SSSS',
+  S: "S",
+  SS: "SS",
+  SSS: "SSS",
+  SSSS: "SSSS",
   SSSSS: (moment: Moment) => {
-    return zeroPad(moment.format('SSSS'), 5);
+    return zeroPad(moment.format("SSSS"), 5);
   },
   SSSSSS: (moment: Moment) => {
-    return zeroPad(moment.format('SSSS'), 6);
+    return zeroPad(moment.format("SSSS"), 6);
   },
 
   // milli-of-day
   A: (moment: Moment) => {
-    return zeroPad(moment.valueOf() - moment.clone().startOf('day').valueOf(), 1);
+    return zeroPad(
+      moment.valueOf() - moment.clone().startOf("day").valueOf(),
+      1
+    );
   },
   AA: (moment: Moment) => {
-    if (moment.isSame(moment.clone().startOf('day'))) {
+    if (moment.isSame(moment.clone().startOf("day"))) {
       // console.warn(moment.format() + ' is the same as ' + moment.clone().startOf('day').format());
-      return '00';
+      return "00";
     }
     return null;
   },
   AAA: (moment: Moment) => {
-    if (moment.isSame(moment.clone().startOf('day'))) {
-      return '000';
+    if (moment.isSame(moment.clone().startOf("day"))) {
+      return "000";
     }
     return null;
   },
   AAAA: (moment: Moment) => {
-    if (moment.isSame(moment.clone().startOf('day'))) {
-      return '0000';
+    if (moment.isSame(moment.clone().startOf("day"))) {
+      return "0000";
     }
     return null;
   },
   AAAAA: (moment: Moment) => {
-    if (moment.isSame(moment.clone().startOf('day'))) {
-      return '00000';
+    if (moment.isSame(moment.clone().startOf("day"))) {
+      return "00000";
     }
     return null;
   },
   AAAAAA: (moment: Moment) => {
-    if (moment.isSame(moment.clone().startOf('day'))) {
-      return '000000';
+    if (moment.isSame(moment.clone().startOf("day"))) {
+      return "000000";
     }
     return null;
   },
@@ -272,148 +285,161 @@ const javaToMoment = {
   // time-zone ID
   VV: (moment: Moment) => {
     if (moment.utcOffset() === 0) {
-      return 'Z';
+      return "Z";
     }
     const tz = moment.tz();
     if (tz && tz.length > 0) {
       return tz;
     }
-    return moment.format('Z');
+    return moment.format("Z");
   },
 
   // time-zone name
   z: (moment: Moment) => {
     if (moment.utcOffset() === 0) {
-      return 'Z';
+      return "Z";
     }
     const abbr = findAbbreviation(moment);
     if (abbr) {
       return abbr;
     }
-    return moment.format('Z');
+    return moment.format("Z");
   },
   zz: (moment: Moment) => {
     if (moment.utcOffset() === 0) {
-      return 'Z';
+      return "Z";
     }
     const abbr = findAbbreviation(moment);
     if (abbr) {
       return abbr;
     }
-    return moment.format('Z');
+    return moment.format("Z");
   },
   zzz: (moment: Moment) => {
     if (moment.utcOffset() === 0) {
-      return 'Z';
+      return "Z";
     }
     const abbr = findAbbreviation(moment);
     if (abbr) {
       return abbr;
     }
-    return moment.format('Z');
+    return moment.format("Z");
   },
   zzzz: (moment: Moment) => {
     if (moment.utcOffset() === 0) {
-      return 'Z';
+      return "Z";
     }
     const abbr = findAbbreviation(moment);
     if (abbr) {
       return getDescriptionForAbbreviation(abbr);
     }
 
-    return moment.format('Z');
+    return moment.format("Z");
   },
 
   // localized zone-offset
   O: (moment: Moment) => {
     const offset = moment.utcOffset() / 60.0;
     if (offset === 0) {
-      return 'GMT';
+      return "GMT";
     }
 
-    const ret = moment.format('Z').replace(endZeroes, '').replace(/^([+-])0/, '$1');
-    return 'GMT' + ret;
+    const ret = moment
+      .format("Z")
+      .replace(endZeroes, "")
+      .replace(/^([+-])0/, "$1");
+    return "GMT" + ret;
   },
   OOOO: (moment: Moment) => {
     const offset = moment.utcOffset() / 60.0;
     if (offset === 0) {
-      return 'GMT';
+      return "GMT";
     }
 
-    const ret = moment.format('Z');
-    return 'GMT' + ret;
+    const ret = moment.format("Z");
+    return "GMT" + ret;
   },
 
   // zone-offset 'Z' for zero
   X: (moment: Moment) => {
-    if (moment.utcOffset() === 0) { return 'Z'; }
-    const ret = moment.format('ZZ')
+    if (moment.utcOffset() === 0) {
+      return "Z";
+    }
+    const ret = moment.format("ZZ");
     if (ret.match(endZeroes)) {
       return ret.substr(0, 3);
     }
     return ret;
   },
   XX: (moment: Moment) => {
-    if (moment.utcOffset() === 0) { return 'Z'; }
-    return moment.format('ZZ');
+    if (moment.utcOffset() === 0) {
+      return "Z";
+    }
+    return moment.format("ZZ");
   },
   XXX: (moment: Moment) => {
-    if (moment.utcOffset() === 0) { return 'Z'; }
-    return moment.format('Z');
+    if (moment.utcOffset() === 0) {
+      return "Z";
+    }
+    return moment.format("Z");
   },
   XXXX: (moment: Moment) => {
-    if (moment.utcOffset() === 0) { return 'Z'; }
-    return moment.format('ZZ');
+    if (moment.utcOffset() === 0) {
+      return "Z";
+    }
+    return moment.format("ZZ");
   },
   XXXXX: (moment: Moment) => {
-    if (moment.utcOffset() === 0) { return 'Z'; }
-    return moment.format('Z');
+    if (moment.utcOffset() === 0) {
+      return "Z";
+    }
+    return moment.format("Z");
   },
 
   // zone-offset
   x: (moment: Moment) => {
-    const ret = moment.format('ZZ');
+    const ret = moment.format("ZZ");
     if (ret.match(endZeroes)) {
       return ret.substr(0, 3);
     }
     return ret;
   },
-  xx: 'ZZ',
-  xxx: 'Z',
-  xxxx: 'ZZ',
-  xxxxx: 'Z',
+  xx: "ZZ",
+  xxx: "Z",
+  xxxx: "ZZ",
+  xxxxx: "Z",
 
   // zone-offset
   Z: (moment: Moment) => {
     if (moment.utcOffset() === 0) {
-      return '+0000';
+      return "+0000";
     }
-    return moment.format('ZZ');
+    return moment.format("ZZ");
   },
   ZZ: (moment: Moment) => {
     if (moment.utcOffset() === 0) {
-      return '+0000';
+      return "+0000";
     }
-    return moment.format('ZZ');
+    return moment.format("ZZ");
   },
   ZZZ: (moment: Moment) => {
     if (moment.utcOffset() === 0) {
-      return '+0000';
+      return "+0000";
     }
-    return moment.format('ZZ');
+    return moment.format("ZZ");
   },
   ZZZZ: (moment: Moment) => {
     if (moment.utcOffset() === 0) {
-      return 'GMT';
+      return "GMT";
     }
-    return 'GMT' + moment.format('Z');
+    return "GMT" + moment.format("Z");
   },
   ZZZZZ: (moment: Moment) => {
     if (moment.utcOffset() === 0) {
-      return 'Z';
+      return "Z";
     }
-    return moment.format('Z');
-  }
+    return moment.format("Z");
+  },
 };
 
 export class PaddedToken extends Token {
@@ -428,7 +454,9 @@ export class PaddedToken extends Token {
 
   public format(input: string): string {
     if (input.length > this.padding) {
-      throw new Error(`Cannot format padding as formatted string "${input}" exceeds pad width of ${this.padding}.`);
+      throw new Error(
+        `Cannot format padding as formatted string "${input}" exceeds pad width of ${this.padding}.`
+      );
     }
 
     const padded = this.padChar.repeat(this.padding) + input;
@@ -437,9 +465,9 @@ export class PaddedToken extends Token {
 }
 
 export default class DateTimeFormatter extends Formatter {
-  tokenize(formatString: string): Array<Token|string> {
+  tokenize(formatString: string): Array<Token | string> {
     let padNextWidth = 0;
-    let padNextChar = ' ';
+    let padNextChar = " ";
 
     const ret = [];
 
@@ -448,74 +476,98 @@ export default class DateTimeFormatter extends Formatter {
       if (cur.match(matchReserved)) {
         let start = pos++;
 
-        for (; pos < formatString.length && formatString.charAt(pos) === cur; pos++);
+        for (
+          ;
+          pos < formatString.length && formatString.charAt(pos) === cur;
+          pos++
+        );
 
         let count = pos - start;
 
         // padding parsed
-        if (cur === 'p') {
+        if (cur === "p") {
           let pad = 0;
           if (pos < formatString.length) {
             cur = formatString.charAt(pos);
             if (cur.match(matchReserved)) {
               pad = count;
               start = pos++;
-              for ( ; pos < formatString.length && formatString.charAt(pos) === cur; pos++); // short loop
+              for (
+                ;
+                pos < formatString.length && formatString.charAt(pos) === cur;
+                pos++
+              ); // short loop
               count = pos - start;
             }
           }
           if (pad === 0) {
-            throw new Error("Pad letter 'p' must be followed by valid pad pattern: " + formatString);
+            throw new Error(
+              "Pad letter 'p' must be followed by valid pad pattern: " +
+                formatString
+            );
           }
           // pad and continue parsing
           padNextWidth = pad;
-          padNextChar = ' ';
+          padNextChar = " ";
         }
 
         // main rules
         const translate = javaToMoment[cur.repeat(count)];
         if (translate === null) {
-          throw new Error(`'${cur.repeat(count)}' cannot be converted to a moment format token; token is not implemented`);
+          throw new Error(
+            `'${cur.repeat(
+              count
+            )}' cannot be converted to a moment format token; token is not implemented`
+          );
         } else if (translate === undefined) {
-          throw new Error(`'${cur.repeat(count)}' cannot be converted to a moment format token; unknown token`);
+          throw new Error(
+            `'${cur.repeat(
+              count
+            )}' cannot be converted to a moment format token; unknown token`
+          );
         } else {
-          if (padNextWidth> 0) {
+          if (padNextWidth > 0) {
             ret.push(new PaddedToken(padNextWidth, padNextChar, cur, count));
             padNextWidth = 0;
-            padNextChar = ' ';
+            padNextChar = " ";
           } else {
             ret.push(new Token(cur, count));
           }
         }
         pos--;
-      } else if (cur === '\'') {
+      } else if (cur === "'") {
         // parse literals
         const start = pos++;
-        for ( ; pos < formatString.length; pos++) {
-          if (formatString.charAt(pos) === '\'') {
-            if (pos + 1 < formatString.length && formatString.charAt(pos + 1) === '\'') {
+        for (; pos < formatString.length; pos++) {
+          if (formatString.charAt(pos) === "'") {
+            if (
+              pos + 1 < formatString.length &&
+              formatString.charAt(pos + 1) === "'"
+            ) {
               pos++;
             } else {
-              break;  // end of literal
+              break; // end of literal
             }
           }
         }
 
         if (pos >= formatString.length) {
-          throw new Error(`Pattern ends with an incomplete string literal: ${formatString}`);
+          throw new Error(
+            `Pattern ends with an incomplete string literal: ${formatString}`
+          );
         }
 
         const str = formatString.substring(start + 1, pos);
         if (str.length == 0) {
-          ret.push('\'');
+          ret.push("'");
         } else {
           ret.push(str.replace("''", "'"));
         }
-      } else if (cur === '[') {
+      } else if (cur === "[") {
         throw new Error(`Optional patterns are not supported: ${cur}`);
-      } else if (cur === ']') {
+      } else if (cur === "]") {
         throw new Error(`Optional patterns are not supported: ${cur}`);
-      } else if (cur === '{' || cur === '}' || cur === '#') {
+      } else if (cur === "{" || cur === "}" || cur === "#") {
         throw new Error(`Pattern includes reserved character: '${cur}'`);
       } else {
         if (ret[ret.length - 1] instanceof Token) {
@@ -544,14 +596,18 @@ export default class DateTimeFormatter extends Formatter {
         const translation = javaToMoment[partString];
 
         if (translation === undefined) {
-          const err = new Error(`'${partString}' cannot be converted to a moment format token; bailing`);
-//          console.error(err.message);
+          const err = new Error(
+            `'${partString}' cannot be converted to a moment format token; bailing`
+          );
+          //          console.error(err.message);
           throw err;
         } else {
-          if (typeof translation === 'function') {
+          if (typeof translation === "function") {
             const result = translation(moment, partString);
             if (result === null) {
-              const err = new Error(`'${partString}' cannot be converted to a moment format token; bailing`);
+              const err = new Error(
+                `'${partString}' cannot be converted to a moment format token; bailing`
+              );
               //          console.error(err.message);
               throw err;
             }
@@ -564,6 +620,6 @@ export default class DateTimeFormatter extends Formatter {
         ret.push(part);
       }
     }
-    return ret.join('');
+    return ret.join("");
   }
 }
