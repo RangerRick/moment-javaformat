@@ -55,7 +55,7 @@ commands:
 jobs:
   run-tests:
     docker:
-      - image: circleci/node:16
+      - image: circleci/node:lts-browsers
         environment:
           TZ: "America/New_York"
     steps:
@@ -66,7 +66,7 @@ jobs:
           command: npm run build-release && npm run test
   merge-main:
     docker:
-      - image: circleci/node:16
+      - image: circleci/node:lts-browsers
         environment:
           TZ: "America/New_York"
     steps:
