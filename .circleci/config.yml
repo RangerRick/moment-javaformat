@@ -2,96 +2,96 @@ version: 2.1
 
 commands:
   cached-checkout:
-      description: "checkout with caching"
-      steps:
-        - restore_cache:
-            name: Restore Git Cache
-            keys:
-              - git-{{ .Branch }}-{{ .Revision }}
-              - git-{{ .Branch }}-
-              - git-
-        - checkout:
-            name: Check Out Code
-        - run:
-            name: Fetch from Git
-            command: |
-              git fetch origin
-              git config user.name 'CircleCI Automated Commit'
-              git config user.email 'github@raccoonfink.com'
-        - save_cache:
-            name: Save Git Cache
-            key: git-{{ .Branch }}-{{ .Revision }}
-            paths:
-              - ".git"
+    description: "checkout with caching"
+    steps:
+      - restore_cache:
+          name: Restore Git Cache
+          keys:
+            - git-{{ .Branch }}-{{ .Revision }}
+            - git-{{ .Branch }}-
+            - git-
+      - checkout:
+          name: Check Out Code
+      - run:
+          name: Fetch from Git
+          command: |
+            git fetch origin
+            git config user.name 'CircleCI Automated Commit'
+            git config user.email 'github@raccoonfink.com'
+      - save_cache:
+          name: Save Git Cache
+          key: git-{{ .Branch }}-{{ .Revision }}
+          paths:
+            - ".git"
   generate-changelog:
-      steps:
-        - run:
-            name: Generate Change Log
-            command: npm run changelog
+    steps:
+      - run:
+          name: Generate Change Log
+          command: npm run changelog
   cached-npm-install:
-      description: run "npm ci", updating cache
-      steps:
-        - restore_cache:
-            name: Restore Package Cache
-            keys:
-              - npm-packages-v2-{{ .Branch }}-{{ checksum "package-lock.json" }}
-              - npm-packages-v2-{{ .Branch }}
-              - npm-packages-v2-
-        - run:
-            name: Clean Old Cache Entries
-            command: |
-              if [ -d ~/.npm ]; then
-                find ~/.npm -type d -maxdepth 2 -ctime +14 -exec rm -rf {} \;
-              fi
-        - run:
-            name: Install Node Dependencies
-            command: npm --prefer-offline --no-progress ci
-        - save_cache:
-            name: Save Package Cache
-            key: npm-packages-v2-{{ .Branch }}-{{ checksum "package-lock.json" }}
-            paths:
-              - ~/.npm
+    description: run "npm ci", updating cache
+    steps:
+      - restore_cache:
+          name: Restore Package Cache
+          keys:
+            - npm-packages-v2-{{ .Branch }}-{{ checksum "package-lock.json" }}
+            - npm-packages-v2-{{ .Branch }}
+            - npm-packages-v2-
+      - run:
+          name: Clean Old Cache Entries
+          command: |
+            if [ -d ~/.npm ]; then
+              find ~/.npm -type d -maxdepth 2 -ctime +14 -exec rm -rf {} \;
+            fi
+      - run:
+          name: Install Node Dependencies
+          command: npm --prefer-offline --no-progress ci
+      - save_cache:
+          name: Save Package Cache
+          key: npm-packages-v2-{{ .Branch }}-{{ checksum "package-lock.json" }}
+          paths:
+            - ~/.npm
 
 jobs:
   run-tests:
-      docker:
-        - image: circleci/node:16
-          environment:
-            TZ: "America/New_York"
-      steps:
-        - cached-checkout
-        - cached-npm-install
-        - run:
-            name: Run Tests
-            command: npm run build-release && npm run test
+    docker:
+      - image: circleci/node:16
+        environment:
+          TZ: "America/New_York"
+    steps:
+      - cached-checkout
+      - cached-npm-install
+      - run:
+          name: Run Tests
+          command: npm run build-release && npm run test
   merge-main:
-      docker:
-        - image: circleci/node:16
-          environment:
-            TZ: "America/New_York"
-      steps:
-        - cached-checkout
-        - run:
-            name: Merge Develop to Main
-            command: |
-              git checkout main
-              git fetch --all
-              git reset --hard origin/main
-              git merge -m 'automated merge from develop -> main' "<< pipeline.git.revision >>"
-        - cached-npm-install
-        - run:
-            name: Build Artifacts
-            command: npm --prefer-offline --no-progress run build-release
-        - generate-changelog
-        - run:
-            name: Commit and Push Updated Artifacts
-            command: |
-              git add -A
-              if [ `git diff HEAD | wc -l` -gt 0 ]; then
-                echo "code detected; committing updated dist/"
-                git commit -m 'build: automated generation of dist/'
-              fi
-              git push origin main:main
+    docker:
+      - image: circleci/node:16
+        environment:
+          TZ: "America/New_York"
+    steps:
+      - cached-checkout
+      - run:
+          name: Merge Develop to Main
+          command: |
+            git checkout main
+            git fetch --all
+            git reset --hard origin/main
+            git merge -m 'automated merge from develop -> main' "<< pipeline.git.revision >>"
+      - cached-npm-install
+      - run:
+          name: Build Artifacts
+          command: npm --prefer-offline --no-progress run build-release
+      - generate-changelog
+      - run:
+          name: Commit and Push Updated Artifacts
+          command: |
+            git add -A
+            if [ `git diff HEAD | wc -l` -gt 0 ]; then
+              echo "code detected; committing updated dist/"
+              git commit -m 'build: automated generation of dist/'
+            fi
+            git push origin main:main
 
 workflows:
   run-tests:
@@ -115,4 +115,3 @@ workflows:
             branches:
               only:
                 - develop
-

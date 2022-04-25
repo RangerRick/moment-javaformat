@@ -4,7 +4,7 @@ declare const moment: any;
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare type Moment = any;
 //import { Moment } from 'moment-timezone';
-import { abbreviations, offsets } from './abbreviations';
+import { abbreviations, offsets } from "./abbreviations";
 
 const offsetMappings = {};
 
@@ -14,8 +14,8 @@ export const findAbbreviationForOffset = (offset: number): string | null => {
   }
 
   const tz = moment.tz.guess();
-  const short = tz ? moment.tz(tz).format('z') : null;
-//  console.log('guessed=', short);
+  const short = tz ? moment.tz(tz).format("z") : null;
+  //  console.log('guessed=', short);
 
   const matches = offsets[String(offset)];
 
@@ -41,7 +41,9 @@ export const getDescriptionForAbbreviation = (abbr: string): string | null => {
   return null;
 };
 
-export const getZoneForDateTime = (dateTime: string | Moment): string | null => {
+export const getZoneForDateTime = (
+  dateTime: string | Moment
+): string | null => {
   const dt = moment(dateTime);
   const offset = dt.utcOffset();
   if (!offsetMappings[offset]) {
@@ -49,7 +51,7 @@ export const getZoneForDateTime = (dateTime: string | Moment): string | null => 
     if (shortcut) {
       offsetMappings[offset] = shortcut;
     } else {
-      console.warn('- unhandled offset: ' + offset);
+      console.warn("- unhandled offset: " + offset);
     }
   }
   return offsetMappings[offset] || null;
@@ -59,7 +61,7 @@ export const toAbsString = (value: string | number): string => {
   if (Number.isInteger(value as number)) {
     return String(Math.abs(value as number));
   }
-  return (value as string).replace(/^-/, '');
+  return (value as string).replace(/^-/, "");
 };
 
 export const zeroPad = (input: string | number, length: number): string => {
@@ -68,7 +70,9 @@ export const zeroPad = (input: string | number, length: number): string => {
   if (abs.length >= length) {
     return String(input);
   }
-  return (abs !== input ? '-' : '') + ('0'.repeat(length) + abs).substr(0 - length);
+  return (
+    (abs !== input ? "-" : "") + ("0".repeat(length) + abs).substr(0 - length)
+  );
 };
 
 export class Token {
@@ -77,7 +81,9 @@ export class Token {
 
   constructor(value: string, count?: number) {
     if (value.length != 1) {
-      throw new Error('You must provide a single character when creating a token!');
+      throw new Error(
+        "You must provide a single character when creating a token!"
+      );
     }
     this.token = value;
     this.count = count === undefined ? 1 : count;
@@ -103,7 +109,7 @@ export abstract class Formatter {
    *
    * @param {string} formatString the string to format
    */
-  abstract tokenize(formatString: string): Array<Token|string>;
+  abstract tokenize(formatString: string): Array<Token | string>;
 
   /**
    * Convert a moment into a formatted date string.

@@ -9,11 +9,9 @@
     "experimentalDecorators": true,
     "sourceMap": true,
     "allowJs": true,
-    "lib": [ "es6", "dom", "es2017" ],
+    "lib": ["es6", "dom", "es2017"],
     "skipLibCheck": true,
     "outDir": "dist"
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }
