@@ -1,5 +1,5 @@
 declare type Moment = any;
-import { Formatter, Token } from '../Formatter';
+import { Formatter, Token } from "../Formatter";
 export default class SimpleDateFormat extends Formatter {
     tokenize(pattern: string): Array<Token | string>;
     /**

@@ -1,5 +1,5 @@
 declare type Moment = any;
-import { Formatter, Token } from '../Formatter';
+import { Formatter, Token } from "../Formatter";
 export declare class PaddedToken extends Token {
     padding: number;
     padChar: string;
