@@ -1,4 +1,4 @@
-## [2.0.3](https://github.com/RangerRick/moment-javaformat/compare/v2.0.2...v2.0.3) (2022-09-12)
+## [2.0.3](https://github.com/RangerRick/moment-javaformat/compare/v2.0.2...v2.0.3) (2022-09-19)
 
 
 ### Features
