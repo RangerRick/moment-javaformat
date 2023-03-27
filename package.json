@@ -26,7 +26,6 @@
     "@commitlint/cli": "^17.0.0",
     "@commitlint/config-conventional": "^17.0.0",
     "@types/jest": "^29.0.0",
-    "@types/moment-timezone": "^0.5.12",
     "@types/node": "^16.11.27",
     "@types/webpack": "^5.0.0",
     "@typescript-eslint/eslint-plugin": "^5.20.0",
