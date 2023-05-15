@@ -1,6 +1,11 @@
 ## [2.0.4](https://github.com/RangerRick/moment-javaformat/compare/v2.0.3...v2.0.4) (2023-05-15)
 
 
+### Features
+
+* **test:** generated updated test data with Temurin 1.8.0_372 ([af1b86d](https://github.com/RangerRick/moment-javaformat/commit/af1b86ddcdb992232f5a787deb783d8150ec8c7d))
+
+
 
 ## [2.0.2](https://github.com/RangerRick/moment-javaformat/compare/v2.0.1...v2.0.2) (2022-04-21)
 
