@@ -1,5 +1,6 @@
 ## <small>2.0.6 (2023-08-28)</small>
 
+* build: automated generation of dist/ ([149d770](https://github.com/RangerRick/moment-javaformat/commit/149d770))
 * build: automated generation of dist/ ([ef2bcc7](https://github.com/RangerRick/moment-javaformat/commit/ef2bcc7))
 * build: automated generation of dist/ ([0c3c5dc](https://github.com/RangerRick/moment-javaformat/commit/0c3c5dc))
 * build: automated generation of dist/ ([9f772d4](https://github.com/RangerRick/moment-javaformat/commit/9f772d4))
@@ -7,6 +8,7 @@
 * build(deps-dev): bump @types/webpack from 5.28.1 to 5.28.2 ([361ea56](https://github.com/RangerRick/moment-javaformat/commit/361ea56))
 * build(deps-dev): bump @typescript-eslint/eslint-plugin ([6cb9988](https://github.com/RangerRick/moment-javaformat/commit/6cb9988))
 * build(deps-dev): bump @typescript-eslint/parser from 6.3.0 to 6.4.0 ([14ca63c](https://github.com/RangerRick/moment-javaformat/commit/14ca63c))
+* build(deps-dev): bump @typescript-eslint/parser from 6.4.0 to 6.4.1 ([d43424c](https://github.com/RangerRick/moment-javaformat/commit/d43424c))
 * build(deps-dev): bump babel-jest from 29.6.2 to 29.6.3 ([6ebc0f3](https://github.com/RangerRick/moment-javaformat/commit/6ebc0f3))
 * build(deps-dev): bump conventional-changelog-cli from 3.0.0 to 4.0.0 ([cc53682](https://github.com/RangerRick/moment-javaformat/commit/cc53682))
 * build(deps-dev): bump jest and @types/jest ([4c4719c](https://github.com/RangerRick/moment-javaformat/commit/4c4719c))
