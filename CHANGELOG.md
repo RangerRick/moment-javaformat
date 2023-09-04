@@ -1,5 +1,6 @@
 ## <small>2.0.6 (2023-09-04)</small>
 
+* build: automated generation of dist/ ([c664ce3](https://github.com/RangerRick/moment-javaformat/commit/c664ce3))
 * build: automated generation of dist/ ([1610fd6](https://github.com/RangerRick/moment-javaformat/commit/1610fd6))
 * build: automated generation of dist/ ([1e537fb](https://github.com/RangerRick/moment-javaformat/commit/1e537fb))
 * build: automated generation of dist/ ([1a03ba2](https://github.com/RangerRick/moment-javaformat/commit/1a03ba2))
@@ -7,6 +8,7 @@
 * build: automated generation of dist/ ([ef2bcc7](https://github.com/RangerRick/moment-javaformat/commit/ef2bcc7))
 * build: automated generation of dist/ ([0c3c5dc](https://github.com/RangerRick/moment-javaformat/commit/0c3c5dc))
 * build: automated generation of dist/ ([9f772d4](https://github.com/RangerRick/moment-javaformat/commit/9f772d4))
+* build(deps-dev): bump @babel/cli from 7.22.10 to 7.22.15 ([3129fd2](https://github.com/RangerRick/moment-javaformat/commit/3129fd2))
 * build(deps-dev): bump @babel/core from 7.22.10 to 7.22.11 ([c77d36a](https://github.com/RangerRick/moment-javaformat/commit/c77d36a))
 * build(deps-dev): bump @babel/core from 7.22.11 to 7.22.15 ([5db4bb0](https://github.com/RangerRick/moment-javaformat/commit/5db4bb0))
 * build(deps-dev): bump @babel/preset-typescript from 7.22.5 to 7.22.15 ([c990901](https://github.com/RangerRick/moment-javaformat/commit/c990901))
@@ -27,6 +29,7 @@
 * build(deps-dev): bump prettier from 3.0.2 to 3.0.3 ([57c5ad0](https://github.com/RangerRick/moment-javaformat/commit/57c5ad0))
 * build(deps-dev): bump prettier-plugin-java from 2.2.0 to 2.3.0 ([0655579](https://github.com/RangerRick/moment-javaformat/commit/0655579))
 * build(deps-dev): bump typescript from 5.1.6 to 5.2.2 ([13e3813](https://github.com/RangerRick/moment-javaformat/commit/13e3813))
+* build(deps-dev): bump webpack-bundle-analyzer from 4.9.0 to 4.9.1 ([04721d9](https://github.com/RangerRick/moment-javaformat/commit/04721d9))
 * chore: 2.0.5 -> 2.0.6 ([df113b6](https://github.com/RangerRick/moment-javaformat/commit/df113b6))
 
 
