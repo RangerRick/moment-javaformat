@@ -1,5 +1,6 @@
-## <small>2.0.6 (2023-08-28)</small>
+## <small>2.0.6 (2023-09-04)</small>
 
+* build: automated generation of dist/ ([1e537fb](https://github.com/RangerRick/moment-javaformat/commit/1e537fb))
 * build: automated generation of dist/ ([1a03ba2](https://github.com/RangerRick/moment-javaformat/commit/1a03ba2))
 * build: automated generation of dist/ ([149d770](https://github.com/RangerRick/moment-javaformat/commit/149d770))
 * build: automated generation of dist/ ([ef2bcc7](https://github.com/RangerRick/moment-javaformat/commit/ef2bcc7))
@@ -13,9 +14,11 @@
 * build(deps-dev): bump @typescript-eslint/parser from 6.4.0 to 6.4.1 ([d43424c](https://github.com/RangerRick/moment-javaformat/commit/d43424c))
 * build(deps-dev): bump babel-jest from 29.6.2 to 29.6.3 ([6ebc0f3](https://github.com/RangerRick/moment-javaformat/commit/6ebc0f3))
 * build(deps-dev): bump conventional-changelog-cli from 3.0.0 to 4.0.0 ([cc53682](https://github.com/RangerRick/moment-javaformat/commit/cc53682))
+* build(deps-dev): bump eslint from 8.47.0 to 8.48.0 ([0a77303](https://github.com/RangerRick/moment-javaformat/commit/0a77303))
 * build(deps-dev): bump jest and @types/jest ([4c4719c](https://github.com/RangerRick/moment-javaformat/commit/4c4719c))
 * build(deps-dev): bump jest from 29.6.2 to 29.6.3 ([8de92a5](https://github.com/RangerRick/moment-javaformat/commit/8de92a5))
 * build(deps-dev): bump jest-environment-jsdom from 29.6.2 to 29.6.3 ([c20dee9](https://github.com/RangerRick/moment-javaformat/commit/c20dee9))
+* build(deps-dev): bump jest-environment-jsdom from 29.6.3 to 29.6.4 ([ba7b411](https://github.com/RangerRick/moment-javaformat/commit/ba7b411))
 * build(deps-dev): bump lint-staged from 14.0.0 to 14.0.1 ([232d97a](https://github.com/RangerRick/moment-javaformat/commit/232d97a))
 * build(deps-dev): bump prettier from 3.0.1 to 3.0.2 ([440f213](https://github.com/RangerRick/moment-javaformat/commit/440f213))
 * build(deps-dev): bump prettier-plugin-java from 2.2.0 to 2.3.0 ([0655579](https://github.com/RangerRick/moment-javaformat/commit/0655579))
