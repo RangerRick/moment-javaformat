@@ -1,5 +1,6 @@
 ## <small>2.0.6 (2023-09-11)</small>
 
+* build: automated generation of dist/ ([5bb15a2](https://github.com/RangerRick/moment-javaformat/commit/5bb15a2))
 * build: automated generation of dist/ ([3c3dcc7](https://github.com/RangerRick/moment-javaformat/commit/3c3dcc7))
 * build: automated generation of dist/ ([3f8b781](https://github.com/RangerRick/moment-javaformat/commit/3f8b781))
 * build: automated generation of dist/ ([c664ce3](https://github.com/RangerRick/moment-javaformat/commit/c664ce3))
@@ -24,9 +25,12 @@
 * build(deps-dev): bump @typescript-eslint/parser from 6.3.0 to 6.4.0 ([14ca63c](https://github.com/RangerRick/moment-javaformat/commit/14ca63c))
 * build(deps-dev): bump @typescript-eslint/parser from 6.4.0 to 6.4.1 ([d43424c](https://github.com/RangerRick/moment-javaformat/commit/d43424c))
 * build(deps-dev): bump @typescript-eslint/parser from 6.4.1 to 6.5.0 ([efd34f6](https://github.com/RangerRick/moment-javaformat/commit/efd34f6))
+* build(deps-dev): bump @typescript-eslint/parser from 6.5.0 to 6.6.0 ([4b73f75](https://github.com/RangerRick/moment-javaformat/commit/4b73f75))
 * build(deps-dev): bump babel-jest from 29.6.2 to 29.6.3 ([6ebc0f3](https://github.com/RangerRick/moment-javaformat/commit/6ebc0f3))
 * build(deps-dev): bump conventional-changelog-cli from 3.0.0 to 4.0.0 ([cc53682](https://github.com/RangerRick/moment-javaformat/commit/cc53682))
+* build(deps-dev): bump conventional-changelog-cli from 4.0.0 to 4.1.0 ([5df31d0](https://github.com/RangerRick/moment-javaformat/commit/5df31d0))
 * build(deps-dev): bump eslint from 8.47.0 to 8.48.0 ([0a77303](https://github.com/RangerRick/moment-javaformat/commit/0a77303))
+* build(deps-dev): bump eslint from 8.48.0 to 8.49.0 ([0ae6dda](https://github.com/RangerRick/moment-javaformat/commit/0ae6dda))
 * build(deps-dev): bump jest and @types/jest ([4c4719c](https://github.com/RangerRick/moment-javaformat/commit/4c4719c))
 * build(deps-dev): bump jest from 29.6.2 to 29.6.3 ([8de92a5](https://github.com/RangerRick/moment-javaformat/commit/8de92a5))
 * build(deps-dev): bump jest-environment-jsdom from 29.6.2 to 29.6.3 ([c20dee9](https://github.com/RangerRick/moment-javaformat/commit/c20dee9))
