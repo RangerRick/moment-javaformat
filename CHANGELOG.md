@@ -1,5 +1,6 @@
-## <small>2.0.6 (2023-09-04)</small>
+## <small>2.0.6 (2023-09-11)</small>
 
+* build: automated generation of dist/ ([3c3dcc7](https://github.com/RangerRick/moment-javaformat/commit/3c3dcc7))
 * build: automated generation of dist/ ([3f8b781](https://github.com/RangerRick/moment-javaformat/commit/3f8b781))
 * build: automated generation of dist/ ([c664ce3](https://github.com/RangerRick/moment-javaformat/commit/c664ce3))
 * build: automated generation of dist/ ([1610fd6](https://github.com/RangerRick/moment-javaformat/commit/1610fd6))
@@ -12,9 +13,11 @@
 * build(deps-dev): bump @babel/cli from 7.22.10 to 7.22.15 ([3129fd2](https://github.com/RangerRick/moment-javaformat/commit/3129fd2))
 * build(deps-dev): bump @babel/core from 7.22.10 to 7.22.11 ([c77d36a](https://github.com/RangerRick/moment-javaformat/commit/c77d36a))
 * build(deps-dev): bump @babel/core from 7.22.11 to 7.22.15 ([5db4bb0](https://github.com/RangerRick/moment-javaformat/commit/5db4bb0))
+* build(deps-dev): bump @babel/core from 7.22.15 to 7.22.17 ([5708e55](https://github.com/RangerRick/moment-javaformat/commit/5708e55))
 * build(deps-dev): bump @babel/preset-env from 7.22.10 to 7.22.15 ([e62f602](https://github.com/RangerRick/moment-javaformat/commit/e62f602))
 * build(deps-dev): bump @babel/preset-typescript from 7.22.5 to 7.22.15 ([c990901](https://github.com/RangerRick/moment-javaformat/commit/c990901))
 * build(deps-dev): bump @types/webpack from 5.28.1 to 5.28.2 ([361ea56](https://github.com/RangerRick/moment-javaformat/commit/361ea56))
+* build(deps-dev): bump @typescript-eslint/eslint-plugin ([aea8124](https://github.com/RangerRick/moment-javaformat/commit/aea8124))
 * build(deps-dev): bump @typescript-eslint/eslint-plugin ([b9f353f](https://github.com/RangerRick/moment-javaformat/commit/b9f353f))
 * build(deps-dev): bump @typescript-eslint/eslint-plugin ([9677225](https://github.com/RangerRick/moment-javaformat/commit/9677225))
 * build(deps-dev): bump @typescript-eslint/eslint-plugin ([6cb9988](https://github.com/RangerRick/moment-javaformat/commit/6cb9988))
