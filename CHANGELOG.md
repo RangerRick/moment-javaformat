@@ -1,5 +1,6 @@
 ## <small>2.0.6 (2023-10-05)</small>
 
+* build: automated generation of dist/ ([afad239](https://github.com/RangerRick/moment-javaformat/commit/afad239))
 * build: automated generation of dist/ ([4342a67](https://github.com/RangerRick/moment-javaformat/commit/4342a67))
 * build: automated generation of dist/ ([d901041](https://github.com/RangerRick/moment-javaformat/commit/d901041))
 * build: automated generation of dist/ ([d8dd8e0](https://github.com/RangerRick/moment-javaformat/commit/d8dd8e0))
@@ -45,6 +46,7 @@
 * build(deps-dev): bump conventional-changelog-cli from 4.0.0 to 4.1.0 ([5df31d0](https://github.com/RangerRick/moment-javaformat/commit/5df31d0))
 * build(deps-dev): bump eslint from 8.47.0 to 8.48.0 ([0a77303](https://github.com/RangerRick/moment-javaformat/commit/0a77303))
 * build(deps-dev): bump eslint from 8.48.0 to 8.49.0 ([0ae6dda](https://github.com/RangerRick/moment-javaformat/commit/0ae6dda))
+* build(deps-dev): bump eslint from 8.49.0 to 8.50.0 ([e1b99e5](https://github.com/RangerRick/moment-javaformat/commit/e1b99e5))
 * build(deps-dev): bump jest and @types/jest ([db5f948](https://github.com/RangerRick/moment-javaformat/commit/db5f948))
 * build(deps-dev): bump jest and @types/jest ([4c4719c](https://github.com/RangerRick/moment-javaformat/commit/4c4719c))
 * build(deps-dev): bump jest from 29.6.2 to 29.6.3 ([8de92a5](https://github.com/RangerRick/moment-javaformat/commit/8de92a5))
