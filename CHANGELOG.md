@@ -1,5 +1,6 @@
-## <small>2.0.6 (2023-10-09)</small>
+## <small>2.0.6 (2023-10-16)</small>
 
+* build: automated generation of dist/ ([486a850](https://github.com/RangerRick/moment-javaformat/commit/486a850))
 * build: automated generation of dist/ ([b741d74](https://github.com/RangerRick/moment-javaformat/commit/b741d74))
 * build: automated generation of dist/ ([f9e8082](https://github.com/RangerRick/moment-javaformat/commit/f9e8082))
 * build: automated generation of dist/ ([afad239](https://github.com/RangerRick/moment-javaformat/commit/afad239))
@@ -33,6 +34,7 @@
 * build(deps-dev): bump @commitlint/cli from 17.7.1 to 17.7.2 ([562655d](https://github.com/RangerRick/moment-javaformat/commit/562655d))
 * build(deps-dev): bump @types/webpack from 5.28.1 to 5.28.2 ([361ea56](https://github.com/RangerRick/moment-javaformat/commit/361ea56))
 * build(deps-dev): bump @types/webpack from 5.28.2 to 5.28.3 ([b3a7433](https://github.com/RangerRick/moment-javaformat/commit/b3a7433))
+* build(deps-dev): bump @typescript-eslint/eslint-plugin ([948958a](https://github.com/RangerRick/moment-javaformat/commit/948958a))
 * build(deps-dev): bump @typescript-eslint/eslint-plugin ([ddd1d47](https://github.com/RangerRick/moment-javaformat/commit/ddd1d47))
 * build(deps-dev): bump @typescript-eslint/eslint-plugin ([279516d](https://github.com/RangerRick/moment-javaformat/commit/279516d))
 * build(deps-dev): bump @typescript-eslint/eslint-plugin ([aea8124](https://github.com/RangerRick/moment-javaformat/commit/aea8124))
