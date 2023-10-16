@@ -1,5 +1,6 @@
 ## <small>2.0.6 (2023-10-16)</small>
 
+* build: automated generation of dist/ ([312811d](https://github.com/RangerRick/moment-javaformat/commit/312811d))
 * build: automated generation of dist/ ([486a850](https://github.com/RangerRick/moment-javaformat/commit/486a850))
 * build: automated generation of dist/ ([b741d74](https://github.com/RangerRick/moment-javaformat/commit/b741d74))
 * build: automated generation of dist/ ([f9e8082](https://github.com/RangerRick/moment-javaformat/commit/f9e8082))
@@ -27,10 +28,12 @@
 * build(deps-dev): bump @babel/core from 7.22.15 to 7.22.17 ([5708e55](https://github.com/RangerRick/moment-javaformat/commit/5708e55))
 * build(deps-dev): bump @babel/core from 7.22.17 to 7.22.20 ([e8c3307](https://github.com/RangerRick/moment-javaformat/commit/e8c3307))
 * build(deps-dev): bump @babel/core from 7.22.20 to 7.23.0 ([a17e0ca](https://github.com/RangerRick/moment-javaformat/commit/a17e0ca))
+* build(deps-dev): bump @babel/core from 7.23.0 to 7.23.2 ([9bf8893](https://github.com/RangerRick/moment-javaformat/commit/9bf8893))
 * build(deps-dev): bump @babel/preset-env from 7.22.10 to 7.22.15 ([e62f602](https://github.com/RangerRick/moment-javaformat/commit/e62f602))
 * build(deps-dev): bump @babel/preset-env from 7.22.15 to 7.22.20 ([a777445](https://github.com/RangerRick/moment-javaformat/commit/a777445))
 * build(deps-dev): bump @babel/preset-typescript from 7.22.15 to 7.23.0 ([1d00950](https://github.com/RangerRick/moment-javaformat/commit/1d00950))
 * build(deps-dev): bump @babel/preset-typescript from 7.22.5 to 7.22.15 ([c990901](https://github.com/RangerRick/moment-javaformat/commit/c990901))
+* build(deps-dev): bump @babel/preset-typescript from 7.23.0 to 7.23.2 ([e5af69f](https://github.com/RangerRick/moment-javaformat/commit/e5af69f))
 * build(deps-dev): bump @commitlint/cli from 17.7.1 to 17.7.2 ([562655d](https://github.com/RangerRick/moment-javaformat/commit/562655d))
 * build(deps-dev): bump @types/webpack from 5.28.1 to 5.28.2 ([361ea56](https://github.com/RangerRick/moment-javaformat/commit/361ea56))
 * build(deps-dev): bump @types/webpack from 5.28.2 to 5.28.3 ([b3a7433](https://github.com/RangerRick/moment-javaformat/commit/b3a7433))
@@ -66,6 +69,7 @@
 * build(deps-dev): bump prettier-plugin-java from 2.2.0 to 2.3.0 ([0655579](https://github.com/RangerRick/moment-javaformat/commit/0655579))
 * build(deps-dev): bump prettier-plugin-java from 2.3.0 to 2.3.1 ([63ad74b](https://github.com/RangerRick/moment-javaformat/commit/63ad74b))
 * build(deps-dev): bump typescript from 5.1.6 to 5.2.2 ([13e3813](https://github.com/RangerRick/moment-javaformat/commit/13e3813))
+* build(deps-dev): bump webpack from 5.88.2 to 5.89.0 ([c4a44ce](https://github.com/RangerRick/moment-javaformat/commit/c4a44ce))
 * build(deps-dev): bump webpack-bundle-analyzer from 4.9.0 to 4.9.1 ([04721d9](https://github.com/RangerRick/moment-javaformat/commit/04721d9))
 * chore: 2.0.5 -> 2.0.6 ([df113b6](https://github.com/RangerRick/moment-javaformat/commit/df113b6))
 
