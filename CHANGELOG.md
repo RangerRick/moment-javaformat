@@ -1,5 +1,6 @@
 ## <small>2.0.6 (2023-10-23)</small>
 
+* build: automated generation of dist/ ([c2a8f0e](https://github.com/RangerRick/moment-javaformat/commit/c2a8f0e))
 * build: automated generation of dist/ ([c29c52e](https://github.com/RangerRick/moment-javaformat/commit/c29c52e))
 * build: automated generation of dist/ ([3681612](https://github.com/RangerRick/moment-javaformat/commit/3681612))
 * build: automated generation of dist/ ([73e734c](https://github.com/RangerRick/moment-javaformat/commit/73e734c))
@@ -42,9 +43,12 @@
 * build(deps-dev): bump @babel/preset-typescript from 7.23.0 to 7.23.2 ([e5af69f](https://github.com/RangerRick/moment-javaformat/commit/e5af69f))
 * build(deps-dev): bump @commitlint/cli from 17.7.1 to 17.7.2 ([562655d](https://github.com/RangerRick/moment-javaformat/commit/562655d))
 * build(deps-dev): bump @commitlint/cli from 17.7.2 to 17.8.0 ([e2a57fc](https://github.com/RangerRick/moment-javaformat/commit/e2a57fc))
+* build(deps-dev): bump @commitlint/config-conventional ([abe982e](https://github.com/RangerRick/moment-javaformat/commit/abe982e))
 * build(deps-dev): bump @commitlint/config-conventional ([a27cd06](https://github.com/RangerRick/moment-javaformat/commit/a27cd06))
+* build(deps-dev): bump @types/jest from 29.5.5 to 29.5.6 ([0a754cb](https://github.com/RangerRick/moment-javaformat/commit/0a754cb))
 * build(deps-dev): bump @types/webpack from 5.28.1 to 5.28.2 ([361ea56](https://github.com/RangerRick/moment-javaformat/commit/361ea56))
 * build(deps-dev): bump @types/webpack from 5.28.2 to 5.28.3 ([b3a7433](https://github.com/RangerRick/moment-javaformat/commit/b3a7433))
+* build(deps-dev): bump @typescript-eslint/eslint-plugin ([678c302](https://github.com/RangerRick/moment-javaformat/commit/678c302))
 * build(deps-dev): bump @typescript-eslint/eslint-plugin ([948958a](https://github.com/RangerRick/moment-javaformat/commit/948958a))
 * build(deps-dev): bump @typescript-eslint/eslint-plugin ([ddd1d47](https://github.com/RangerRick/moment-javaformat/commit/ddd1d47))
 * build(deps-dev): bump @typescript-eslint/eslint-plugin ([279516d](https://github.com/RangerRick/moment-javaformat/commit/279516d))
