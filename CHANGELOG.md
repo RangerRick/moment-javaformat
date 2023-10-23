@@ -1,5 +1,6 @@
 ## <small>2.0.6 (2023-10-23)</small>
 
+* build: automated generation of dist/ ([3af0ba7](https://github.com/RangerRick/moment-javaformat/commit/3af0ba7))
 * build: automated generation of dist/ ([c2a8f0e](https://github.com/RangerRick/moment-javaformat/commit/c2a8f0e))
 * build: automated generation of dist/ ([c29c52e](https://github.com/RangerRick/moment-javaformat/commit/c29c52e))
 * build: automated generation of dist/ ([3681612](https://github.com/RangerRick/moment-javaformat/commit/3681612))
@@ -43,6 +44,7 @@
 * build(deps-dev): bump @babel/preset-typescript from 7.23.0 to 7.23.2 ([e5af69f](https://github.com/RangerRick/moment-javaformat/commit/e5af69f))
 * build(deps-dev): bump @commitlint/cli from 17.7.1 to 17.7.2 ([562655d](https://github.com/RangerRick/moment-javaformat/commit/562655d))
 * build(deps-dev): bump @commitlint/cli from 17.7.2 to 17.8.0 ([e2a57fc](https://github.com/RangerRick/moment-javaformat/commit/e2a57fc))
+* build(deps-dev): bump @commitlint/cli from 17.8.0 to 18.0.0 ([41b9dd5](https://github.com/RangerRick/moment-javaformat/commit/41b9dd5))
 * build(deps-dev): bump @commitlint/config-conventional ([abe982e](https://github.com/RangerRick/moment-javaformat/commit/abe982e))
 * build(deps-dev): bump @commitlint/config-conventional ([a27cd06](https://github.com/RangerRick/moment-javaformat/commit/a27cd06))
 * build(deps-dev): bump @types/jest from 29.5.5 to 29.5.6 ([0a754cb](https://github.com/RangerRick/moment-javaformat/commit/0a754cb))
