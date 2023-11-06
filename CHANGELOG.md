@@ -1,5 +1,6 @@
-## <small>2.0.6 (2023-10-30)</small>
+## <small>2.0.6 (2023-11-06)</small>
 
+* build: automated generation of dist/ ([8377a2c](https://github.com/RangerRick/moment-javaformat/commit/8377a2c))
 * build: automated generation of dist/ ([325ee4f](https://github.com/RangerRick/moment-javaformat/commit/325ee4f))
 * build: automated generation of dist/ ([27a1024](https://github.com/RangerRick/moment-javaformat/commit/27a1024))
 * build: automated generation of dist/ ([d4142a5](https://github.com/RangerRick/moment-javaformat/commit/d4142a5))
@@ -56,6 +57,7 @@
 * build(deps-dev): bump @types/webpack from 5.28.1 to 5.28.2 ([361ea56](https://github.com/RangerRick/moment-javaformat/commit/361ea56))
 * build(deps-dev): bump @types/webpack from 5.28.2 to 5.28.3 ([b3a7433](https://github.com/RangerRick/moment-javaformat/commit/b3a7433))
 * build(deps-dev): bump @types/webpack from 5.28.3 to 5.28.4 ([10bb409](https://github.com/RangerRick/moment-javaformat/commit/10bb409))
+* build(deps-dev): bump @typescript-eslint/eslint-plugin ([52b5056](https://github.com/RangerRick/moment-javaformat/commit/52b5056))
 * build(deps-dev): bump @typescript-eslint/eslint-plugin ([b30bfa1](https://github.com/RangerRick/moment-javaformat/commit/b30bfa1))
 * build(deps-dev): bump @typescript-eslint/eslint-plugin ([678c302](https://github.com/RangerRick/moment-javaformat/commit/678c302))
 * build(deps-dev): bump @typescript-eslint/eslint-plugin ([948958a](https://github.com/RangerRick/moment-javaformat/commit/948958a))
@@ -74,6 +76,7 @@
 * build(deps-dev): bump @typescript-eslint/parser from 6.7.4 to 6.7.5 ([1483d7f](https://github.com/RangerRick/moment-javaformat/commit/1483d7f))
 * build(deps-dev): bump @typescript-eslint/parser from 6.7.5 to 6.8.0 ([3ff87b8](https://github.com/RangerRick/moment-javaformat/commit/3ff87b8))
 * build(deps-dev): bump @typescript-eslint/parser from 6.8.0 to 6.9.0 ([615e7e3](https://github.com/RangerRick/moment-javaformat/commit/615e7e3))
+* build(deps-dev): bump @typescript-eslint/parser from 6.9.0 to 6.9.1 ([0e35bab](https://github.com/RangerRick/moment-javaformat/commit/0e35bab))
 * build(deps-dev): bump babel-jest from 29.6.2 to 29.6.3 ([6ebc0f3](https://github.com/RangerRick/moment-javaformat/commit/6ebc0f3))
 * build(deps-dev): bump conventional-changelog-cli from 3.0.0 to 4.0.0 ([cc53682](https://github.com/RangerRick/moment-javaformat/commit/cc53682))
 * build(deps-dev): bump conventional-changelog-cli from 4.0.0 to 4.1.0 ([5df31d0](https://github.com/RangerRick/moment-javaformat/commit/5df31d0))
