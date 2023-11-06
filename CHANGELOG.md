@@ -1,5 +1,6 @@
 ## <small>2.0.6 (2023-11-06)</small>
 
+* build: automated generation of dist/ ([706d66b](https://github.com/RangerRick/moment-javaformat/commit/706d66b))
 * build: automated generation of dist/ ([2f057f2](https://github.com/RangerRick/moment-javaformat/commit/2f057f2))
 * build: automated generation of dist/ ([8377a2c](https://github.com/RangerRick/moment-javaformat/commit/8377a2c))
 * build: automated generation of dist/ ([325ee4f](https://github.com/RangerRick/moment-javaformat/commit/325ee4f))
@@ -55,6 +56,7 @@
 * build(deps-dev): bump @commitlint/config-conventional ([abe982e](https://github.com/RangerRick/moment-javaformat/commit/abe982e))
 * build(deps-dev): bump @commitlint/config-conventional ([a27cd06](https://github.com/RangerRick/moment-javaformat/commit/a27cd06))
 * build(deps-dev): bump @types/jest from 29.5.5 to 29.5.6 ([0a754cb](https://github.com/RangerRick/moment-javaformat/commit/0a754cb))
+* build(deps-dev): bump @types/jest from 29.5.6 to 29.5.7 ([de98c23](https://github.com/RangerRick/moment-javaformat/commit/de98c23))
 * build(deps-dev): bump @types/webpack from 5.28.1 to 5.28.2 ([361ea56](https://github.com/RangerRick/moment-javaformat/commit/361ea56))
 * build(deps-dev): bump @types/webpack from 5.28.2 to 5.28.3 ([b3a7433](https://github.com/RangerRick/moment-javaformat/commit/b3a7433))
 * build(deps-dev): bump @types/webpack from 5.28.3 to 5.28.4 ([10bb409](https://github.com/RangerRick/moment-javaformat/commit/10bb409))
