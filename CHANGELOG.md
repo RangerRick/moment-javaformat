@@ -1,5 +1,6 @@
 ## <small>2.0.6 (2023-11-14)</small>
 
+* build: automated generation of dist/ ([dd697f5](https://github.com/RangerRick/moment-javaformat/commit/dd697f5))
 * build: automated generation of dist/ ([98a736b](https://github.com/RangerRick/moment-javaformat/commit/98a736b))
 * build: automated generation of dist/ ([d6e49f1](https://github.com/RangerRick/moment-javaformat/commit/d6e49f1))
 * build: automated generation of dist/ ([e10295f](https://github.com/RangerRick/moment-javaformat/commit/e10295f))
@@ -69,6 +70,7 @@
 * build(deps-dev): bump @types/webpack from 5.28.2 to 5.28.3 ([b3a7433](https://github.com/RangerRick/moment-javaformat/commit/b3a7433))
 * build(deps-dev): bump @types/webpack from 5.28.3 to 5.28.4 ([10bb409](https://github.com/RangerRick/moment-javaformat/commit/10bb409))
 * build(deps-dev): bump @types/webpack from 5.28.4 to 5.28.5 ([da58bf1](https://github.com/RangerRick/moment-javaformat/commit/da58bf1))
+* build(deps-dev): bump @typescript-eslint/eslint-plugin ([3857e13](https://github.com/RangerRick/moment-javaformat/commit/3857e13))
 * build(deps-dev): bump @typescript-eslint/eslint-plugin ([52b5056](https://github.com/RangerRick/moment-javaformat/commit/52b5056))
 * build(deps-dev): bump @typescript-eslint/eslint-plugin ([b30bfa1](https://github.com/RangerRick/moment-javaformat/commit/b30bfa1))
 * build(deps-dev): bump @typescript-eslint/eslint-plugin ([678c302](https://github.com/RangerRick/moment-javaformat/commit/678c302))
@@ -111,6 +113,7 @@
 * build(deps-dev): bump lint-staged from 15.0.2 to 15.1.0 ([c4df9ad](https://github.com/RangerRick/moment-javaformat/commit/c4df9ad))
 * build(deps-dev): bump prettier from 3.0.1 to 3.0.2 ([440f213](https://github.com/RangerRick/moment-javaformat/commit/440f213))
 * build(deps-dev): bump prettier from 3.0.2 to 3.0.3 ([57c5ad0](https://github.com/RangerRick/moment-javaformat/commit/57c5ad0))
+* build(deps-dev): bump prettier from 3.0.3 to 3.1.0 ([49f450b](https://github.com/RangerRick/moment-javaformat/commit/49f450b))
 * build(deps-dev): bump prettier-plugin-java from 2.2.0 to 2.3.0 ([0655579](https://github.com/RangerRick/moment-javaformat/commit/0655579))
 * build(deps-dev): bump prettier-plugin-java from 2.3.0 to 2.3.1 ([63ad74b](https://github.com/RangerRick/moment-javaformat/commit/63ad74b))
 * build(deps-dev): bump typescript from 5.1.6 to 5.2.2 ([13e3813](https://github.com/RangerRick/moment-javaformat/commit/13e3813))
