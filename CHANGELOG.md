@@ -1,5 +1,6 @@
 ## <small>2.0.6 (2023-11-14)</small>
 
+* build: automated generation of dist/ ([98a736b](https://github.com/RangerRick/moment-javaformat/commit/98a736b))
 * build: automated generation of dist/ ([d6e49f1](https://github.com/RangerRick/moment-javaformat/commit/d6e49f1))
 * build: automated generation of dist/ ([e10295f](https://github.com/RangerRick/moment-javaformat/commit/e10295f))
 * build: automated generation of dist/ ([706d66b](https://github.com/RangerRick/moment-javaformat/commit/706d66b))
@@ -56,11 +57,14 @@
 * build(deps-dev): bump @commitlint/cli from 17.7.2 to 17.8.0 ([e2a57fc](https://github.com/RangerRick/moment-javaformat/commit/e2a57fc))
 * build(deps-dev): bump @commitlint/cli from 17.8.0 to 18.0.0 ([41b9dd5](https://github.com/RangerRick/moment-javaformat/commit/41b9dd5))
 * build(deps-dev): bump @commitlint/cli from 18.0.0 to 18.2.0 ([d1d2c74](https://github.com/RangerRick/moment-javaformat/commit/d1d2c74))
+* build(deps-dev): bump @commitlint/cli from 18.2.0 to 18.4.1 ([67163ab](https://github.com/RangerRick/moment-javaformat/commit/67163ab))
+* build(deps-dev): bump @commitlint/config-conventional ([2c5510a](https://github.com/RangerRick/moment-javaformat/commit/2c5510a))
 * build(deps-dev): bump @commitlint/config-conventional ([6ee778f](https://github.com/RangerRick/moment-javaformat/commit/6ee778f))
 * build(deps-dev): bump @commitlint/config-conventional ([abe982e](https://github.com/RangerRick/moment-javaformat/commit/abe982e))
 * build(deps-dev): bump @commitlint/config-conventional ([a27cd06](https://github.com/RangerRick/moment-javaformat/commit/a27cd06))
 * build(deps-dev): bump @types/jest from 29.5.5 to 29.5.6 ([0a754cb](https://github.com/RangerRick/moment-javaformat/commit/0a754cb))
 * build(deps-dev): bump @types/jest from 29.5.6 to 29.5.7 ([de98c23](https://github.com/RangerRick/moment-javaformat/commit/de98c23))
+* build(deps-dev): bump @types/jest from 29.5.7 to 29.5.8 ([d45e6d3](https://github.com/RangerRick/moment-javaformat/commit/d45e6d3))
 * build(deps-dev): bump @types/webpack from 5.28.1 to 5.28.2 ([361ea56](https://github.com/RangerRick/moment-javaformat/commit/361ea56))
 * build(deps-dev): bump @types/webpack from 5.28.2 to 5.28.3 ([b3a7433](https://github.com/RangerRick/moment-javaformat/commit/b3a7433))
 * build(deps-dev): bump @types/webpack from 5.28.3 to 5.28.4 ([10bb409](https://github.com/RangerRick/moment-javaformat/commit/10bb409))
