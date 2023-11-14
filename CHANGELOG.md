@@ -1,5 +1,6 @@
 ## <small>2.0.6 (2023-11-14)</small>
 
+* build: automated generation of dist/ ([d6e49f1](https://github.com/RangerRick/moment-javaformat/commit/d6e49f1))
 * build: automated generation of dist/ ([e10295f](https://github.com/RangerRick/moment-javaformat/commit/e10295f))
 * build: automated generation of dist/ ([706d66b](https://github.com/RangerRick/moment-javaformat/commit/706d66b))
 * build: automated generation of dist/ ([2f057f2](https://github.com/RangerRick/moment-javaformat/commit/2f057f2))
@@ -50,6 +51,7 @@
 * build(deps-dev): bump @babel/preset-typescript from 7.22.15 to 7.23.0 ([1d00950](https://github.com/RangerRick/moment-javaformat/commit/1d00950))
 * build(deps-dev): bump @babel/preset-typescript from 7.22.5 to 7.22.15 ([c990901](https://github.com/RangerRick/moment-javaformat/commit/c990901))
 * build(deps-dev): bump @babel/preset-typescript from 7.23.0 to 7.23.2 ([e5af69f](https://github.com/RangerRick/moment-javaformat/commit/e5af69f))
+* build(deps-dev): bump @babel/preset-typescript from 7.23.2 to 7.23.3 ([5789da9](https://github.com/RangerRick/moment-javaformat/commit/5789da9))
 * build(deps-dev): bump @commitlint/cli from 17.7.1 to 17.7.2 ([562655d](https://github.com/RangerRick/moment-javaformat/commit/562655d))
 * build(deps-dev): bump @commitlint/cli from 17.7.2 to 17.8.0 ([e2a57fc](https://github.com/RangerRick/moment-javaformat/commit/e2a57fc))
 * build(deps-dev): bump @commitlint/cli from 17.8.0 to 18.0.0 ([41b9dd5](https://github.com/RangerRick/moment-javaformat/commit/41b9dd5))
@@ -62,6 +64,7 @@
 * build(deps-dev): bump @types/webpack from 5.28.1 to 5.28.2 ([361ea56](https://github.com/RangerRick/moment-javaformat/commit/361ea56))
 * build(deps-dev): bump @types/webpack from 5.28.2 to 5.28.3 ([b3a7433](https://github.com/RangerRick/moment-javaformat/commit/b3a7433))
 * build(deps-dev): bump @types/webpack from 5.28.3 to 5.28.4 ([10bb409](https://github.com/RangerRick/moment-javaformat/commit/10bb409))
+* build(deps-dev): bump @types/webpack from 5.28.4 to 5.28.5 ([da58bf1](https://github.com/RangerRick/moment-javaformat/commit/da58bf1))
 * build(deps-dev): bump @typescript-eslint/eslint-plugin ([52b5056](https://github.com/RangerRick/moment-javaformat/commit/52b5056))
 * build(deps-dev): bump @typescript-eslint/eslint-plugin ([b30bfa1](https://github.com/RangerRick/moment-javaformat/commit/b30bfa1))
 * build(deps-dev): bump @typescript-eslint/eslint-plugin ([678c302](https://github.com/RangerRick/moment-javaformat/commit/678c302))
@@ -101,6 +104,7 @@
 * build(deps-dev): bump lint-staged from 14.0.0 to 14.0.1 ([232d97a](https://github.com/RangerRick/moment-javaformat/commit/232d97a))
 * build(deps-dev): bump lint-staged from 14.0.1 to 15.0.1 ([396a1c9](https://github.com/RangerRick/moment-javaformat/commit/396a1c9))
 * build(deps-dev): bump lint-staged from 15.0.1 to 15.0.2 ([d9930b2](https://github.com/RangerRick/moment-javaformat/commit/d9930b2))
+* build(deps-dev): bump lint-staged from 15.0.2 to 15.1.0 ([c4df9ad](https://github.com/RangerRick/moment-javaformat/commit/c4df9ad))
 * build(deps-dev): bump prettier from 3.0.1 to 3.0.2 ([440f213](https://github.com/RangerRick/moment-javaformat/commit/440f213))
 * build(deps-dev): bump prettier from 3.0.2 to 3.0.3 ([57c5ad0](https://github.com/RangerRick/moment-javaformat/commit/57c5ad0))
 * build(deps-dev): bump prettier-plugin-java from 2.2.0 to 2.3.0 ([0655579](https://github.com/RangerRick/moment-javaformat/commit/0655579))
