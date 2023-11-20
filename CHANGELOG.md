@@ -1,5 +1,6 @@
 ## <small>2.0.6 (2023-11-20)</small>
 
+* build: automated generation of dist/ ([00553e2](https://github.com/RangerRick/moment-javaformat/commit/00553e2))
 * build: automated generation of dist/ ([dde02c9](https://github.com/RangerRick/moment-javaformat/commit/dde02c9))
 * build: automated generation of dist/ ([dd697f5](https://github.com/RangerRick/moment-javaformat/commit/dd697f5))
 * build: automated generation of dist/ ([98a736b](https://github.com/RangerRick/moment-javaformat/commit/98a736b))
@@ -118,6 +119,7 @@
 * build(deps-dev): bump prettier from 3.0.3 to 3.1.0 ([49f450b](https://github.com/RangerRick/moment-javaformat/commit/49f450b))
 * build(deps-dev): bump prettier-plugin-java from 2.2.0 to 2.3.0 ([0655579](https://github.com/RangerRick/moment-javaformat/commit/0655579))
 * build(deps-dev): bump prettier-plugin-java from 2.3.0 to 2.3.1 ([63ad74b](https://github.com/RangerRick/moment-javaformat/commit/63ad74b))
+* build(deps-dev): bump prettier-plugin-java from 2.3.1 to 2.4.0 ([0697370](https://github.com/RangerRick/moment-javaformat/commit/0697370))
 * build(deps-dev): bump typescript from 5.1.6 to 5.2.2 ([13e3813](https://github.com/RangerRick/moment-javaformat/commit/13e3813))
 * build(deps-dev): bump webpack from 5.88.2 to 5.89.0 ([c4a44ce](https://github.com/RangerRick/moment-javaformat/commit/c4a44ce))
 * build(deps-dev): bump webpack-bundle-analyzer from 4.9.0 to 4.9.1 ([04721d9](https://github.com/RangerRick/moment-javaformat/commit/04721d9))
