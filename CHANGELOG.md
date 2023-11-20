@@ -1,5 +1,6 @@
 ## <small>2.0.6 (2023-11-20)</small>
 
+* build: automated generation of dist/ ([3fdad61](https://github.com/RangerRick/moment-javaformat/commit/3fdad61))
 * build: automated generation of dist/ ([00553e2](https://github.com/RangerRick/moment-javaformat/commit/00553e2))
 * build: automated generation of dist/ ([dde02c9](https://github.com/RangerRick/moment-javaformat/commit/dde02c9))
 * build: automated generation of dist/ ([dd697f5](https://github.com/RangerRick/moment-javaformat/commit/dd697f5))
@@ -48,6 +49,7 @@
 * build(deps-dev): bump @babel/core from 7.22.17 to 7.22.20 ([e8c3307](https://github.com/RangerRick/moment-javaformat/commit/e8c3307))
 * build(deps-dev): bump @babel/core from 7.22.20 to 7.23.0 ([a17e0ca](https://github.com/RangerRick/moment-javaformat/commit/a17e0ca))
 * build(deps-dev): bump @babel/core from 7.23.0 to 7.23.2 ([9bf8893](https://github.com/RangerRick/moment-javaformat/commit/9bf8893))
+* build(deps-dev): bump @babel/core from 7.23.2 to 7.23.3 ([b4a9257](https://github.com/RangerRick/moment-javaformat/commit/b4a9257))
 * build(deps-dev): bump @babel/preset-env from 7.22.10 to 7.22.15 ([e62f602](https://github.com/RangerRick/moment-javaformat/commit/e62f602))
 * build(deps-dev): bump @babel/preset-env from 7.22.15 to 7.22.20 ([a777445](https://github.com/RangerRick/moment-javaformat/commit/a777445))
 * build(deps-dev): bump @babel/preset-env from 7.22.20 to 7.23.2 ([d9919b2](https://github.com/RangerRick/moment-javaformat/commit/d9919b2))
@@ -61,6 +63,7 @@
 * build(deps-dev): bump @commitlint/cli from 17.8.0 to 18.0.0 ([41b9dd5](https://github.com/RangerRick/moment-javaformat/commit/41b9dd5))
 * build(deps-dev): bump @commitlint/cli from 18.0.0 to 18.2.0 ([d1d2c74](https://github.com/RangerRick/moment-javaformat/commit/d1d2c74))
 * build(deps-dev): bump @commitlint/cli from 18.2.0 to 18.4.1 ([67163ab](https://github.com/RangerRick/moment-javaformat/commit/67163ab))
+* build(deps-dev): bump @commitlint/config-conventional ([aa032f8](https://github.com/RangerRick/moment-javaformat/commit/aa032f8))
 * build(deps-dev): bump @commitlint/config-conventional ([2c5510a](https://github.com/RangerRick/moment-javaformat/commit/2c5510a))
 * build(deps-dev): bump @commitlint/config-conventional ([6ee778f](https://github.com/RangerRick/moment-javaformat/commit/6ee778f))
 * build(deps-dev): bump @commitlint/config-conventional ([abe982e](https://github.com/RangerRick/moment-javaformat/commit/abe982e))
@@ -84,6 +87,7 @@
 * build(deps-dev): bump @typescript-eslint/eslint-plugin ([b9f353f](https://github.com/RangerRick/moment-javaformat/commit/b9f353f))
 * build(deps-dev): bump @typescript-eslint/eslint-plugin ([9677225](https://github.com/RangerRick/moment-javaformat/commit/9677225))
 * build(deps-dev): bump @typescript-eslint/eslint-plugin ([6cb9988](https://github.com/RangerRick/moment-javaformat/commit/6cb9988))
+* build(deps-dev): bump @typescript-eslint/parser from 6.10.0 to 6.11.0 ([40b3f91](https://github.com/RangerRick/moment-javaformat/commit/40b3f91))
 * build(deps-dev): bump @typescript-eslint/parser from 6.3.0 to 6.4.0 ([14ca63c](https://github.com/RangerRick/moment-javaformat/commit/14ca63c))
 * build(deps-dev): bump @typescript-eslint/parser from 6.4.0 to 6.4.1 ([d43424c](https://github.com/RangerRick/moment-javaformat/commit/d43424c))
 * build(deps-dev): bump @typescript-eslint/parser from 6.4.1 to 6.5.0 ([efd34f6](https://github.com/RangerRick/moment-javaformat/commit/efd34f6))
@@ -123,6 +127,7 @@
 * build(deps-dev): bump typescript from 5.1.6 to 5.2.2 ([13e3813](https://github.com/RangerRick/moment-javaformat/commit/13e3813))
 * build(deps-dev): bump webpack from 5.88.2 to 5.89.0 ([c4a44ce](https://github.com/RangerRick/moment-javaformat/commit/c4a44ce))
 * build(deps-dev): bump webpack-bundle-analyzer from 4.9.0 to 4.9.1 ([04721d9](https://github.com/RangerRick/moment-javaformat/commit/04721d9))
+* build(deps-dev): bump webpack-bundle-analyzer from 4.9.1 to 4.10.1 ([21a3f19](https://github.com/RangerRick/moment-javaformat/commit/21a3f19))
 * chore: 2.0.5 -> 2.0.6 ([df113b6](https://github.com/RangerRick/moment-javaformat/commit/df113b6))
 
 
