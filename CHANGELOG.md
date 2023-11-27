@@ -1,5 +1,6 @@
-## <small>2.0.6 (2023-11-20)</small>
+## <small>2.0.6 (2023-11-27)</small>
 
+* build: automated generation of dist/ ([ff8b622](https://github.com/RangerRick/moment-javaformat/commit/ff8b622))
 * build: automated generation of dist/ ([80d25e6](https://github.com/RangerRick/moment-javaformat/commit/80d25e6))
 * build: automated generation of dist/ ([3fdad61](https://github.com/RangerRick/moment-javaformat/commit/3fdad61))
 * build: automated generation of dist/ ([00553e2](https://github.com/RangerRick/moment-javaformat/commit/00553e2))
@@ -66,6 +67,7 @@
 * build(deps-dev): bump @commitlint/cli from 18.0.0 to 18.2.0 ([d1d2c74](https://github.com/RangerRick/moment-javaformat/commit/d1d2c74))
 * build(deps-dev): bump @commitlint/cli from 18.2.0 to 18.4.1 ([67163ab](https://github.com/RangerRick/moment-javaformat/commit/67163ab))
 * build(deps-dev): bump @commitlint/cli from 18.4.1 to 18.4.2 ([e179f12](https://github.com/RangerRick/moment-javaformat/commit/e179f12))
+* build(deps-dev): bump @commitlint/config-conventional ([333b641](https://github.com/RangerRick/moment-javaformat/commit/333b641))
 * build(deps-dev): bump @commitlint/config-conventional ([aa032f8](https://github.com/RangerRick/moment-javaformat/commit/aa032f8))
 * build(deps-dev): bump @commitlint/config-conventional ([2c5510a](https://github.com/RangerRick/moment-javaformat/commit/2c5510a))
 * build(deps-dev): bump @commitlint/config-conventional ([6ee778f](https://github.com/RangerRick/moment-javaformat/commit/6ee778f))
