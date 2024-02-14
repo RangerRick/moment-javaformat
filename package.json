@@ -1,6 +1,6 @@
 {
   "name": "@rangerrick/moment-javaformat",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "Format Moment.js using Java format strings",
   "browser": "dist/moment-javaformat.min.js",
   "main": "dist/node.min.js",
