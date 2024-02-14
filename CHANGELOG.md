@@ -1,4 +1,9 @@
-## [2.0.7](https://github.com/RangerRick/moment-javaformat/compare/v2.0.6...v2.0.7) (2024-02-12)
+## [2.0.7](https://github.com/RangerRick/moment-javaformat/compare/v2.0.6...v2.0.7) (2024-02-14)
+
+
+### Bug Fixes
+
+* don't log the entire moment.js object ([de573cd](https://github.com/RangerRick/moment-javaformat/commit/de573cd40117463530aa7fb48a21f3531e0a4323)), closes [#1453](https://github.com/RangerRick/moment-javaformat/issues/1453)
 
 
 
