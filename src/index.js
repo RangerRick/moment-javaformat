@@ -7,14 +7,14 @@ import DateTimeFormatter from "./formats/DateTimeFormatter";
 
 const register = (moment, fatal = true) => {
   if (moment && moment.fn.zoneAbbr) {
-    console.log("register:", moment, fatal);
+    console.log("register: moment=%s, fatal=%s", typeof moment, fatal);
     if (moment.tz) {
       console.log(
-        "Moment.js with timezone support detected; attaching Java format methods."
+        "Moment.js with timezone support detected; attaching Java format methods.",
       );
     } else {
       console.warn(
-        "Moment.js detected, but timezone support is missing.  Some Java formatting features may not work as expected."
+        "Moment.js detected, but timezone support is missing.  Some Java formatting features may not work as expected.",
       );
     }
 
@@ -30,7 +30,7 @@ const register = (moment, fatal = true) => {
     return moment;
   } else {
     console.error(
-      "Unable to attach Java format methods.  Moment.js object was invalid."
+      "Unable to attach Java format methods.  Moment.js object was invalid.",
     );
     if (fatal) {
       throw new Error("Moment.js object was invalid.");
@@ -54,14 +54,14 @@ if (typeof window !== "undefined" && window?.moment) {
     window.moment = register(moment, false);
   } catch (err) {
     console.warn(
-      "Failed to load moment-timezone. Attempting fallback to moment."
+      "Failed to load moment-timezone. Attempting fallback to moment.",
     );
     try {
       const moment = require("moment");
       window.moment = register(moment, false);
     } catch (subErr) {
       console.warn(
-        "Failed to load moment.  User will have to manually register."
+        "Failed to load moment.  User will have to manually register.",
       );
     }
   }
