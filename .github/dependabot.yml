@@ -24,6 +24,33 @@ updates:
         versions:
           - 5.0.9
       - dependency-name: "@types/node"
+    groups:
+      babel-and-eslint:
+        patterns:
+          - "*babel*"
+          - "*eslint*"
+        update-types:
+          - "minor"
+          - "patch"
+      commitlint:
+        patterns:
+          - "*commitlint*"
+        update-types:
+          - "minor"
+          - "patch"
+      jest:
+        patterns:
+          - "*jest*"
+        update-types:
+          - "minor"
+          - "patch"
+      webpack:
+        patterns:
+          - "*webpack*"
+          - "*-loader"
+        update-types:
+          - "minor"
+          - "patch"
     commit-message:
       prefix: build
       include: scope
