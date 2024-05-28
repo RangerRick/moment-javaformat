@@ -1,5 +1,6 @@
-## <small>2.0.9 (2024-05-20)</small>
+## <small>2.0.9 (2024-05-28)</small>
 
+* build: automated generation of dist/ ([f2c91c7](https://github.com/RangerRick/moment-javaformat/commit/f2c91c7))
 * build: automated generation of dist/ ([7f12279](https://github.com/RangerRick/moment-javaformat/commit/7f12279))
 * build: automated generation of dist/ ([f260d3a](https://github.com/RangerRick/moment-javaformat/commit/f260d3a))
 * build: automated generation of dist/ ([d7077d5](https://github.com/RangerRick/moment-javaformat/commit/d7077d5))
@@ -9,6 +10,7 @@
 * build(deps-dev): bump the babel-and-eslint group with 2 updates ([2048116](https://github.com/RangerRick/moment-javaformat/commit/2048116))
 * build(deps-dev): bump the babel-and-eslint group with 2 updates ([b1df6ff](https://github.com/RangerRick/moment-javaformat/commit/b1df6ff))
 * build(deps-dev): bump the babel-and-eslint group with 5 updates ([0841a2e](https://github.com/RangerRick/moment-javaformat/commit/0841a2e))
+* build(deps-dev): bump the babel-and-eslint group with 6 updates ([716bbde](https://github.com/RangerRick/moment-javaformat/commit/716bbde))
 * chore: 2.0.8 -> 2.0.9 ([aa80907](https://github.com/RangerRick/moment-javaformat/commit/aa80907))
 
 
