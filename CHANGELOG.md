@@ -1,5 +1,6 @@
-## <small>2.0.9 (2024-06-10)</small>
+## <small>2.0.9 (2024-06-17)</small>
 
+* build: automated generation of dist/ ([2d8d045](https://github.com/RangerRick/moment-javaformat/commit/2d8d045))
 * build: automated generation of dist/ ([6931cbf](https://github.com/RangerRick/moment-javaformat/commit/6931cbf))
 * build: automated generation of dist/ ([053a372](https://github.com/RangerRick/moment-javaformat/commit/053a372))
 * build: automated generation of dist/ ([74c8a58](https://github.com/RangerRick/moment-javaformat/commit/74c8a58))
@@ -13,10 +14,12 @@
 * build(deps-dev): bump lint-staged from 15.2.2 to 15.2.5 ([be8962a](https://github.com/RangerRick/moment-javaformat/commit/be8962a))
 * build(deps-dev): bump prettier from 3.2.5 to 3.3.0 ([69f5a15](https://github.com/RangerRick/moment-javaformat/commit/69f5a15))
 * build(deps-dev): bump prettier from 3.3.0 to 3.3.1 ([459d59d](https://github.com/RangerRick/moment-javaformat/commit/459d59d))
+* build(deps-dev): bump the babel-and-eslint group with 2 updates ([83ae770](https://github.com/RangerRick/moment-javaformat/commit/83ae770))
 * build(deps-dev): bump the babel-and-eslint group with 2 updates ([b6178cb](https://github.com/RangerRick/moment-javaformat/commit/b6178cb))
 * build(deps-dev): bump the babel-and-eslint group with 2 updates ([2048116](https://github.com/RangerRick/moment-javaformat/commit/2048116))
 * build(deps-dev): bump the babel-and-eslint group with 2 updates ([b1df6ff](https://github.com/RangerRick/moment-javaformat/commit/b1df6ff))
 * build(deps-dev): bump the babel-and-eslint group with 5 updates ([0841a2e](https://github.com/RangerRick/moment-javaformat/commit/0841a2e))
+* build(deps-dev): bump the babel-and-eslint group with 6 updates ([a60c2b6](https://github.com/RangerRick/moment-javaformat/commit/a60c2b6))
 * build(deps-dev): bump the babel-and-eslint group with 6 updates ([716bbde](https://github.com/RangerRick/moment-javaformat/commit/716bbde))
 * chore: 2.0.8 -> 2.0.9 ([aa80907](https://github.com/RangerRick/moment-javaformat/commit/aa80907))
 
