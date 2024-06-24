@@ -1,5 +1,6 @@
 ## <small>2.0.9 (2024-06-24)</small>
 
+* build: automated generation of dist/ ([ddb37ba](https://github.com/RangerRick/moment-javaformat/commit/ddb37ba))
 * build: automated generation of dist/ ([5d6bf5d](https://github.com/RangerRick/moment-javaformat/commit/5d6bf5d))
 * build: automated generation of dist/ ([92a51d0](https://github.com/RangerRick/moment-javaformat/commit/92a51d0))
 * build: automated generation of dist/ ([00f5315](https://github.com/RangerRick/moment-javaformat/commit/00f5315))
@@ -27,7 +28,9 @@
 * build(deps-dev): bump the babel-and-eslint group with 5 updates ([0841a2e](https://github.com/RangerRick/moment-javaformat/commit/0841a2e))
 * build(deps-dev): bump the babel-and-eslint group with 6 updates ([a60c2b6](https://github.com/RangerRick/moment-javaformat/commit/a60c2b6))
 * build(deps-dev): bump the babel-and-eslint group with 6 updates ([716bbde](https://github.com/RangerRick/moment-javaformat/commit/716bbde))
+* build(deps-dev): bump typescript from 5.4.5 to 5.5.2 ([ba9dede](https://github.com/RangerRick/moment-javaformat/commit/ba9dede))
 * build(deps-dev): bump webpack from 5.91.0 to 5.92.0 in the webpack group ([d49e1a1](https://github.com/RangerRick/moment-javaformat/commit/d49e1a1))
+* build(deps-dev): bump webpack from 5.92.0 to 5.92.1 in the webpack group ([433b63b](https://github.com/RangerRick/moment-javaformat/commit/433b63b))
 * build(deps-dev): bump ws from 7.5.9 to 7.5.10 ([67e5541](https://github.com/RangerRick/moment-javaformat/commit/67e5541))
 * chore: 2.0.8 -> 2.0.9 ([aa80907](https://github.com/RangerRick/moment-javaformat/commit/aa80907))
 
