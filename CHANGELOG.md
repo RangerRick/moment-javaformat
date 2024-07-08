@@ -1,5 +1,6 @@
 ## <small>2.0.9 (2024-07-08)</small>
 
+* build: automated generation of dist/ ([ca20486](https://github.com/RangerRick/moment-javaformat/commit/ca20486))
 * build: automated generation of dist/ ([fbb65c8](https://github.com/RangerRick/moment-javaformat/commit/fbb65c8))
 * build: automated generation of dist/ ([59c55dd](https://github.com/RangerRick/moment-javaformat/commit/59c55dd))
 * build: automated generation of dist/ ([ddb37ba](https://github.com/RangerRick/moment-javaformat/commit/ddb37ba))
