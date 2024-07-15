@@ -1,5 +1,6 @@
-## <small>2.0.9 (2024-07-08)</small>
+## <small>2.0.9 (2024-07-15)</small>
 
+* build: automated generation of dist/ ([699db64](https://github.com/RangerRick/moment-javaformat/commit/699db64))
 * build: automated generation of dist/ ([ca20486](https://github.com/RangerRick/moment-javaformat/commit/ca20486))
 * build: automated generation of dist/ ([fbb65c8](https://github.com/RangerRick/moment-javaformat/commit/fbb65c8))
 * build: automated generation of dist/ ([59c55dd](https://github.com/RangerRick/moment-javaformat/commit/59c55dd))
@@ -30,6 +31,7 @@
 * build(deps-dev): bump the babel-and-eslint group with 2 updates ([b6178cb](https://github.com/RangerRick/moment-javaformat/commit/b6178cb))
 * build(deps-dev): bump the babel-and-eslint group with 2 updates ([2048116](https://github.com/RangerRick/moment-javaformat/commit/2048116))
 * build(deps-dev): bump the babel-and-eslint group with 2 updates ([b1df6ff](https://github.com/RangerRick/moment-javaformat/commit/b1df6ff))
+* build(deps-dev): bump the babel-and-eslint group with 5 updates ([212db96](https://github.com/RangerRick/moment-javaformat/commit/212db96))
 * build(deps-dev): bump the babel-and-eslint group with 5 updates ([0841a2e](https://github.com/RangerRick/moment-javaformat/commit/0841a2e))
 * build(deps-dev): bump the babel-and-eslint group with 6 updates ([a60c2b6](https://github.com/RangerRick/moment-javaformat/commit/a60c2b6))
 * build(deps-dev): bump the babel-and-eslint group with 6 updates ([716bbde](https://github.com/RangerRick/moment-javaformat/commit/716bbde))
