@@ -28,7 +28,7 @@
     "@types/jest": "^29.0.0",
     "@types/node": "^16.11.27",
     "@types/webpack": "^5.0.0",
-    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^7.0.2",
     "babel-jest": "^29.0.2",
     "babel-loader": "^9.0.0",
