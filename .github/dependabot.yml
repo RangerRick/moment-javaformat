@@ -29,28 +29,19 @@ updates:
         patterns:
           - "*babel*"
           - "*eslint*"
-        update-types:
-          - "minor"
-          - "patch"
       commitlint:
         patterns:
           - "*commitlint*"
-        update-types:
-          - "minor"
-          - "patch"
       jest:
         patterns:
           - "*jest*"
-        update-types:
-          - "minor"
-          - "patch"
+      typescript:
+        patterns:
+          - "*typescript*"
       webpack:
         patterns:
           - "*webpack*"
           - "*-loader"
-        update-types:
-          - "minor"
-          - "patch"
     commit-message:
       prefix: build
       include: scope
