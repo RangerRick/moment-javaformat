@@ -1,5 +1,6 @@
 ## <small>2.0.9 (2024-08-05)</small>
 
+* build: automated generation of dist/ ([8d19b6d](https://github.com/RangerRick/moment-javaformat/commit/8d19b6d))
 * build: automated generation of dist/ ([f6f6f28](https://github.com/RangerRick/moment-javaformat/commit/f6f6f28))
 * build: automated generation of dist/ ([d53d429](https://github.com/RangerRick/moment-javaformat/commit/d53d429))
 * build: automated generation of dist/ ([345eab0](https://github.com/RangerRick/moment-javaformat/commit/345eab0))
@@ -31,6 +32,7 @@
 * build(deps-dev): bump husky from 9.1.1 to 9.1.4 ([4d00158](https://github.com/RangerRick/moment-javaformat/commit/4d00158))
 * build(deps-dev): bump lint-staged from 15.2.2 to 15.2.5 ([be8962a](https://github.com/RangerRick/moment-javaformat/commit/be8962a))
 * build(deps-dev): bump lint-staged from 15.2.5 to 15.2.7 ([5dea737](https://github.com/RangerRick/moment-javaformat/commit/5dea737))
+* build(deps-dev): bump lint-staged from 15.2.7 to 15.2.8 ([5401210](https://github.com/RangerRick/moment-javaformat/commit/5401210))
 * build(deps-dev): bump prettier from 3.2.5 to 3.3.0 ([69f5a15](https://github.com/RangerRick/moment-javaformat/commit/69f5a15))
 * build(deps-dev): bump prettier from 3.3.0 to 3.3.1 ([459d59d](https://github.com/RangerRick/moment-javaformat/commit/459d59d))
 * build(deps-dev): bump prettier from 3.3.1 to 3.3.2 ([4ad4eab](https://github.com/RangerRick/moment-javaformat/commit/4ad4eab))
