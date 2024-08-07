@@ -1,5 +1,6 @@
-## <small>2.0.9 (2024-08-05)</small>
+## <small>2.0.9 (2024-08-07)</small>
 
+* build: automated generation of dist/ ([f8efbbd](https://github.com/RangerRick/moment-javaformat/commit/f8efbbd))
 * build: automated generation of dist/ ([8d19b6d](https://github.com/RangerRick/moment-javaformat/commit/8d19b6d))
 * build: automated generation of dist/ ([f6f6f28](https://github.com/RangerRick/moment-javaformat/commit/f6f6f28))
 * build: automated generation of dist/ ([d53d429](https://github.com/RangerRick/moment-javaformat/commit/d53d429))
@@ -25,7 +26,6 @@
 * build: automated generation of dist/ ([f260d3a](https://github.com/RangerRick/moment-javaformat/commit/f260d3a))
 * build: automated generation of dist/ ([d7077d5](https://github.com/RangerRick/moment-javaformat/commit/d7077d5))
 * build: automated generation of dist/ ([ce48774](https://github.com/RangerRick/moment-javaformat/commit/ce48774))
-* build(dependabot): make upgrade groups a bit more broad ([bc05dc3](https://github.com/RangerRick/moment-javaformat/commit/bc05dc3))
 * build(deps-dev): bump @commitlint/cli in the commitlint group ([48ef58b](https://github.com/RangerRick/moment-javaformat/commit/48ef58b))
 * build(deps-dev): bump conventional-changelog-cli from 4.1.0 to 5.0.0 ([dfe8521](https://github.com/RangerRick/moment-javaformat/commit/dfe8521))
 * build(deps-dev): bump husky from 9.0.11 to 9.1.1 ([5673c25](https://github.com/RangerRick/moment-javaformat/commit/5673c25))
