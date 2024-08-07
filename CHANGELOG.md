@@ -1,5 +1,7 @@
 ## <small>2.0.9 (2024-08-07)</small>
 
+* make a separate update group for typescript ([1da4d79](https://github.com/RangerRick/moment-javaformat/commit/1da4d79))
+* build: automated generation of dist/ ([854e47a](https://github.com/RangerRick/moment-javaformat/commit/854e47a))
 * build: automated generation of dist/ ([f8efbbd](https://github.com/RangerRick/moment-javaformat/commit/f8efbbd))
 * build: automated generation of dist/ ([8d19b6d](https://github.com/RangerRick/moment-javaformat/commit/8d19b6d))
 * build: automated generation of dist/ ([f6f6f28](https://github.com/RangerRick/moment-javaformat/commit/f6f6f28))
