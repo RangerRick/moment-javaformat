@@ -1,6 +1,6 @@
 ## <small>2.0.9 (2024-08-07)</small>
 
-* make a separate update group for typescript ([1da4d79](https://github.com/RangerRick/moment-javaformat/commit/1da4d79))
+* build: automated generation of dist/ ([728ff62](https://github.com/RangerRick/moment-javaformat/commit/728ff62))
 * build: automated generation of dist/ ([854e47a](https://github.com/RangerRick/moment-javaformat/commit/854e47a))
 * build: automated generation of dist/ ([f8efbbd](https://github.com/RangerRick/moment-javaformat/commit/f8efbbd))
 * build: automated generation of dist/ ([8d19b6d](https://github.com/RangerRick/moment-javaformat/commit/8d19b6d))
@@ -28,6 +28,7 @@
 * build: automated generation of dist/ ([f260d3a](https://github.com/RangerRick/moment-javaformat/commit/f260d3a))
 * build: automated generation of dist/ ([d7077d5](https://github.com/RangerRick/moment-javaformat/commit/d7077d5))
 * build: automated generation of dist/ ([ce48774](https://github.com/RangerRick/moment-javaformat/commit/ce48774))
+* build(deps-dev): bump @commitlint/cli in the commitlint group ([845b0b5](https://github.com/RangerRick/moment-javaformat/commit/845b0b5))
 * build(deps-dev): bump @commitlint/cli in the commitlint group ([48ef58b](https://github.com/RangerRick/moment-javaformat/commit/48ef58b))
 * build(deps-dev): bump conventional-changelog-cli from 4.1.0 to 5.0.0 ([dfe8521](https://github.com/RangerRick/moment-javaformat/commit/dfe8521))
 * build(deps-dev): bump husky from 9.0.11 to 9.1.1 ([5673c25](https://github.com/RangerRick/moment-javaformat/commit/5673c25))
@@ -60,6 +61,7 @@
 * build(deps-dev): bump webpack from 5.92.0 to 5.92.1 in the webpack group ([433b63b](https://github.com/RangerRick/moment-javaformat/commit/433b63b))
 * build(deps-dev): bump webpack from 5.92.1 to 5.93.0 in the webpack group ([3778792](https://github.com/RangerRick/moment-javaformat/commit/3778792))
 * build(deps-dev): bump ws from 7.5.9 to 7.5.10 ([67e5541](https://github.com/RangerRick/moment-javaformat/commit/67e5541))
+* make a separate update group for typescript ([1da4d79](https://github.com/RangerRick/moment-javaformat/commit/1da4d79))
 * chore: 2.0.8 -> 2.0.9 ([aa80907](https://github.com/RangerRick/moment-javaformat/commit/aa80907))
 
 
