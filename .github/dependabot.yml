@@ -25,6 +25,12 @@ updates:
           - 5.0.9
       - dependency-name: "@types/node"
     groups:
+      typescript:
+        patterns:
+          - "*typescript*"
+        update-types:
+          - "minor"
+          - "patch"
       babel-and-eslint:
         patterns:
           - "*babel*"
