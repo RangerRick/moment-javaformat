@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
-
 // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars
 declare const moment: any;
 
@@ -88,7 +86,7 @@ const javaToMoment = {
       throw new Error(
         "Field DayOfYear cannot be printed as the value " +
           ret +
-          " exceeds the maximum print width of 2"
+          " exceeds the maximum print width of 2",
       );
     }
     return zeroPad(ret, 2);
@@ -243,7 +241,7 @@ const javaToMoment = {
   A: (moment: Moment) => {
     return zeroPad(
       moment.valueOf() - moment.clone().startOf("day").valueOf(),
-      1
+      1,
     );
   },
   AA: (moment: Moment) => {
@@ -455,7 +453,7 @@ export class PaddedToken extends Token {
   public format(input: string): string {
     if (input.length > this.padding) {
       throw new Error(
-        `Cannot format padding as formatted string "${input}" exceeds pad width of ${this.padding}.`
+        `Cannot format padding as formatted string "${input}" exceeds pad width of ${this.padding}.`,
       );
     }
 
@@ -503,7 +501,7 @@ export default class DateTimeFormatter extends Formatter {
           if (pad === 0) {
             throw new Error(
               "Pad letter 'p' must be followed by valid pad pattern: " +
-                formatString
+                formatString,
             );
           }
           // pad and continue parsing
@@ -516,14 +514,14 @@ export default class DateTimeFormatter extends Formatter {
         if (translate === null) {
           throw new Error(
             `'${cur.repeat(
-              count
-            )}' cannot be converted to a moment format token; token is not implemented`
+              count,
+            )}' cannot be converted to a moment format token; token is not implemented`,
           );
         } else if (translate === undefined) {
           throw new Error(
             `'${cur.repeat(
-              count
-            )}' cannot be converted to a moment format token; unknown token`
+              count,
+            )}' cannot be converted to a moment format token; unknown token`,
           );
         } else {
           if (padNextWidth > 0) {
@@ -553,7 +551,7 @@ export default class DateTimeFormatter extends Formatter {
 
         if (pos >= formatString.length) {
           throw new Error(
-            `Pattern ends with an incomplete string literal: ${formatString}`
+            `Pattern ends with an incomplete string literal: ${formatString}`,
           );
         }
 
@@ -597,7 +595,7 @@ export default class DateTimeFormatter extends Formatter {
 
         if (translation === undefined) {
           const err = new Error(
-            `'${partString}' cannot be converted to a moment format token; bailing`
+            `'${partString}' cannot be converted to a moment format token; bailing`,
           );
           //          console.error(err.message);
           throw err;
@@ -606,7 +604,7 @@ export default class DateTimeFormatter extends Formatter {
             const result = translation(moment, partString);
             if (result === null) {
               const err = new Error(
-                `'${partString}' cannot be converted to a moment format token; bailing`
+                `'${partString}' cannot be converted to a moment format token; bailing`,
               );
               //          console.error(err.message);
               throw err;

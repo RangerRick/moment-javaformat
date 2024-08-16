@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
-
 // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars
 declare const moment: any;
 
@@ -422,14 +420,14 @@ export default class SimpleDateFormat extends Formatter {
       if (translate === null) {
         throw new Error(
           `'${tag.repeat(
-            length
-          )}' cannot be converted to a moment format token; token is not implemented`
+            length,
+          )}' cannot be converted to a moment format token; token is not implemented`,
         );
       } else if (translate === undefined) {
         throw new Error(
           `'${tag.repeat(
-            length
-          )}' cannot be converted to a moment format token; unknown token`
+            length,
+          )}' cannot be converted to a moment format token; unknown token`,
         );
       }
       ret.push(new Token(tag, length));
@@ -559,7 +557,7 @@ export default class SimpleDateFormat extends Formatter {
         const translation = javaToMoment[partString];
         if (translation === undefined) {
           throw new Error(
-            `'${partString}' cannot be converted to a moment format token; unknown token`
+            `'${partString}' cannot be converted to a moment format token; unknown token`,
           );
         } else {
           if (typeof translation === "function") {

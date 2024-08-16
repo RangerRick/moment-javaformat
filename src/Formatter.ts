@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-types */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare const moment: any;
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -42,7 +41,7 @@ export const getDescriptionForAbbreviation = (abbr: string): string | null => {
 };
 
 export const getZoneForDateTime = (
-  dateTime: string | Moment
+  dateTime: string | Moment,
 ): string | null => {
   const dt = moment(dateTime);
   const offset = dt.utcOffset();
@@ -82,7 +81,7 @@ export class Token {
   constructor(value: string, count?: number) {
     if (value.length != 1) {
       throw new Error(
-        "You must provide a single character when creating a token!"
+        "You must provide a single character when creating a token!",
       );
     }
     this.token = value;

@@ -1,7 +1,4 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-
 import moment from "moment-timezone";
-// @ts-ignore
 window.moment = moment;
 
 import { Formatter, getZoneForDateTime } from "../src/Formatter";
@@ -55,7 +52,7 @@ const testClass = (className: string, impl: Formatter): void => {
                   expect(() => {
                     impl.format(date, token);
                   }).toThrowError(
-                    "cannot be converted to a moment format token"
+                    "cannot be converted to a moment format token",
                   );
                   return;
                 }
