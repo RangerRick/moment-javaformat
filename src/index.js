@@ -1,7 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-
 import SimpleDateFormat from "./formats/SimpleDateFormat";
 import DateTimeFormatter from "./formats/DateTimeFormatter";
 
@@ -52,14 +48,14 @@ if (typeof window !== "undefined" && window?.moment) {
   try {
     const moment = require("moment-timezone");
     window.moment = register(moment, false);
-  } catch (err) {
+  } catch {
     console.warn(
       "Failed to load moment-timezone. Attempting fallback to moment.",
     );
     try {
       const moment = require("moment");
       window.moment = register(moment, false);
-    } catch (subErr) {
+    } catch {
       console.warn(
         "Failed to load moment.  User will have to manually register.",
       );
