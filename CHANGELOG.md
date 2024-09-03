@@ -1,5 +1,6 @@
 ## <small>2.0.9 (2024-09-03)</small>
 
+* build: automated generation of dist/ ([22841ab](https://github.com/RangerRick/moment-javaformat/commit/22841ab))
 * build: automated generation of dist/ ([ba7fd2c](https://github.com/RangerRick/moment-javaformat/commit/ba7fd2c))
 * build: automated generation of dist/ ([2cd378e](https://github.com/RangerRick/moment-javaformat/commit/2cd378e))
 * build: automated generation of dist/ ([ae750f4](https://github.com/RangerRick/moment-javaformat/commit/ae750f4))
@@ -46,6 +47,7 @@
 * build(deps-dev): bump lint-staged from 15.2.5 to 15.2.7 ([5dea737](https://github.com/RangerRick/moment-javaformat/commit/5dea737))
 * build(deps-dev): bump lint-staged from 15.2.7 to 15.2.8 ([5401210](https://github.com/RangerRick/moment-javaformat/commit/5401210))
 * build(deps-dev): bump lint-staged from 15.2.8 to 15.2.9 ([06afa2c](https://github.com/RangerRick/moment-javaformat/commit/06afa2c))
+* build(deps-dev): bump lint-staged from 15.2.9 to 15.2.10 ([b7dd917](https://github.com/RangerRick/moment-javaformat/commit/b7dd917))
 * build(deps-dev): bump prettier from 3.2.5 to 3.3.0 ([69f5a15](https://github.com/RangerRick/moment-javaformat/commit/69f5a15))
 * build(deps-dev): bump prettier from 3.3.0 to 3.3.1 ([459d59d](https://github.com/RangerRick/moment-javaformat/commit/459d59d))
 * build(deps-dev): bump prettier from 3.3.1 to 3.3.2 ([4ad4eab](https://github.com/RangerRick/moment-javaformat/commit/4ad4eab))
@@ -66,6 +68,7 @@
 * build(deps-dev): bump the babel-and-eslint group with 5 updates ([0841a2e](https://github.com/RangerRick/moment-javaformat/commit/0841a2e))
 * build(deps-dev): bump the babel-and-eslint group with 6 updates ([a60c2b6](https://github.com/RangerRick/moment-javaformat/commit/a60c2b6))
 * build(deps-dev): bump the babel-and-eslint group with 6 updates ([716bbde](https://github.com/RangerRick/moment-javaformat/commit/716bbde))
+* build(deps-dev): bump the commitlint group with 2 updates ([afcbdff](https://github.com/RangerRick/moment-javaformat/commit/afcbdff))
 * build(deps-dev): bump the typescript group with 3 updates ([c9859e7](https://github.com/RangerRick/moment-javaformat/commit/c9859e7))
 * build(deps-dev): bump the typescript group with 3 updates ([7c6ac8c](https://github.com/RangerRick/moment-javaformat/commit/7c6ac8c))
 * build(deps-dev): bump typescript from 5.4.5 to 5.5.2 ([ba9dede](https://github.com/RangerRick/moment-javaformat/commit/ba9dede))
