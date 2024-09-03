@@ -1,5 +1,6 @@
 ## <small>2.0.9 (2024-09-03)</small>
 
+* build: automated generation of dist/ ([ba7fd2c](https://github.com/RangerRick/moment-javaformat/commit/ba7fd2c))
 * build: automated generation of dist/ ([2cd378e](https://github.com/RangerRick/moment-javaformat/commit/2cd378e))
 * build: automated generation of dist/ ([ae750f4](https://github.com/RangerRick/moment-javaformat/commit/ae750f4))
 * build: automated generation of dist/ ([e9d90c7](https://github.com/RangerRick/moment-javaformat/commit/e9d90c7))
@@ -34,6 +35,7 @@
 * build: automated generation of dist/ ([f260d3a](https://github.com/RangerRick/moment-javaformat/commit/f260d3a))
 * build: automated generation of dist/ ([d7077d5](https://github.com/RangerRick/moment-javaformat/commit/d7077d5))
 * build: automated generation of dist/ ([ce48774](https://github.com/RangerRick/moment-javaformat/commit/ce48774))
+* build(deps-dev): bump @babel/cli in the babel-and-eslint group ([8539e70](https://github.com/RangerRick/moment-javaformat/commit/8539e70))
 * build(deps-dev): bump @commitlint/cli in the commitlint group ([845b0b5](https://github.com/RangerRick/moment-javaformat/commit/845b0b5))
 * build(deps-dev): bump @commitlint/cli in the commitlint group ([48ef58b](https://github.com/RangerRick/moment-javaformat/commit/48ef58b))
 * build(deps-dev): bump conventional-changelog-cli from 4.1.0 to 5.0.0 ([dfe8521](https://github.com/RangerRick/moment-javaformat/commit/dfe8521))
