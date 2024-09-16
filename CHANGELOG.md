@@ -1,5 +1,6 @@
-## <small>2.0.9 (2024-09-09)</small>
+## <small>2.0.9 (2024-09-16)</small>
 
+* build: automated generation of dist/ ([b58132b](https://github.com/RangerRick/moment-javaformat/commit/b58132b))
 * build: automated generation of dist/ ([bad0fa2](https://github.com/RangerRick/moment-javaformat/commit/bad0fa2))
 * build: automated generation of dist/ ([e839c2f](https://github.com/RangerRick/moment-javaformat/commit/e839c2f))
 * build: automated generation of dist/ ([22841ab](https://github.com/RangerRick/moment-javaformat/commit/22841ab))
@@ -41,6 +42,7 @@
 * build(deps-dev): bump @babel/cli in the babel-and-eslint group ([8539e70](https://github.com/RangerRick/moment-javaformat/commit/8539e70))
 * build(deps-dev): bump @commitlint/cli in the commitlint group ([845b0b5](https://github.com/RangerRick/moment-javaformat/commit/845b0b5))
 * build(deps-dev): bump @commitlint/cli in the commitlint group ([48ef58b](https://github.com/RangerRick/moment-javaformat/commit/48ef58b))
+* build(deps-dev): bump babel-loader in the babel-and-eslint group ([448758e](https://github.com/RangerRick/moment-javaformat/commit/448758e))
 * build(deps-dev): bump conventional-changelog-cli from 4.1.0 to 5.0.0 ([dfe8521](https://github.com/RangerRick/moment-javaformat/commit/dfe8521))
 * build(deps-dev): bump husky from 9.0.11 to 9.1.1 ([5673c25](https://github.com/RangerRick/moment-javaformat/commit/5673c25))
 * build(deps-dev): bump husky from 9.1.1 to 9.1.4 ([4d00158](https://github.com/RangerRick/moment-javaformat/commit/4d00158))
