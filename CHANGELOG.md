@@ -1,5 +1,6 @@
 ## <small>2.0.9 (2024-10-02)</small>
 
+* build: automated generation of dist/ ([2f59a3c](https://github.com/RangerRick/moment-javaformat/commit/2f59a3c))
 * build: automated generation of dist/ ([6bb3659](https://github.com/RangerRick/moment-javaformat/commit/6bb3659))
 * build: automated generation of dist/ ([54c45d7](https://github.com/RangerRick/moment-javaformat/commit/54c45d7))
 * build: automated generation of dist/ ([2aa16a5](https://github.com/RangerRick/moment-javaformat/commit/2aa16a5))
@@ -64,6 +65,7 @@
 * build(deps-dev): bump prettier from 3.3.2 to 3.3.3 ([8b6b14f](https://github.com/RangerRick/moment-javaformat/commit/8b6b14f))
 * build(deps-dev): bump prettier-plugin-java from 2.6.0 to 2.6.4 ([e0c7109](https://github.com/RangerRick/moment-javaformat/commit/e0c7109))
 * build(deps-dev): bump the babel-and-eslint group across 1 directory with 2 updates ([375b988](https://github.com/RangerRick/moment-javaformat/commit/375b988))
+* build(deps-dev): bump the babel-and-eslint group across 1 directory with 5 updates ([9caab05](https://github.com/RangerRick/moment-javaformat/commit/9caab05))
 * build(deps-dev): bump the babel-and-eslint group with 2 updates ([a597a07](https://github.com/RangerRick/moment-javaformat/commit/a597a07))
 * build(deps-dev): bump the babel-and-eslint group with 2 updates ([3203a5e](https://github.com/RangerRick/moment-javaformat/commit/3203a5e))
 * build(deps-dev): bump the babel-and-eslint group with 2 updates ([2bdd8c5](https://github.com/RangerRick/moment-javaformat/commit/2bdd8c5))
@@ -95,6 +97,7 @@
 * build(deps-dev): bump webpack from 5.92.0 to 5.92.1 in the webpack group ([433b63b](https://github.com/RangerRick/moment-javaformat/commit/433b63b))
 * build(deps-dev): bump webpack from 5.92.1 to 5.93.0 in the webpack group ([3778792](https://github.com/RangerRick/moment-javaformat/commit/3778792))
 * build(deps-dev): bump webpack from 5.93.0 to 5.94.0 in the webpack group ([b9f64fc](https://github.com/RangerRick/moment-javaformat/commit/b9f64fc))
+* build(deps-dev): bump webpack from 5.94.0 to 5.95.0 in the webpack group ([b4f17d7](https://github.com/RangerRick/moment-javaformat/commit/b4f17d7))
 * build(deps-dev): bump ws from 7.5.9 to 7.5.10 ([67e5541](https://github.com/RangerRick/moment-javaformat/commit/67e5541))
 * chore: 2.0.8 -> 2.0.9 ([aa80907](https://github.com/RangerRick/moment-javaformat/commit/aa80907))
 * chore: move to eslint json format to ease migration ([09f5e85](https://github.com/RangerRick/moment-javaformat/commit/09f5e85))
