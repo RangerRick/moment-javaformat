@@ -1,5 +1,6 @@
-## <small>2.0.9 (2024-10-11)</small>
+## <small>2.0.9 (2024-10-15)</small>
 
+* build: automated generation of dist/ ([ea576d0](https://github.com/RangerRick/moment-javaformat/commit/ea576d0))
 * build: automated generation of dist/ ([bd0aa35](https://github.com/RangerRick/moment-javaformat/commit/bd0aa35))
 * build: automated generation of dist/ ([ee0b2fa](https://github.com/RangerRick/moment-javaformat/commit/ee0b2fa))
 * build: automated generation of dist/ ([b0bfd5f](https://github.com/RangerRick/moment-javaformat/commit/b0bfd5f))
@@ -97,6 +98,7 @@
 * build(deps-dev): bump the typescript group with 3 updates ([a866be0](https://github.com/RangerRick/moment-javaformat/commit/a866be0))
 * build(deps-dev): bump the typescript group with 3 updates ([c9859e7](https://github.com/RangerRick/moment-javaformat/commit/c9859e7))
 * build(deps-dev): bump the typescript group with 3 updates ([7c6ac8c](https://github.com/RangerRick/moment-javaformat/commit/7c6ac8c))
+* build(deps-dev): bump the typescript group with 4 updates ([570cc8d](https://github.com/RangerRick/moment-javaformat/commit/570cc8d))
 * build(deps-dev): bump typescript from 5.4.5 to 5.5.2 ([ba9dede](https://github.com/RangerRick/moment-javaformat/commit/ba9dede))
 * build(deps-dev): bump typescript from 5.5.2 to 5.5.3 ([cf9a866](https://github.com/RangerRick/moment-javaformat/commit/cf9a866))
 * build(deps-dev): bump typescript from 5.5.3 to 5.5.4 ([fabf255](https://github.com/RangerRick/moment-javaformat/commit/fabf255))
