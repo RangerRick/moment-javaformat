@@ -1,5 +1,6 @@
 ## <small>2.0.9 (2024-10-21)</small>
 
+* build: automated generation of dist/ ([a59f0fd](https://github.com/RangerRick/moment-javaformat/commit/a59f0fd))
 * build: automated generation of dist/ ([fcf5f85](https://github.com/RangerRick/moment-javaformat/commit/fcf5f85))
 * build: automated generation of dist/ ([3e316e1](https://github.com/RangerRick/moment-javaformat/commit/3e316e1))
 * build: automated generation of dist/ ([ea576d0](https://github.com/RangerRick/moment-javaformat/commit/ea576d0))
@@ -76,6 +77,7 @@
 * build(deps-dev): bump prettier-plugin-java from 2.6.0 to 2.6.4 ([e0c7109](https://github.com/RangerRick/moment-javaformat/commit/e0c7109))
 * build(deps-dev): bump the babel-and-eslint group across 1 directory with 2 updates ([375b988](https://github.com/RangerRick/moment-javaformat/commit/375b988))
 * build(deps-dev): bump the babel-and-eslint group across 1 directory with 5 updates ([9caab05](https://github.com/RangerRick/moment-javaformat/commit/9caab05))
+* build(deps-dev): bump the babel-and-eslint group with 2 updates ([8e34afb](https://github.com/RangerRick/moment-javaformat/commit/8e34afb))
 * build(deps-dev): bump the babel-and-eslint group with 2 updates ([fafbf33](https://github.com/RangerRick/moment-javaformat/commit/fafbf33))
 * build(deps-dev): bump the babel-and-eslint group with 2 updates ([a597a07](https://github.com/RangerRick/moment-javaformat/commit/a597a07))
 * build(deps-dev): bump the babel-and-eslint group with 2 updates ([3203a5e](https://github.com/RangerRick/moment-javaformat/commit/3203a5e))
