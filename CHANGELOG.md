@@ -1,5 +1,6 @@
 ## <small>2.0.9 (2024-11-04)</small>
 
+* build: automated generation of dist/ ([fba0584](https://github.com/RangerRick/moment-javaformat/commit/fba0584))
 * build: automated generation of dist/ ([eeea7a8](https://github.com/RangerRick/moment-javaformat/commit/eeea7a8))
 * build: automated generation of dist/ ([509a380](https://github.com/RangerRick/moment-javaformat/commit/509a380))
 * build: automated generation of dist/ ([e5a7989](https://github.com/RangerRick/moment-javaformat/commit/e5a7989))
@@ -64,6 +65,7 @@
 * build(deps-dev): bump babel-loader in the babel-and-eslint group ([448758e](https://github.com/RangerRick/moment-javaformat/commit/448758e))
 * build(deps-dev): bump conventional-changelog-cli from 4.1.0 to 5.0.0 ([dfe8521](https://github.com/RangerRick/moment-javaformat/commit/dfe8521))
 * build(deps-dev): bump globals from 15.10.0 to 15.11.0 ([d848185](https://github.com/RangerRick/moment-javaformat/commit/d848185))
+* build(deps-dev): bump globals from 15.11.0 to 15.12.0 ([c0a4635](https://github.com/RangerRick/moment-javaformat/commit/c0a4635))
 * build(deps-dev): bump globals from 15.9.0 to 15.10.0 ([5cc5bda](https://github.com/RangerRick/moment-javaformat/commit/5cc5bda))
 * build(deps-dev): bump husky from 9.0.11 to 9.1.1 ([5673c25](https://github.com/RangerRick/moment-javaformat/commit/5673c25))
 * build(deps-dev): bump husky from 9.1.1 to 9.1.4 ([4d00158](https://github.com/RangerRick/moment-javaformat/commit/4d00158))
@@ -83,6 +85,7 @@
 * build(deps-dev): bump prettier-plugin-java from 2.6.4 to 2.6.5 ([05c606c](https://github.com/RangerRick/moment-javaformat/commit/05c606c))
 * build(deps-dev): bump the babel-and-eslint group across 1 directory with 2 updates ([375b988](https://github.com/RangerRick/moment-javaformat/commit/375b988))
 * build(deps-dev): bump the babel-and-eslint group across 1 directory with 5 updates ([9caab05](https://github.com/RangerRick/moment-javaformat/commit/9caab05))
+* build(deps-dev): bump the babel-and-eslint group with 2 updates ([771d719](https://github.com/RangerRick/moment-javaformat/commit/771d719))
 * build(deps-dev): bump the babel-and-eslint group with 2 updates ([8e34afb](https://github.com/RangerRick/moment-javaformat/commit/8e34afb))
 * build(deps-dev): bump the babel-and-eslint group with 2 updates ([fafbf33](https://github.com/RangerRick/moment-javaformat/commit/fafbf33))
 * build(deps-dev): bump the babel-and-eslint group with 2 updates ([a597a07](https://github.com/RangerRick/moment-javaformat/commit/a597a07))
