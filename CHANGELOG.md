@@ -1,5 +1,6 @@
 ## <small>2.0.9 (2024-11-04)</small>
 
+* build: automated generation of dist/ ([eeea7a8](https://github.com/RangerRick/moment-javaformat/commit/eeea7a8))
 * build: automated generation of dist/ ([509a380](https://github.com/RangerRick/moment-javaformat/commit/509a380))
 * build: automated generation of dist/ ([e5a7989](https://github.com/RangerRick/moment-javaformat/commit/e5a7989))
 * build: automated generation of dist/ ([af9872a](https://github.com/RangerRick/moment-javaformat/commit/af9872a))
@@ -122,6 +123,7 @@
 * build(deps-dev): bump webpack from 5.92.1 to 5.93.0 in the webpack group ([3778792](https://github.com/RangerRick/moment-javaformat/commit/3778792))
 * build(deps-dev): bump webpack from 5.93.0 to 5.94.0 in the webpack group ([b9f64fc](https://github.com/RangerRick/moment-javaformat/commit/b9f64fc))
 * build(deps-dev): bump webpack from 5.94.0 to 5.95.0 in the webpack group ([b4f17d7](https://github.com/RangerRick/moment-javaformat/commit/b4f17d7))
+* build(deps-dev): bump webpack from 5.95.0 to 5.96.1 in the webpack group ([c0b56d9](https://github.com/RangerRick/moment-javaformat/commit/c0b56d9))
 * build(deps-dev): bump ws from 7.5.9 to 7.5.10 ([67e5541](https://github.com/RangerRick/moment-javaformat/commit/67e5541))
 * chore: 2.0.8 -> 2.0.9 ([aa80907](https://github.com/RangerRick/moment-javaformat/commit/aa80907))
 * chore: move to eslint json format to ease migration ([09f5e85](https://github.com/RangerRick/moment-javaformat/commit/09f5e85))
