@@ -1,5 +1,10 @@
-## <small>2.0.9 (2024-11-11)</small>
+## <small>2.0.9 (2024-11-18)</small>
 
+* refactor: fix import/require mismatch ([5026943](https://github.com/RangerRick/moment-javaformat/commit/5026943))
+* style: reformat with latest prettier ([b743b44](https://github.com/RangerRick/moment-javaformat/commit/b743b44))
+* feat(build): add `prettier` recommended warnings to eslint ([50873f7](https://github.com/RangerRick/moment-javaformat/commit/50873f7))
+* fix(security): audit updates ([863173e](https://github.com/RangerRick/moment-javaformat/commit/863173e))
+* build: automated generation of dist/ ([8532ff2](https://github.com/RangerRick/moment-javaformat/commit/8532ff2))
 * build: automated generation of dist/ ([5ed8953](https://github.com/RangerRick/moment-javaformat/commit/5ed8953))
 * build: automated generation of dist/ ([fba0584](https://github.com/RangerRick/moment-javaformat/commit/fba0584))
 * build: automated generation of dist/ ([eeea7a8](https://github.com/RangerRick/moment-javaformat/commit/eeea7a8))
@@ -72,6 +77,7 @@
 * build(deps-dev): bump husky from 9.1.1 to 9.1.4 ([4d00158](https://github.com/RangerRick/moment-javaformat/commit/4d00158))
 * build(deps-dev): bump husky from 9.1.4 to 9.1.5 ([f57aef1](https://github.com/RangerRick/moment-javaformat/commit/f57aef1))
 * build(deps-dev): bump husky from 9.1.5 to 9.1.6 ([41b93f2](https://github.com/RangerRick/moment-javaformat/commit/41b93f2))
+* build(deps-dev): bump husky from 9.1.6 to 9.1.7 ([8294efd](https://github.com/RangerRick/moment-javaformat/commit/8294efd))
 * build(deps-dev): bump lint-staged from 15.2.2 to 15.2.5 ([be8962a](https://github.com/RangerRick/moment-javaformat/commit/be8962a))
 * build(deps-dev): bump lint-staged from 15.2.5 to 15.2.7 ([5dea737](https://github.com/RangerRick/moment-javaformat/commit/5dea737))
 * build(deps-dev): bump lint-staged from 15.2.7 to 15.2.8 ([5401210](https://github.com/RangerRick/moment-javaformat/commit/5401210))
@@ -110,6 +116,7 @@
 * build(deps-dev): bump the commitlint group with 2 updates ([e1c2deb](https://github.com/RangerRick/moment-javaformat/commit/e1c2deb))
 * build(deps-dev): bump the commitlint group with 2 updates ([afcbdff](https://github.com/RangerRick/moment-javaformat/commit/afcbdff))
 * build(deps-dev): bump the typescript group across 1 directory with 4 updates ([4cfde92](https://github.com/RangerRick/moment-javaformat/commit/4cfde92))
+* build(deps-dev): bump the typescript group with 3 updates ([aa4ce06](https://github.com/RangerRick/moment-javaformat/commit/aa4ce06))
 * build(deps-dev): bump the typescript group with 3 updates ([2d6a6de](https://github.com/RangerRick/moment-javaformat/commit/2d6a6de))
 * build(deps-dev): bump the typescript group with 3 updates ([c4eda8d](https://github.com/RangerRick/moment-javaformat/commit/c4eda8d))
 * build(deps-dev): bump the typescript group with 3 updates ([6da5baa](https://github.com/RangerRick/moment-javaformat/commit/6da5baa))
