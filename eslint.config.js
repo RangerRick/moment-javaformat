@@ -1,8 +1,9 @@
-import globals from "globals";
-import eslint from "@eslint/js";
-import tseslint from "typescript-eslint";
+const globals = require("globals");
+const eslint = require("@eslint/js");
+const tseslint = require("typescript-eslint");
+const prettierRecommended = require("eslint-plugin-prettier/recommended");
 
-export default [
+return [
   {
     languageOptions: {
       globals: {
@@ -15,6 +16,7 @@ export default [
   },
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
+  prettierRecommended,
   {
     rules: {
       "@typescript-eslint/ban-ts-ignore": "off",

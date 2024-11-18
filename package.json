@@ -87,6 +87,7 @@
   "scripts": {
     "prepare": "husky install",
     "prepublishOnly": "pinst --disable && npm run test",
+    "prettier": "prettier --write --ignore-unknown **/*",
     "postpublish": "pinst --enable",
     "build": "webpack --mode=development",
     "build-release": "webpack --mode=development && webpack --mode=production && tsc -d --declarationMap --emitDeclarationOnly --declarationDir dist/lib",
