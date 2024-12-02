@@ -6,6 +6,8 @@
 * chore: move to eslint json format to ease migration ([09f5e85](https://github.com/RangerRick/moment-javaformat/commit/09f5e85))
 * chore: move to eslint9 + fixes to config and validation ([b2da59e](https://github.com/RangerRick/moment-javaformat/commit/b2da59e))
 * chore: remove old husky junk ([953ac58](https://github.com/RangerRick/moment-javaformat/commit/953ac58))
+* chore: skip dist/ ([9a4e55d](https://github.com/RangerRick/moment-javaformat/commit/9a4e55d))
+* build: automated generation of dist/ ([5a85e62](https://github.com/RangerRick/moment-javaformat/commit/5a85e62))
 * build: automated generation of dist/ ([80142dc](https://github.com/RangerRick/moment-javaformat/commit/80142dc))
 * build: automated generation of dist/ ([1297ad8](https://github.com/RangerRick/moment-javaformat/commit/1297ad8))
 * build: automated generation of dist/ ([b1e51a3](https://github.com/RangerRick/moment-javaformat/commit/b1e51a3))
