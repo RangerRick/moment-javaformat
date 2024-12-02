@@ -1,9 +1,6 @@
 {
   "$schema": "https://unpkg.com/knip@5/schema.json",
-  "entry": [
-    "src/index.ts",
-    "dist/moment-javaformat.min.js",
-    "dist/node.min.js"
-  ],
+  "entry": ["src/index.ts"],
+  "ignore": ["dist/**"],
   "project": ["src/**", "eslint.config.js"]
 }
