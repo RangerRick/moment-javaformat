@@ -1,10 +1,12 @@
 ## <small>2.0.9 (2024-12-02)</small>
 
 * chore: 2.0.8 -> 2.0.9 ([aa80907](https://github.com/RangerRick/moment-javaformat/commit/aa80907))
+* chore: add dist files to entrypoint coverage ([1c47488](https://github.com/RangerRick/moment-javaformat/commit/1c47488))
 * chore: add more speed/size validation and cleanup ([0c4f352](https://github.com/RangerRick/moment-javaformat/commit/0c4f352))
 * chore: move to eslint json format to ease migration ([09f5e85](https://github.com/RangerRick/moment-javaformat/commit/09f5e85))
 * chore: move to eslint9 + fixes to config and validation ([b2da59e](https://github.com/RangerRick/moment-javaformat/commit/b2da59e))
 * chore: remove old husky junk ([953ac58](https://github.com/RangerRick/moment-javaformat/commit/953ac58))
+* build: automated generation of dist/ ([80142dc](https://github.com/RangerRick/moment-javaformat/commit/80142dc))
 * build: automated generation of dist/ ([1297ad8](https://github.com/RangerRick/moment-javaformat/commit/1297ad8))
 * build: automated generation of dist/ ([b1e51a3](https://github.com/RangerRick/moment-javaformat/commit/b1e51a3))
 * build: automated generation of dist/ ([ddf86ca](https://github.com/RangerRick/moment-javaformat/commit/ddf86ca))
