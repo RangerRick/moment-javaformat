@@ -1,6 +1,7 @@
 const path = require("path");
 const process = require("process");
 const nodeExternals = require("webpack-node-externals");
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const BundleAnalyzerPlugin =
@@ -38,6 +39,7 @@ const generalConfig = {
 
 if (isProduction) {
   generalConfig.devtool = "cheap-module-source-map";
+  generalConfig.plugins.push(new NodePolyfillPlugin());
 } else {
   // generalConfig.plugins.push(new BundleAnalyzerPlugin());
 }
