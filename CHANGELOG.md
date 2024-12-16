@@ -1,5 +1,6 @@
-## <small>2.0.9 (2024-12-09)</small>
+## <small>2.0.9 (2024-12-16)</small>
 
+* build: automated generation of dist/ ([09e6977](https://github.com/RangerRick/moment-javaformat/commit/09e6977))
 * build: automated generation of dist/ ([6ed0dce](https://github.com/RangerRick/moment-javaformat/commit/6ed0dce))
 * build: automated generation of dist/ ([6a310f2](https://github.com/RangerRick/moment-javaformat/commit/6a310f2))
 * build: automated generation of dist/ ([1f78dfb](https://github.com/RangerRick/moment-javaformat/commit/1f78dfb))
@@ -128,6 +129,7 @@
 * build(deps-dev): bump the commitlint group with 2 updates ([e1c2deb](https://github.com/RangerRick/moment-javaformat/commit/e1c2deb))
 * build(deps-dev): bump the commitlint group with 2 updates ([afcbdff](https://github.com/RangerRick/moment-javaformat/commit/afcbdff))
 * build(deps-dev): bump the typescript group across 1 directory with 4 updates ([4cfde92](https://github.com/RangerRick/moment-javaformat/commit/4cfde92))
+* build(deps-dev): bump the typescript group with 3 updates ([bcda873](https://github.com/RangerRick/moment-javaformat/commit/bcda873))
 * build(deps-dev): bump the typescript group with 3 updates ([55d292f](https://github.com/RangerRick/moment-javaformat/commit/55d292f))
 * build(deps-dev): bump the typescript group with 3 updates ([aa4ce06](https://github.com/RangerRick/moment-javaformat/commit/aa4ce06))
 * build(deps-dev): bump the typescript group with 3 updates ([2d6a6de](https://github.com/RangerRick/moment-javaformat/commit/2d6a6de))
