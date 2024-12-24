@@ -1,5 +1,6 @@
 ## <small>2.0.9 (2024-12-24)</small>
 
+* build: automated generation of dist/ ([e31cb40](https://github.com/RangerRick/moment-javaformat/commit/e31cb40))
 * build: automated generation of dist/ ([cd2c216](https://github.com/RangerRick/moment-javaformat/commit/cd2c216))
 * build: automated generation of dist/ ([f70b92b](https://github.com/RangerRick/moment-javaformat/commit/f70b92b))
 * build: automated generation of dist/ ([36f19a7](https://github.com/RangerRick/moment-javaformat/commit/36f19a7))
@@ -165,6 +166,7 @@
 * build(deps-dev): bump webpack from 5.93.0 to 5.94.0 in the webpack group ([b9f64fc](https://github.com/RangerRick/moment-javaformat/commit/b9f64fc))
 * build(deps-dev): bump webpack from 5.94.0 to 5.95.0 in the webpack group ([b4f17d7](https://github.com/RangerRick/moment-javaformat/commit/b4f17d7))
 * build(deps-dev): bump webpack from 5.95.0 to 5.96.1 in the webpack group ([c0b56d9](https://github.com/RangerRick/moment-javaformat/commit/c0b56d9))
+* build(deps-dev): bump webpack-cli from 5.1.4 to 6.0.1 ([21ba26c](https://github.com/RangerRick/moment-javaformat/commit/21ba26c))
 * build(deps-dev): bump ws from 7.5.9 to 7.5.10 ([67e5541](https://github.com/RangerRick/moment-javaformat/commit/67e5541))
 * chore: 2.0.8 -> 2.0.9 ([aa80907](https://github.com/RangerRick/moment-javaformat/commit/aa80907))
 * chore: add dist files to entrypoint coverage ([1c47488](https://github.com/RangerRick/moment-javaformat/commit/1c47488))
