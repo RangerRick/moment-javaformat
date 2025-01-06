@@ -91,7 +91,7 @@ jobs:
             git add -A
             if [ `git diff HEAD | wc -l` -gt 0 ]; then
               echo "code detected; committing updated dist/"
-              git commit --no-verify -m 'build: automated generation of dist/'
+              git commit --no-verify -m 'chore: automated generation of dist/'
             fi
             git push origin main:main
 
