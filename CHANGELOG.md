@@ -1,9 +1,11 @@
 ## <small>2.0.10 (2025-01-13)</small>
 
 * chore: 2.0.9 -> 2.0.10 ([39e26c3](https://github.com/RangerRick/moment-javaformat/commit/39e26c3))
+* chore: automated generation of dist/ ([9a24421](https://github.com/RangerRick/moment-javaformat/commit/9a24421))
 * chore: automated generation of dist/ ([ec45b1a](https://github.com/RangerRick/moment-javaformat/commit/ec45b1a))
 * chore: automated generation of dist/ ([57656dd](https://github.com/RangerRick/moment-javaformat/commit/57656dd))
 * chore: automated generation of dist/ ([86d151b](https://github.com/RangerRick/moment-javaformat/commit/86d151b))
+* chore: don't run husky in CI, it already triggers during dev ([847cb05](https://github.com/RangerRick/moment-javaformat/commit/847cb05))
 * chore: fix deprecated husky stuff ([e676345](https://github.com/RangerRick/moment-javaformat/commit/e676345))
 * build(deps-dev): bump eslint-config-prettier from 9.1.0 to 10.0.1 ([a247efd](https://github.com/RangerRick/moment-javaformat/commit/a247efd))
 * build(deps-dev): bump prettier-plugin-java from 2.6.5 to 2.6.6 ([4852cdc](https://github.com/RangerRick/moment-javaformat/commit/4852cdc))
