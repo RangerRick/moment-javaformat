@@ -1,6 +1,9 @@
-## <small>2.0.10 (2025-01-06)</small>
+## <small>2.0.10 (2025-01-13)</small>
 
+* build(deps-dev): bump eslint-config-prettier from 9.1.0 to 10.0.1 ([a247efd](https://github.com/RangerRick/moment-javaformat/commit/a247efd))
+* build(deps-dev): bump the typescript group with 4 updates ([2a57946](https://github.com/RangerRick/moment-javaformat/commit/2a57946))
 * chore: 2.0.9 -> 2.0.10 ([39e26c3](https://github.com/RangerRick/moment-javaformat/commit/39e26c3))
+* chore: automated generation of dist/ ([86d151b](https://github.com/RangerRick/moment-javaformat/commit/86d151b))
 
 
 
