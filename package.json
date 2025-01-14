@@ -71,7 +71,7 @@
     "maintained node versions"
   ],
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "**/*": "prettier --check ."
   },
   "jest": {
     "collectCoverage": true,
@@ -84,12 +84,12 @@
   "scripts": {
     "prepare": "husky",
     "prepublishOnly": "npm run test",
-    "prettier": "prettier --write --ignore-unknown **/*",
+    "prettier": "prettier --write .",
     "build": "webpack --mode=development",
     "build-release": "webpack --mode=development && webpack --mode=production && tsc -d --declarationMap --emitDeclarationOnly --declarationDir dist/lib",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "release": "npm run test && npm run build-release",
-    "lint": "eslint src test && knip --production",
+    "lint": "eslint src test && prettier --check . && knip --production",
     "generate-testdata": "mkdirp node_modules/.cache/java-test-data && javac -source 1.8 -target 1.8 -d node_modules/.cache/java-test-data src/date.java && java -classpath node_modules/.cache/java-test-data date > test/test-data.js",
     "test": "npm run lint && jest",
     "watch": "webpack --mode=development --watch --debug"
