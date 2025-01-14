@@ -65,10 +65,10 @@ if (typeof window !== "undefined" && window?.moment) {
 
 let m = undefined;
 if (typeof window !== "undefined") {
-  m = window?.moment;
+  m = window.moment;
 }
 if (typeof m === "undefined" && typeof global !== "undefined") {
-  m = global?.moment;
+  m = global.moment;
 }
 export default m;
 
