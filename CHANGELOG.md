@@ -1,13 +1,7 @@
 ## <small>2.0.10 (2025-01-21)</small>
 
-* build(deps-dev): bump eslint-config-prettier from 9.1.0 to 10.0.1 ([a247efd](https://github.com/RangerRick/moment-javaformat/commit/a247efd))
-* build(deps-dev): bump lint-staged from 15.3.0 to 15.4.1 ([140f121](https://github.com/RangerRick/moment-javaformat/commit/140f121))
-* build(deps-dev): bump prettier-plugin-java from 2.6.5 to 2.6.6 ([4852cdc](https://github.com/RangerRick/moment-javaformat/commit/4852cdc))
-* build(deps-dev): bump the babel-and-eslint group across 1 directory with 4 updates ([8f53aba](https://github.com/RangerRick/moment-javaformat/commit/8f53aba))
-* build(deps-dev): bump the babel-and-eslint group with 2 updates ([e0efea9](https://github.com/RangerRick/moment-javaformat/commit/e0efea9))
-* build(deps-dev): bump the typescript group with 3 updates ([b10c4a4](https://github.com/RangerRick/moment-javaformat/commit/b10c4a4))
-* build(deps-dev): bump the typescript group with 4 updates ([2a57946](https://github.com/RangerRick/moment-javaformat/commit/2a57946))
 * chore: 2.0.9 -> 2.0.10 ([39e26c3](https://github.com/RangerRick/moment-javaformat/commit/39e26c3))
+* chore: automated generation of dist/ ([3d1e5f7](https://github.com/RangerRick/moment-javaformat/commit/3d1e5f7))
 * chore: automated generation of dist/ ([0ea5951](https://github.com/RangerRick/moment-javaformat/commit/0ea5951))
 * chore: automated generation of dist/ ([395beef](https://github.com/RangerRick/moment-javaformat/commit/395beef))
 * chore: automated generation of dist/ ([931645f](https://github.com/RangerRick/moment-javaformat/commit/931645f))
@@ -23,7 +17,15 @@
 * chore: enable auto-merge of dependabot PRs ([2bd0ec5](https://github.com/RangerRick/moment-javaformat/commit/2bd0ec5))
 * chore: fix deprecated husky stuff ([e676345](https://github.com/RangerRick/moment-javaformat/commit/e676345))
 * chore: ignore some things to avoid failure at test time ([266b9f5](https://github.com/RangerRick/moment-javaformat/commit/266b9f5))
+* chore: prettier should ignore auto-generated changelog ([a7f7e15](https://github.com/RangerRick/moment-javaformat/commit/a7f7e15))
 * chore: remove unnecessary config-level hook ([b58009f](https://github.com/RangerRick/moment-javaformat/commit/b58009f))
+* build(deps-dev): bump eslint-config-prettier from 9.1.0 to 10.0.1 ([a247efd](https://github.com/RangerRick/moment-javaformat/commit/a247efd))
+* build(deps-dev): bump lint-staged from 15.3.0 to 15.4.1 ([140f121](https://github.com/RangerRick/moment-javaformat/commit/140f121))
+* build(deps-dev): bump prettier-plugin-java from 2.6.5 to 2.6.6 ([4852cdc](https://github.com/RangerRick/moment-javaformat/commit/4852cdc))
+* build(deps-dev): bump the babel-and-eslint group across 1 directory with 4 updates ([8f53aba](https://github.com/RangerRick/moment-javaformat/commit/8f53aba))
+* build(deps-dev): bump the babel-and-eslint group with 2 updates ([e0efea9](https://github.com/RangerRick/moment-javaformat/commit/e0efea9))
+* build(deps-dev): bump the typescript group with 3 updates ([b10c4a4](https://github.com/RangerRick/moment-javaformat/commit/b10c4a4))
+* build(deps-dev): bump the typescript group with 4 updates ([2a57946](https://github.com/RangerRick/moment-javaformat/commit/2a57946))
 * refactor: avoid unnecessary ? syntax ([2c0786f](https://github.com/RangerRick/moment-javaformat/commit/2c0786f))
 
 
