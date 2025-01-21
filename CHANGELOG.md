@@ -1,6 +1,7 @@
 ## <small>2.0.10 (2025-01-21)</small>
 
 * chore: 2.0.9 -> 2.0.10 ([39e26c3](https://github.com/RangerRick/moment-javaformat/commit/39e26c3))
+* chore: automated generation of dist/ ([395beef](https://github.com/RangerRick/moment-javaformat/commit/395beef))
 * chore: automated generation of dist/ ([931645f](https://github.com/RangerRick/moment-javaformat/commit/931645f))
 * chore: automated generation of dist/ ([bc98718](https://github.com/RangerRick/moment-javaformat/commit/bc98718))
 * chore: automated generation of dist/ ([3790b8f](https://github.com/RangerRick/moment-javaformat/commit/3790b8f))
@@ -9,6 +10,7 @@
 * chore: automated generation of dist/ ([ec45b1a](https://github.com/RangerRick/moment-javaformat/commit/ec45b1a))
 * chore: automated generation of dist/ ([57656dd](https://github.com/RangerRick/moment-javaformat/commit/57656dd))
 * chore: automated generation of dist/ ([86d151b](https://github.com/RangerRick/moment-javaformat/commit/86d151b))
+* chore: change dependabot to daily ([db65a09](https://github.com/RangerRick/moment-javaformat/commit/db65a09))
 * chore: don't run husky in CI, it already triggers during dev ([847cb05](https://github.com/RangerRick/moment-javaformat/commit/847cb05))
 * chore: enable auto-merge of dependabot PRs ([2bd0ec5](https://github.com/RangerRick/moment-javaformat/commit/2bd0ec5))
 * chore: fix deprecated husky stuff ([e676345](https://github.com/RangerRick/moment-javaformat/commit/e676345))
