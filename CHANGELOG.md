@@ -1,6 +1,7 @@
 ## <small>2.0.10 (2025-01-28)</small>
 
 * chore: 2.0.9 -> 2.0.10 ([39e26c3](https://github.com/RangerRick/moment-javaformat/commit/39e26c3))
+* chore: automated generation of dist/ ([f14f242](https://github.com/RangerRick/moment-javaformat/commit/f14f242))
 * chore: automated generation of dist/ ([0e90cd1](https://github.com/RangerRick/moment-javaformat/commit/0e90cd1))
 * chore: automated generation of dist/ ([cce43f6](https://github.com/RangerRick/moment-javaformat/commit/cce43f6))
 * chore: automated generation of dist/ ([12f9c1f](https://github.com/RangerRick/moment-javaformat/commit/12f9c1f))
