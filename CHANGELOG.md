@@ -1,5 +1,6 @@
-## <small>2.0.10 (2025-02-11)</small>
+## <small>2.0.10 (2025-02-12)</small>
 
+* build(deps-dev): bump eslint in the babel-and-eslint group ([f58b609](https://github.com/RangerRick/moment-javaformat/commit/f58b609))
 * build(deps-dev): bump eslint-config-prettier from 9.1.0 to 10.0.1 ([a247efd](https://github.com/RangerRick/moment-javaformat/commit/a247efd))
 * build(deps-dev): bump lint-staged from 15.3.0 to 15.4.1 ([140f121](https://github.com/RangerRick/moment-javaformat/commit/140f121))
 * build(deps-dev): bump lint-staged from 15.4.1 to 15.4.2 ([0b54fbe](https://github.com/RangerRick/moment-javaformat/commit/0b54fbe))
@@ -20,6 +21,7 @@
 * build(deps-dev): bump the typescript group with 3 updates ([b10c4a4](https://github.com/RangerRick/moment-javaformat/commit/b10c4a4))
 * build(deps-dev): bump the typescript group with 4 updates ([2a57946](https://github.com/RangerRick/moment-javaformat/commit/2a57946))
 * chore: 2.0.9 -> 2.0.10 ([39e26c3](https://github.com/RangerRick/moment-javaformat/commit/39e26c3))
+* chore: automated generation of dist/ ([1a17a75](https://github.com/RangerRick/moment-javaformat/commit/1a17a75))
 * chore: automated generation of dist/ ([6a66c8f](https://github.com/RangerRick/moment-javaformat/commit/6a66c8f))
 * chore: automated generation of dist/ ([36e7289](https://github.com/RangerRick/moment-javaformat/commit/36e7289))
 * chore: automated generation of dist/ ([f316fa4](https://github.com/RangerRick/moment-javaformat/commit/f316fa4))
