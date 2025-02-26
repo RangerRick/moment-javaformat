@@ -1,8 +1,8 @@
-## <small>2.0.10 (2025-02-25)</small>
+## <small>2.0.10 (2025-02-26)</small>
 
-* fix(eslint): remove unnecessary eslint typedef shim ([60c78a2](https://github.com/RangerRick/moment-javaformat/commit/60c78a2))
 * build: fix find warning ([4c50ffb](https://github.com/RangerRick/moment-javaformat/commit/4c50ffb))
 * build(deps-dev): bump eslint in the babel-and-eslint group ([f58b609](https://github.com/RangerRick/moment-javaformat/commit/f58b609))
+* build(deps-dev): bump eslint-config-prettier ([2065f12](https://github.com/RangerRick/moment-javaformat/commit/2065f12))
 * build(deps-dev): bump eslint-config-prettier from 9.1.0 to 10.0.1 ([a247efd](https://github.com/RangerRick/moment-javaformat/commit/a247efd))
 * build(deps-dev): bump eslint-plugin-barrel-files from 2.1.0 to 3.0.0 ([783d463](https://github.com/RangerRick/moment-javaformat/commit/783d463))
 * build(deps-dev): bump globals from 15.14.0 to 15.15.0 ([2688d25](https://github.com/RangerRick/moment-javaformat/commit/2688d25))
@@ -33,6 +33,7 @@
 * build(deps-dev): bump the typescript group with 4 updates ([2a57946](https://github.com/RangerRick/moment-javaformat/commit/2a57946))
 * build(deps-dev): bump webpack from 5.97.1 to 5.98.0 in the webpack group ([2b34e94](https://github.com/RangerRick/moment-javaformat/commit/2b34e94))
 * chore: 2.0.9 -> 2.0.10 ([39e26c3](https://github.com/RangerRick/moment-javaformat/commit/39e26c3))
+* chore: automated generation of dist/ ([216d8a6](https://github.com/RangerRick/moment-javaformat/commit/216d8a6))
 * chore: automated generation of dist/ ([be96f34](https://github.com/RangerRick/moment-javaformat/commit/be96f34))
 * chore: automated generation of dist/ ([6475755](https://github.com/RangerRick/moment-javaformat/commit/6475755))
 * chore: automated generation of dist/ ([4d88df3](https://github.com/RangerRick/moment-javaformat/commit/4d88df3))
@@ -73,6 +74,7 @@
 * chore: ignore some things to avoid failure at test time ([266b9f5](https://github.com/RangerRick/moment-javaformat/commit/266b9f5))
 * chore: prettier should ignore auto-generated changelog ([a7f7e15](https://github.com/RangerRick/moment-javaformat/commit/a7f7e15))
 * chore: remove unnecessary config-level hook ([b58009f](https://github.com/RangerRick/moment-javaformat/commit/b58009f))
+* fix(eslint): remove unnecessary eslint typedef shim ([60c78a2](https://github.com/RangerRick/moment-javaformat/commit/60c78a2))
 * refactor: avoid unnecessary ? syntax ([2c0786f](https://github.com/RangerRick/moment-javaformat/commit/2c0786f))
 
 
