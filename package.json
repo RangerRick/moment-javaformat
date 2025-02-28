@@ -32,7 +32,7 @@
     "@typescript-eslint/eslint-plugin": "^8.1.0",
     "@typescript-eslint/parser": "^8.1.0",
     "babel-jest": "^29.0.2",
-    "babel-loader": "^9.0.0",
+    "babel-loader": "^10.0.0",
     "conventional-changelog-cli": "^5.0.0",
     "eslint": "^9.9.0",
     "eslint-config-prettier": "^10.0.1",
