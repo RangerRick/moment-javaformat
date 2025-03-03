@@ -1,4 +1,4 @@
-## <small>2.0.10 (2025-02-28)</small>
+## <small>2.0.10 (2025-03-03)</small>
 
 * build: fix find warning ([4c50ffb](https://github.com/RangerRick/moment-javaformat/commit/4c50ffb))
 * build(deps-dev): bump babel-loader from 9.2.1 to 10.0.0 ([8d07dc2](https://github.com/RangerRick/moment-javaformat/commit/8d07dc2))
@@ -15,6 +15,7 @@
 * build(deps-dev): bump prettier from 3.4.2 to 3.5.0 ([20fdef6](https://github.com/RangerRick/moment-javaformat/commit/20fdef6))
 * build(deps-dev): bump prettier from 3.5.0 to 3.5.1 ([dd25a1d](https://github.com/RangerRick/moment-javaformat/commit/dd25a1d))
 * build(deps-dev): bump prettier from 3.5.1 to 3.5.2 ([41e3ecf](https://github.com/RangerRick/moment-javaformat/commit/41e3ecf))
+* build(deps-dev): bump prettier from 3.5.2 to 3.5.3 ([5939c7d](https://github.com/RangerRick/moment-javaformat/commit/5939c7d))
 * build(deps-dev): bump prettier-plugin-java from 2.6.5 to 2.6.6 ([4852cdc](https://github.com/RangerRick/moment-javaformat/commit/4852cdc))
 * build(deps-dev): bump prettier-plugin-java from 2.6.6 to 2.6.7 ([17cafce](https://github.com/RangerRick/moment-javaformat/commit/17cafce))
 * build(deps-dev): bump the babel-and-eslint group across 1 directory with 4 updates ([8f53aba](https://github.com/RangerRick/moment-javaformat/commit/8f53aba))
@@ -34,6 +35,7 @@
 * build(deps-dev): bump the typescript group with 4 updates ([2a57946](https://github.com/RangerRick/moment-javaformat/commit/2a57946))
 * build(deps-dev): bump webpack from 5.97.1 to 5.98.0 in the webpack group ([2b34e94](https://github.com/RangerRick/moment-javaformat/commit/2b34e94))
 * chore: 2.0.9 -> 2.0.10 ([39e26c3](https://github.com/RangerRick/moment-javaformat/commit/39e26c3))
+* chore: automated generation of dist/ ([5353dde](https://github.com/RangerRick/moment-javaformat/commit/5353dde))
 * chore: automated generation of dist/ ([918e583](https://github.com/RangerRick/moment-javaformat/commit/918e583))
 * chore: automated generation of dist/ ([216d8a6](https://github.com/RangerRick/moment-javaformat/commit/216d8a6))
 * chore: automated generation of dist/ ([be96f34](https://github.com/RangerRick/moment-javaformat/commit/be96f34))
