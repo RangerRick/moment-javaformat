@@ -1,7 +1,8 @@
-## <small>2.0.10 (2025-04-29)</small>
+## <small>2.0.10 (2025-05-01)</small>
 
 * build: fix find warning ([4c50ffb](https://github.com/RangerRick/moment-javaformat/commit/4c50ffb))
 * build(deps-dev): bump @babel/core in the babel-and-eslint group ([ac3680c](https://github.com/RangerRick/moment-javaformat/commit/ac3680c))
+* build(deps-dev): bump @babel/preset-typescript in the typescript group ([8681041](https://github.com/RangerRick/moment-javaformat/commit/8681041))
 * build(deps-dev): bump babel-loader from 9.2.1 to 10.0.0 ([8d07dc2](https://github.com/RangerRick/moment-javaformat/commit/8d07dc2))
 * build(deps-dev): bump eslint in the babel-and-eslint group ([f58b609](https://github.com/RangerRick/moment-javaformat/commit/f58b609))
 * build(deps-dev): bump eslint-config-prettier ([3ce3daa](https://github.com/RangerRick/moment-javaformat/commit/3ce3daa))
@@ -64,6 +65,7 @@
 * build(deps-dev): bump webpack from 5.99.5 to 5.99.6 in the webpack group ([426b02d](https://github.com/RangerRick/moment-javaformat/commit/426b02d))
 * build(deps-dev): bump webpack from 5.99.6 to 5.99.7 in the webpack group ([568d89d](https://github.com/RangerRick/moment-javaformat/commit/568d89d))
 * chore: 2.0.9 -> 2.0.10 ([39e26c3](https://github.com/RangerRick/moment-javaformat/commit/39e26c3))
+* chore: automated generation of dist/ ([ee259bb](https://github.com/RangerRick/moment-javaformat/commit/ee259bb))
 * chore: automated generation of dist/ ([8a55623](https://github.com/RangerRick/moment-javaformat/commit/8a55623))
 * chore: automated generation of dist/ ([0018972](https://github.com/RangerRick/moment-javaformat/commit/0018972))
 * chore: automated generation of dist/ ([94a09cb](https://github.com/RangerRick/moment-javaformat/commit/94a09cb))
