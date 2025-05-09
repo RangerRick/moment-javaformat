@@ -1,4 +1,4 @@
-## <small>2.0.10 (2025-05-08)</small>
+## <small>2.0.10 (2025-05-09)</small>
 
 * build: fix find warning ([4c50ffb](https://github.com/RangerRick/moment-javaformat/commit/4c50ffb))
 * build(deps-dev): bump @babel/core in the babel-and-eslint group ([ac3680c](https://github.com/RangerRick/moment-javaformat/commit/ac3680c))
@@ -30,6 +30,7 @@
 * build(deps-dev): bump prettier-plugin-java from 2.6.5 to 2.6.6 ([4852cdc](https://github.com/RangerRick/moment-javaformat/commit/4852cdc))
 * build(deps-dev): bump prettier-plugin-java from 2.6.6 to 2.6.7 ([17cafce](https://github.com/RangerRick/moment-javaformat/commit/17cafce))
 * build(deps-dev): bump the babel-and-eslint group across 1 directory with 4 updates ([8f53aba](https://github.com/RangerRick/moment-javaformat/commit/8f53aba))
+* build(deps-dev): bump the babel-and-eslint group with 2 updates ([5b20d6d](https://github.com/RangerRick/moment-javaformat/commit/5b20d6d))
 * build(deps-dev): bump the babel-and-eslint group with 2 updates ([79ee0ba](https://github.com/RangerRick/moment-javaformat/commit/79ee0ba))
 * build(deps-dev): bump the babel-and-eslint group with 2 updates ([4e6e2b2](https://github.com/RangerRick/moment-javaformat/commit/4e6e2b2))
 * build(deps-dev): bump the babel-and-eslint group with 2 updates ([15b0afa](https://github.com/RangerRick/moment-javaformat/commit/15b0afa))
@@ -73,6 +74,7 @@
 * build(deps-dev): bump webpack from 5.99.6 to 5.99.7 in the webpack group ([568d89d](https://github.com/RangerRick/moment-javaformat/commit/568d89d))
 * build(deps-dev): bump webpack from 5.99.7 to 5.99.8 in the webpack group ([6b7844d](https://github.com/RangerRick/moment-javaformat/commit/6b7844d))
 * chore: 2.0.9 -> 2.0.10 ([39e26c3](https://github.com/RangerRick/moment-javaformat/commit/39e26c3))
+* chore: automated generation of dist/ ([e863365](https://github.com/RangerRick/moment-javaformat/commit/e863365))
 * chore: automated generation of dist/ ([1772b4e](https://github.com/RangerRick/moment-javaformat/commit/1772b4e))
 * chore: automated generation of dist/ ([f5b55c8](https://github.com/RangerRick/moment-javaformat/commit/f5b55c8))
 * chore: automated generation of dist/ ([b265ca1](https://github.com/RangerRick/moment-javaformat/commit/b265ca1))
