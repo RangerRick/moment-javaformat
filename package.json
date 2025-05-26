@@ -46,7 +46,7 @@
     "knip": "^5.38.4",
     "lint-staged": "^16.0.0",
     "mkdirp": "^3.0.0",
-    "moment-timezone": "^0.5.27",
+    "moment-timezone": "^0.6.0",
     "node-polyfill-webpack-plugin": "^4.0.0",
     "prettier": "^3.0.0",
     "prettier-plugin-java": "^2.0.0",
