@@ -1,4 +1,4 @@
-## <small>2.0.10 (2025-05-27)</small>
+## <small>2.0.10 (2025-05-28)</small>
 
 * build: fix find warning ([4c50ffb](https://github.com/RangerRick/moment-javaformat/commit/4c50ffb))
 * build(deps-dev): bump @babel/core in the babel-and-eslint group ([bd4873d](https://github.com/RangerRick/moment-javaformat/commit/bd4873d))
@@ -53,6 +53,7 @@
 * build(deps-dev): bump the commitlint group with 2 updates ([04c8c9d](https://github.com/RangerRick/moment-javaformat/commit/04c8c9d))
 * build(deps-dev): bump the commitlint group with 2 updates ([da779f5](https://github.com/RangerRick/moment-javaformat/commit/da779f5))
 * build(deps-dev): bump the commitlint group with 2 updates ([a6bc4f0](https://github.com/RangerRick/moment-javaformat/commit/a6bc4f0))
+* build(deps-dev): bump the typescript group with 3 updates ([8902b72](https://github.com/RangerRick/moment-javaformat/commit/8902b72))
 * build(deps-dev): bump the typescript group with 3 updates ([4f93435](https://github.com/RangerRick/moment-javaformat/commit/4f93435))
 * build(deps-dev): bump the typescript group with 3 updates ([22945fc](https://github.com/RangerRick/moment-javaformat/commit/22945fc))
 * build(deps-dev): bump the typescript group with 3 updates ([9aab5c6](https://github.com/RangerRick/moment-javaformat/commit/9aab5c6))
@@ -81,6 +82,7 @@
 * build(deps-dev): bump webpack from 5.99.7 to 5.99.8 in the webpack group ([6b7844d](https://github.com/RangerRick/moment-javaformat/commit/6b7844d))
 * build(deps-dev): bump webpack from 5.99.8 to 5.99.9 in the webpack group ([78c95a3](https://github.com/RangerRick/moment-javaformat/commit/78c95a3))
 * chore: 2.0.9 -> 2.0.10 ([39e26c3](https://github.com/RangerRick/moment-javaformat/commit/39e26c3))
+* chore: automated generation of dist/ ([90b3c78](https://github.com/RangerRick/moment-javaformat/commit/90b3c78))
 * chore: automated generation of dist/ ([16668ce](https://github.com/RangerRick/moment-javaformat/commit/16668ce))
 * chore: automated generation of dist/ ([10e7aa7](https://github.com/RangerRick/moment-javaformat/commit/10e7aa7))
 * chore: automated generation of dist/ ([627c034](https://github.com/RangerRick/moment-javaformat/commit/627c034))
