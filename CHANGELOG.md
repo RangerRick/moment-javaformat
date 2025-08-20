@@ -2,6 +2,7 @@
 
 * chore: "npm audit fix" for brace-expansion 1.1.11 -> 1.1.12 ([8d00a4f](https://github.com/RangerRick/moment-javaformat/commit/8d00a4f))
 * chore: 2.0.9 -> 2.0.10 ([39e26c3](https://github.com/RangerRick/moment-javaformat/commit/39e26c3))
+* chore: automated generation of dist/ ([7d059b1](https://github.com/RangerRick/moment-javaformat/commit/7d059b1))
 * chore: automated generation of dist/ ([6462afe](https://github.com/RangerRick/moment-javaformat/commit/6462afe))
 * chore: automated generation of dist/ ([4e6e53a](https://github.com/RangerRick/moment-javaformat/commit/4e6e53a))
 * chore: automated generation of dist/ ([8f16a68](https://github.com/RangerRick/moment-javaformat/commit/8f16a68))
