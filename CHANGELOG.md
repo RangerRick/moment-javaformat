@@ -1,7 +1,9 @@
-## <small>2.0.10 (2025-08-20)</small>
+## <small>2.0.12 (2025-08-20)</small>
 
 * chore: add github action to publish to npm ([595bf12](https://github.com/RangerRick/moment-javaformat/commit/595bf12))
+* chore: automated generation of dist/ ([54fde8d](https://github.com/RangerRick/moment-javaformat/commit/54fde8d))
 * chore: automated generation of dist/ ([4374a98](https://github.com/RangerRick/moment-javaformat/commit/4374a98))
+* chore: bump to 2.0.12 ([266ae27](https://github.com/RangerRick/moment-javaformat/commit/266ae27))
 * chore: don't need to run test, provenance does it ([a52cfb9](https://github.com/RangerRick/moment-javaformat/commit/a52cfb9))
 * chore: set to use proper environment ([1f306ea](https://github.com/RangerRick/moment-javaformat/commit/1f306ea))
 
