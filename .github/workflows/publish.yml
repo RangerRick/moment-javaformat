@@ -10,6 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: npmjs-publish
     permissions:
       contents: read
       id-token: write
