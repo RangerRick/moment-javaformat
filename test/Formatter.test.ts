@@ -51,8 +51,10 @@ const testClass = (className: string, impl: Formatter): void => {
                 ) {
                   expect(() => {
                     impl.format(date, token);
-                  }).toThrowError(
-                    "cannot be converted to a moment format token",
+                  }).toThrow(
+                    new RegExp(
+                      "^.*cannot be converted to a moment format token.*$",
+                    ),
                   );
                   return;
                 }
@@ -76,7 +78,11 @@ const testClass = (className: string, impl: Formatter): void => {
                       if (expected === null) {
                         expect(() => {
                           impl.format(date, formatString);
-                        }).toThrowError();
+                        }).toThrow(
+                          new RegExp(
+                            "^.*cannot be converted to a moment format token.*$",
+                          ),
+                        );
                       } else {
                         const formatted = impl.format(date, formatString);
                         expect(formatted).toBe(expected);

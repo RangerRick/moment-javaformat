@@ -1,10 +1,12 @@
-const globals = require("globals");
-const eslint = require("@eslint/js");
-const tseslint = require("typescript-eslint");
-const prettierRecommended = require("eslint-plugin-prettier/recommended");
-const depend = require("eslint-plugin-depend");
+import globals from "globals";
+import eslint from "@eslint/js";
+import tseslint from "typescript-eslint";
+import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
+import depend from "eslint-plugin-depend";
+import { defineConfig } from "eslint/config";
+import noBarrelFiles from "eslint-plugin-no-barrel-files";
 
-return [
+export default defineConfig([
   {
     languageOptions: {
       globals: {
@@ -18,16 +20,20 @@ return [
   depend.configs["flat/recommended"],
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
-  prettierRecommended,
+  eslintPluginPrettierRecommended,
+  noBarrelFiles.flat,
   {
     rules: {
       "@typescript-eslint/ban-ts-ignore": "off",
       "@typescript-eslint/no-require-imports": "off",
       "@typescript-eslint/no-var-requires": "off",
-      "barrel-files/avoid-barrel-files": "error",
-      "barrel-files/avoid-importing-barrel-files": "error",
-      "barrel-files/avoid-namespace-import": "error",
-      "barrel-files/avoid-re-export-all": "error",
+      "no-barrel-files/no-barrel-files": "error",
+      "depend/ban-dependencies": [
+        "error",
+        {
+          allowed: ["moment"],
+        },
+      ],
     },
   },
-];
+]);
