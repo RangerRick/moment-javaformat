@@ -72,4 +72,5 @@ if (typeof m === "undefined" && typeof global !== "undefined") {
 }
 export default m;
 
+// eslint-disable-next-line no-barrel-files/no-barrel-files
 export { register, SimpleDateFormat, DateTimeFormatter };
