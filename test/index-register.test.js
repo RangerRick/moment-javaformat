@@ -10,6 +10,6 @@ describe("index (manual)", () => {
   test("register(null, true)", () => {
     expect(() => {
       register(null, true);
-    }).toThrowError("Moment.js object was invalid.");
+    }).toThrow(new Error("Moment.js object was invalid."));
   });
 });
