@@ -39,7 +39,7 @@
     "eslint-plugin-depend": "^1.0.0",
     "eslint-plugin-no-barrel-files": "^1.2.2",
     "eslint-plugin-prettier": "^5.5.4",
-    "globals": "^16.0.0",
+    "globals": "^17.0.0",
     "husky": "^9.0.7",
     "jest": "^30.0.0",
     "jest-environment-jsdom": "^30.0.0",
