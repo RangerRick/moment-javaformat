@@ -34,7 +34,7 @@
     "babel-jest": "^30.0.0",
     "babel-loader": "^10.0.0",
     "conventional-changelog-cli": "^5.0.0",
-    "eslint": "^9.33.0",
+    "eslint": "^10.0.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-depend": "^1.0.0",
     "eslint-plugin-no-barrel-files": "^1.2.2",
