@@ -1,15 +1,11 @@
 ## [2.0.12](https://github.com/RangerRick/moment-javaformat/compare/v2.0.11...v2.0.12) (2025-08-20)
 
-
-
 ## [2.0.10](https://github.com/RangerRick/moment-javaformat/compare/v2.0.9...v2.0.10) (2025-08-20)
 
 
 ### Bug Fixes
 
 * **eslint:** remove unnecessary eslint typedef shim ([60c78a2](https://github.com/RangerRick/moment-javaformat/commit/60c78a23fc6895e7b43b181ee04a2db05d0a4394))
-
-
 
 ## [2.0.9](https://github.com/RangerRick/moment-javaformat/compare/v2.0.8...v2.0.9) (2025-01-06)
 
@@ -28,11 +24,7 @@
 
 * Revert "build(dependabot): make upgrade groups a bit more broad" ([3f3bb77](https://github.com/RangerRick/moment-javaformat/commit/3f3bb7734205d8a6d31260ffcc1ab6ff4bcaf720))
 
-
-
 ## [2.0.8](https://github.com/RangerRick/moment-javaformat/compare/v2.0.7...v2.0.8) (2024-04-22)
-
-
 
 ## [2.0.7](https://github.com/RangerRick/moment-javaformat/compare/2.0.7...v2.0.7) (2024-02-14)
 
@@ -41,11 +33,7 @@
 
 * don't log the entire moment.js object ([de573cd](https://github.com/RangerRick/moment-javaformat/commit/de573cd40117463530aa7fb48a21f3531e0a4323)), closes [#1453](https://github.com/RangerRick/moment-javaformat/issues/1453)
 
-
-
 ## [2.0.5](https://github.com/RangerRick/moment-javaformat/compare/v2.0.4...v2.0.5) (2023-08-14)
-
-
 
 ## [2.0.4](https://github.com/RangerRick/moment-javaformat/compare/v2.0.3...v2.0.4) (2023-05-15)
 
@@ -54,19 +42,11 @@
 
 * **test:** generated updated test data with Temurin 1.8.0_372 ([af1b86d](https://github.com/RangerRick/moment-javaformat/commit/af1b86ddcdb992232f5a787deb783d8150ec8c7d))
 
-
-
 ## [2.0.2](https://github.com/RangerRick/moment-javaformat/compare/v2.0.1...v2.0.2) (2022-04-21)
-
-
 
 ## [2.0.1](https://github.com/RangerRick/moment-javaformat/compare/v2.0.0...v2.0.1) (2021-12-14)
 
-
-
 ## [1.0.1](https://github.com/RangerRick/moment-javaformat/compare/v1.0.0...v1.0.1) (2020-01-28)
-
-
 
 ## [2.0.3](https://github.com/RangerRick/moment-javaformat/compare/v2.0.2...v2.0.3) (2023-03-27)
 
@@ -75,11 +55,7 @@
 
 * use prettier to format javascript/typescript/java ([4c9e0d0](https://github.com/RangerRick/moment-javaformat/commit/4c9e0d0233f717a145b84eab7c459d347359ff12))
 
-
-
 ## [2.0.2](https://github.com/RangerRick/moment-javaformat/compare/v2.0.1...v2.0.2) (2022-04-21)
-
-
 
 ## [2.0.1](https://github.com/RangerRick/moment-javaformat/compare/v2.0.0...v2.0.1) (2021-12-14)
 
@@ -101,14 +77,10 @@
 
 * Revert "build(deps-dev): bump webpack from 4.44.2 to 5.1.3" ([114a748](https://github.com/RangerRick/moment-javaformat/commit/114a7481de6433a7e2ea152a56c47acd770120b2))
 
-
-
 ## [1.0.1](https://github.com/RangerRick/moment-javaformat/compare/v1.0.0...v1.0.1) (2020-01-28)
 
 
 ### Bug Fixes
 
 * **formatter:** a bunch of correctness fixes, test updates ([e3b2512](https://github.com/RangerRick/moment-javaformat/commit/e3b2512dd2a317a309d039fa849124c7b1454187))
-
-
 
