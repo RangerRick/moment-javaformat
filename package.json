@@ -44,7 +44,7 @@
     "jest": "^30.0.0",
     "jest-environment-jsdom": "^30.0.0",
     "knip": "^5.38.4",
-    "lint-staged": "^16.0.0",
+    "lint-staged": "^17.0.2",
     "mkdirp": "^3.0.0",
     "moment-timezone": "^0.6.0",
     "node-polyfill-webpack-plugin": "^4.0.0",
